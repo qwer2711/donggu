@@ -1607,6 +1607,12 @@
 }
 /* 갤럭시 fold(해상도 280px 이하)*/
 @media screen and (max-width: 320px) {
+  .poster-area .p-box .poster-txt .info-area .left-side {
+    width: 45vw;
+  }
+  .poster-area .p-box .poster-txt .info-area .right-side li {
+    padding-left: 1rem;
+  }
   .precautions {
     padding: 4rem 2rem;
   }
