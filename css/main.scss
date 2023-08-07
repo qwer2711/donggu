@@ -406,6 +406,13 @@
 }
 /* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
+  .m-container {
+    padding: 3.5vh 0;
+    padding: calc(var(--vh, 1vh) * 3.5) 0;
+  }
+  .top-banner .banner .item {
+    height: 350px;
+  }
   .shortcut-btn {
     display: none;
   }
@@ -431,10 +438,14 @@
   }
   .top-banner .banner .slick-arrow {
     bottom: auto;
-    top: 32.5vh;
-    top: calc(var(--vh, 1vh) * 32.5);
+    top: 33.5vh;
+    top: calc(var(--vh, 1vh) * 33.5);
     transform: translate(-50%, 0%);
     background: transparent !important;
+  }
+  .top-banner .banner .slick-prev i,
+  .top-banner .banner .slick-next i {
+    color: var(--grayColor);
   }
   .top-banner .banner .slick-prev:hover,
   .top-banner .banner .slick-next:hover {
@@ -448,17 +459,29 @@
     right: calc(100% - 75vw);
   }
   .top-banner .banner .slick-dots {
-    top: 34vh;
-    top: calc(var(--vh, 1vh) * 34);
+    top: 35vh;
+    top: calc(var(--vh, 1vh) * 35);
     left: 50%;
     transform: translate(-50%, 0%);
     width: auto;
+  }
+  .top-banner .banner .slick-dots li button {
+    background: #cfcfcf;
   }
   .top-banner .banner .item .txt-box .btn-box {
     justify-content: center;
   }
   .top-banner .banner .item .txt-box .btn-box .s-btn.join {
     background: var(--mainColor);
+  }
+  .program-list .slick-prev {
+    left: -11vw;
+  }
+  .program-list .slick-next {
+    right: -11vw;
+  }
+  .main.btn-box {
+    margin: 20px 0 0;
   }
 }
 /* 아이폰(해상도 375px 이하)*/
