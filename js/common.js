@@ -4,6 +4,14 @@
  * 업데이트 : 2023-08-03
  ******************************************************** */
 window.addEventListener("load", function () {
+  // js
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+  setScreenSize();
+  window.addEventListener("resize", setScreenSize);
+
   $("#slider-div").slick({
     autoplay: false,
     autoplaySpeed: 1800,
