@@ -1,0 +1,480 @@
+@charset "UTF-8";
+/* *******************************************************
+ * 파일이름 : main.css
+ * 설명 : 메인 css
+ * 업데이트 : 2023-00-00
+ ******************************************************** */
+/* ****************** 공통CSS  ********************** */
+@import url(../css/common/layout.css);
+@import url(../css/common/fonts.css);
+@import url(../css/common/reset.css);
+/* ****************** Main 시작  ********************** */
+.main-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.m-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 6.9vh 0;
+}
+
+.shortcut-btn {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  z-index: 1000;
+}
+
+/* ***** header  ***** */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: var(--headerHeight);
+  background: var(--mainColor);
+}
+.header .title {
+  width: 100%;
+  height: var(--headerHeight);
+  font-size: 1.8rem;
+  color: white;
+  justify-content: start;
+  align-items: center;
+}
+.header .title h1 {
+  display: block;
+  margin-left: 3vw;
+}
+
+.top-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: var(--headerHeight);
+}
+.top-banner .pause-btn {
+  position: absolute;
+  top: auto;
+  bottom: 3.2vh;
+  left: 34.5vh;
+  z-index: 1000;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+}
+.top-banner .pause-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  display: inline-block;
+  color: var(--blackColor);
+}
+.top-banner .banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* 사이드 버튼 */
+  /* 페이지버튼 */
+}
+.top-banner .banner .item {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.top-banner .banner .item .txt-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: var(--area-1240-width);
+}
+.top-banner .banner .item .txt-box p {
+  font-family: "recipe", sans-serif;
+  color: #fff;
+  line-height: 1.3;
+  font-size: 5rem;
+  word-break: keep-all;
+}
+.top-banner .banner .item .txt-box span.sub-txt {
+  font-size: 2rem;
+  display: block;
+  margin-top: 10px;
+  color: var(--blackColor);
+}
+.top-banner .banner .item .txt-box span.sub-txt i {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  width: 10px;
+}
+.top-banner .banner .item .txt-box .btn-box {
+  margin-top: 30px;
+}
+.top-banner .banner .item .txt-box .btn-box .s-btn.join {
+  border: 2px solid #fff;
+  padding: 12px 35px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.top-banner .banner .slick-arrow {
+  position: absolute;
+  top: auto;
+  bottom: 5%;
+  display: block;
+  z-index: 50;
+  font-size: 1.6rem;
+  background: #fff;
+  padding: 10px 15px;
+}
+.top-banner .banner .slick-prev {
+  right: 37vh;
+  left: auto;
+  border-top-left-radius: 45%;
+  border-bottom-left-radius: 45%;
+}
+.top-banner .banner .slick-next {
+  left: auto;
+  right: 32vh;
+  border-top-right-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+.top-banner .banner .slick-prev:hover,
+.top-banner .banner .slick-next:hover {
+  background: #ffc000;
+}
+.top-banner .banner .slick-dots {
+  position: absolute;
+  top: auto;
+  bottom: 8%;
+  left: 19.5%;
+}
+.top-banner .banner .slick-dots li {
+  display: inline-block;
+}
+.top-banner .banner .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: transparent;
+}
+.top-banner .banner .slick-dots li.slick-active button {
+  background: #ffc000;
+}
+
+.main-sub-tit {
+  margin: 0 0 30px;
+  font-size: 2rem;
+  font-family: "recipe", sans-serif;
+  text-align: center;
+}
+
+.program-list {
+  width: 100%;
+  max-width: var(--area-1240-width);
+  margin: 0 auto;
+  /* 사이드 버튼 */
+}
+.program-list .slick-list {
+  margin: 0 -20px;
+}
+.program-list .slick-slide {
+  margin: 0 20px;
+}
+.program-list .item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.program-list .item .txt-box {
+  padding: 1rem;
+}
+.program-list .item .txt-box .b-tit {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+  text-indent: 5px;
+}
+.program-list .item .txt-box .s-tit {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.program-list .item .txt-box .s-tit i {
+  display: inline-block;
+  width: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-right: 10px;
+  color: #818181;
+}
+.program-list .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  z-index: 50;
+  font-size: 1.6rem;
+  background: var(--mainColor);
+  padding: 15px;
+}
+.program-list .slick-arrow i {
+  color: #fff;
+}
+.program-list .slick-prev {
+  left: -5vw;
+  right: auto;
+  border-top-left-radius: 45%;
+  border-bottom-left-radius: 45%;
+}
+.program-list .slick-prev:hover,
+.program-list .slick-next:hover {
+  background: #ffc000;
+}
+.program-list .slick-next {
+  left: auto;
+  right: -5vw;
+  border-top-right-radius: 45%;
+  border-bottom-right-radius: 45%;
+}
+
+.main.btn-box {
+  width: 100%;
+  justify-content: center;
+  margin: 40px 0 0;
+}
+.main.btn-box a {
+  padding: 12px 35px;
+  background: transparent;
+  color: #000;
+  font-size: 16px;
+  border: 1px solid #d7d7d7;
+}
+
+/* ****************** 반응형 시작  ********************** */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+/* Wide Screen Desktop (해상도 1440px) */
+@media screen and (max-width: 1440px) {
+  .top-banner .pause-btn {
+    left: 7vw;
+  }
+  .top-banner .banner .slick-dots {
+    left: 9.5vw;
+  }
+}
+/* Desktop (해상도 1280px) */
+@media screen and (max-width: 1280px) {
+  .top-banner .banner .item .txt-box {
+    left: 10vw;
+    transform: translate(5%, -50%);
+    width: 50%;
+  }
+  .top-banner .banner .item .txt-box p {
+    font-size: 3.5rem;
+  }
+  .top-banner .banner .slick-prev {
+    right: 36vw;
+  }
+  .top-banner .banner .slick-next {
+    right: 33vw;
+  }
+  .program-list {
+    width: 75vw;
+  }
+  .top-banner .pause-btn {
+    left: 12.5vw;
+  }
+  .top-banner .banner .slick-dots {
+    left: 16vw;
+  }
+}
+/* PC (해상도 800px ~ 1024px)*/
+@media screen and (max-width: 1024px) {
+  .top-banner .banner .slick-prev {
+    right: 30vw;
+  }
+  .top-banner .banner .slick-next {
+    right: 27vw;
+  }
+  .top-banner .banner .item .txt-box {
+    width: 40%;
+  }
+  .top-banner .banner .item .txt-box p {
+    font-size: 3.5rem;
+  }
+  .program-list {
+    width: 65%;
+  }
+  .top-banner .banner .slick-dots {
+    left: 21vh;
+  }
+  .program-list .slick-prev {
+    left: -12vh;
+  }
+  .program-list .slick-next {
+    left: auto;
+    right: -12vh;
+  }
+}
+/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
+@media screen and (max-width: 830px) {
+  .top-banner .banner .item {
+    background-position: -60vw 0;
+  }
+  .top-banner .banner .item .txt-box {
+    left: 5vw;
+    transform: translate(5%, -50%);
+  }
+  .top-banner .banner .item .txt-box p {
+    font-size: 3rem;
+  }
+  .top-banner .pause-btn {
+    left: 7.5vw;
+  }
+  .top-banner .banner .slick-dots {
+    left: 12.5vh;
+  }
+  .top-banner .banner .slick-prev:hover,
+  .top-banner .banner .slick-next:hover {
+    background: #fff;
+  }
+  .program-list .slick-prev {
+    left: -8vh;
+  }
+  .program-list .slick-next {
+    right: -8vh;
+  }
+}
+/* 테블릿 세로 (해상도 600px ~ 767px)*/
+@media screen and (max-width: 768px) {
+  .top-banner .banner .item {
+    background-position: -70vw 0;
+  }
+  .top-banner .banner .item .txt-box {
+    width: 60%;
+  }
+  .top-banner .banner .item .txt-box p {
+    font-size: 3.2rem;
+  }
+  .top-banner .banner .slick-prev {
+    right: 30vw;
+  }
+  .top-banner .banner .slick-next {
+    right: 25vw;
+  }
+  .top-banner .pause-btn {
+    display: none;
+  }
+  .top-banner .slick-dots {
+    display: none !important;
+  }
+  .program-list .slick-prev {
+    left: -8vh;
+  }
+  .program-list .slick-next {
+    right: -8vh;
+  }
+  .program-list {
+    width: 70%;
+  }
+}
+/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
+@media screen and (max-width: 480px) {
+  .top-banner .banner .item {
+    background-position: -120vw 0;
+    height: 38vh;
+  }
+  .top-banner .banner .item .txt-box {
+    width: 70%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  .top-banner .banner .item .txt-box p {
+    font-size: 2.5rem;
+  }
+  .top-banner .banner .item .txt-box .btn-box {
+    margin-top: 30px;
+    justify-content: center;
+  }
+  .top-banner .banner .item .txt-box .btn-box .s-btn.join {
+    border: 2px solid var(--mainColor);
+    padding: 12px 35px;
+    background: var(--mainColor);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  .top-banner .banner .item .txt-box p {
+    font-size: 2.4rem;
+    color: var(--blackColor);
+  }
+  .top-banner .banner .item .txt-box span.sub-txt {
+    font-size: 1.5rem;
+  }
+  .program-list .slick-prev {
+    left: -5vh;
+    background: transparent;
+    padding: 5px;
+  }
+  .program-list .slick-prev i {
+    color: var(--blackColor);
+  }
+  .program-list .slick-next {
+    left: auto;
+    right: -5vh;
+    background: transparent;
+    padding: 5px;
+  }
+  .program-list .slick-next i {
+    color: var(--blackColor);
+  }
+  .program-list .slick-prev:hover,
+  .program-list .slick-next:hover {
+    background: transparent;
+  }
+  .shortcut-btn {
+    display: none;
+  }
+}
+/* 아이폰(해상도 375px 이하)*/
+/* 갤럭시 fold(해상도 280px 이하)*/
+@media screen and (max-width: 320px) {
+  .top-banner .banner .item .txt-box p {
+    font-size: 2rem;
+  }
+  .top-banner .banner .item .txt-box span.sub-txt {
+    font-size: 1.3rem;
+  }
+  .program-list .item .txt-box .s-tit {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}/*# sourceMappingURL=main.css.map */

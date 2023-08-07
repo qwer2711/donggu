@@ -1,0 +1,1277 @@
+@charset "UTF-8";
+
+/* *******************************************************
+ * 파일이름 : sub.css
+ * 설명 : 전체 서브페이지 css
+ * 업데이트 : 2023-00-00
+ ******************************************************** */
+
+@mixin table-layout($borderColor: null, $fontColor: null, $mgTop: null) {
+  width: 100%;
+  border-top: 2px solid $borderColor;
+  color: $fontColor;
+  margin-top: $mgTop;
+}
+
+@mixin table-th(
+  $borderColor: null,
+  $padding: null,
+  $fontSize: null,
+  $background: null
+) {
+  border-bottom: 1px solid $borderColor;
+  border-right: 1px solid $borderColor;
+  padding: $padding;
+  font-size: $fontSize;
+  background: $background;
+  vertical-align: middle;
+  font-weight: 400;
+}
+@mixin table-td(
+  $borderColor: null,
+  $padding: null,
+  $fontSize: null,
+  $background: null
+) {
+  padding: $padding;
+  font-size: $fontSize;
+  background: $background;
+  border-bottom: 1px solid $borderColor;
+  border-right: 1px solid $borderColor;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+@mixin button(
+  $padding: null,
+  $background: null,
+  $color: null,
+  $fontSize: null
+) {
+  padding: $padding;
+  background: $background;
+  color: $color;
+  font-size: $fontSize;
+  display: block;
+  margin-top: 10px;
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  letter-spacing: -0.04em;
+  text-align: center;
+  border-radius: 3px;
+}
+
+/* ****************** Sub 공통CSS  ********************** */
+
+@import url(../css/common/layout.css);
+@import url(../css/common/fonts.css);
+@import url(../css/common/reset.css);
+
+/* ***** sub-header  ***** */
+
+.sub-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  background: var(--mainColor);
+
+  .title {
+    width: 100%;
+    height: 80px;
+    font-size: 1.8rem;
+    color: white;
+    justify-content: start;
+    align-items: center;
+    h1 {
+      display: block;
+      margin-left: 3vw;
+    }
+  }
+}
+
+.s-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: var(--headerHeight);
+  padding-bottom: 80px;
+  .cont {
+    width: 100%;
+    height: 100%;
+    max-width: var(--area-1240-width);
+    margin: 6.05vh auto;
+  }
+}
+
+.line-tit {
+  border-bottom: 1px solid #d7d7d7;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 20px;
+  h2 {
+    font-family: "recipe", "sanserif";
+    font-size: 2.5rem;
+  }
+}
+
+.s-btn.join {
+  @include button(0 25px, var(--mainColor), #fff, 16px);
+  margin-left: 1rem;
+}
+.s-btn.main {
+  @include button(0 25px, #fff, var(--blackColor), 16px);
+  margin-right: 1rem;
+  border: 1px solid #d7d7d7;
+}
+
+/* ****************** Sub 시작  ********************** */
+
+/* **********************************
+ * 설명 : sub_1_프로그램상세.html
+ ************************************ */
+.poster-area {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  .p-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .poter-img {
+      width: 33%;
+      height: 100%;
+      padding-left: 3%;
+    }
+    .poster-txt {
+      width: 67%;
+      height: 90%;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-top: 2rem;
+      justify-content: center;
+      .top-area {
+        justify-content: space-between;
+        border-bottom: 1px solid #d7d7d7;
+        padding-bottom: 2rem;
+        .title {
+          position: relative;
+          width: 50%;
+          font-size: 3.3rem;
+          margin-top: 1rem;
+          font-weight: 500;
+          font-family: "recipe", Sans-serif;
+          letter-spacing: -1px;
+          .status {
+            font-size: 1.2rem;
+            padding: 0.5rem 1.2rem;
+            font-weight: 400;
+            color: #fff;
+            background: #3bbcad;
+            border-radius: 18px;
+            margin-left: 1.3rem;
+            display: inline-block;
+          }
+        }
+        .title::before {
+          content: attr(data-before-title);
+          position: absolute;
+          top: -30px;
+          font-family: "Pretendard", Sans-serif;
+          font-size: 1.65rem;
+          letter-spacing: -0.3px;
+          font-weight: 400;
+          color: var(--grayColor);
+        }
+        .join-btn {
+          span {
+            position: relative;
+            width: 140px;
+            height: 40px;
+            border-radius: 25px;
+            line-height: 40px;
+            color: var(--blackColor);
+            font-size: 1.5rem;
+            text-indent: 2.5rem;
+            display: block;
+            text-align: center;
+            background: transparent;
+            transition: background-color 0.5s 0.05s;
+            &:hover {
+              background: var(--mainColor);
+              color: #fff;
+            }
+
+            &::before {
+              content: "";
+              font-size: 1.6rem;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 40px;
+              height: 40px;
+              text-indent: 0rem;
+              border-radius: 100%;
+              color: #fff;
+              background: var(--mainColor);
+              transition: background-color 0.5s 0.05s;
+              font-weight: 100;
+            }
+            @keyframes arrow-act {
+              0% {
+                transform: translateX(2px);
+              }
+
+              50% {
+                transform: translateX(-2px);
+              }
+
+              100% {
+                transform: translateX(2px);
+              }
+            }
+            &::after {
+              content: "";
+              font-size: 1.6rem;
+              position: absolute;
+              top: auto;
+              left: 0;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              background: url(../images/icon/caret_right.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              text-indent: 0rem;
+              transition: background-color 0.5s 0.05s;
+              animation: arrow-act 1s ease-out infinite;
+              font-weight: 100;
+            }
+            &:hover:after {
+              content: "";
+              background: url(../images/icon/caret_right_2.png);
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+      .info-area {
+        width: 100%;
+        align-items: center;
+        color: #4b4855;
+        .left-side {
+          width: 20%;
+          font-weight: 400;
+          li {
+            span {
+              width: 20px;
+              display: block;
+              height: 30px;
+              line-height: 30px;
+              text-align: center;
+
+              i {
+                color: #818181;
+              }
+            }
+          }
+        }
+        .right-side {
+          width: 68%;
+          font-weight: 400;
+          li {
+            height: 20px;
+            padding-left: 3rem;
+            border-left: 1px solid #d7d7d7;
+            span {
+              position: relative;
+              &:first-child {
+                display: block;
+              }
+            }
+            span.dot {
+              text-indent: 12px;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: #ffb800;
+              }
+            }
+            span.dot:last-child {
+              margin-left: 40px;
+            }
+            span.red {
+              position: relative;
+              color: red;
+              align-items: center;
+              .question-box {
+                position: absolute;
+                top: 25px;
+                left: 90%;
+                width: 32vw;
+                padding: 1rem;
+                background: #fafafa;
+                border: 1px solid #d7d7d7;
+                border-radius: 3px;
+                color: #818181;
+                line-height: 1.6;
+                font-size: 1.3rem;
+                text-indent: 0px;
+                display: none;
+              }
+              .question-hover {
+                position: relative;
+                display: inline-block;
+                text-indent: 0px;
+                .fa-circle-question {
+                  color: #bebebe;
+                  text-indent: 5px;
+                }
+              }
+            }
+            span.red:hover {
+              .question-box {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .left-side li,
+        .right-side li {
+          display: block;
+          width: 100%;
+          height: 30px;
+          margin: 3rem 0;
+          line-height: 1;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 1.6rem;
+          span {
+            display: block;
+            margin-right: 10px;
+          }
+        }
+      }
+      .item-area {
+        padding: 1rem 0;
+        div {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+}
+.program-area {
+  h3 {
+    margin: 50px 0 30px;
+    font-size: 2rem;
+    font-family: "recipe", sans-serif;
+  }
+  .t-prog {
+    @include table-layout(#32afdd, null, 15px);
+    text-align: center;
+    table-layout: fixed;
+    border-left: 1px solid #ced0d5;
+    th {
+      @include table-th(#ced0d5, 2rem, 1.6rem, #efefef);
+      line-height: 1.2;
+    }
+
+    td {
+      @include table-td(#ced0d5, 2rem, 1.6rem, #fff);
+      line-height: 1.2;
+    }
+  }
+  .guide {
+    border: 1px solid #d7d7d7;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    div {
+      position: relative;
+      padding: 1rem 0;
+      text-indent: 18px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #ffb800;
+      }
+      b {
+        font-weight: 500;
+      }
+    }
+  }
+  .btn-box {
+    margin: 3.5rem 0 0;
+    justify-content: center;
+  }
+}
+
+/* **********************************
+ * 설명 : sub_2_1_확인모달.html
+ ************************************ */
+.mdal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  // -webkit-backdrop-filter: blur(3px);
+  // backdrop-filter: blur(3px);
+  display: block;
+}
+.alarm-pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 400px;
+  height: 270px;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden;
+  color: #000;
+  z-index: 200;
+  display: none;
+  padding: 1rem;
+  .m-cont {
+    height: 100%;
+    justify-content: space-evenly;
+    .top {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      p {
+        display: inline-block;
+        line-height: 1;
+        padding-top: 12px;
+        font-size: 16px;
+        color: #3e3e3e;
+        .col {
+          color: var(--mainColor);
+          font-weight: 500;
+          line-height: 1.5;
+        }
+      }
+    }
+    .btn-box {
+      justify-content: center;
+    }
+  }
+}
+.alarm-pop.on {
+  display: block;
+}
+
+/* **********************************
+ * 설명 : sub_2_2_확인모달.html
+ ************************************ */
+.alarm-pop-2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 450px;
+  height: 120px;
+  background: #4a4a4a;
+  overflow: hidden;
+  color: #fff;
+  z-index: 200;
+  display: none;
+  font-size: 1.6rem;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  .m-cont {
+    height: 100%;
+    justify-content: space-between;
+    .txt {
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    .btn-area {
+      justify-content: end;
+      button {
+        @include button(0 20px, #006cbe, #fff, 16px);
+        width: auto;
+        height: 35px;
+        line-height: 35px;
+      }
+    }
+  }
+}
+.alarm-pop-2.on {
+  display: block;
+}
+
+/* *****************************************
+ * 설명 : sub_3_프로그램신청_본인인증.html
+          sub_8_프로그램신청_완료.html
+ ******************************************* */
+
+.write-nav {
+  margin-top: 40px;
+  justify-content: space-between;
+  align-items: center;
+  .step {
+    position: relative;
+    width: 250px;
+    height: 75px;
+    border: 1px solid #d7d7d7;
+    background: #efefef;
+    border-radius: 40px;
+    .l-icon {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      width: 22%;
+      height: 55px;
+      transform: translateY(-50%);
+      .icon {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 1px solid #d7d7d7;
+        border-radius: 50%;
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 2.5rem;
+          color: #d7d7d7;
+        }
+      }
+    }
+    .r-txt {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30%;
+      width: 65%;
+      font-size: 1.6rem;
+      text-align: center;
+      span {
+        display: block;
+        line-height: 25px;
+        color: #818181;
+      }
+      span.txt {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .step-1 {
+    border: 1px solid #00b0f0;
+    background: #fff !important;
+    .icon {
+      background: #fff3d0 !important;
+      border: 1px solid #ffb800 !important;
+      i {
+        color: #ffb800 !important;
+      }
+    }
+    .r-txt {
+      .col {
+        color: #00b0f0;
+      }
+    }
+  }
+}
+.certified-area {
+  width: 880px;
+  height: 500px;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  margin: 5rem auto 0;
+  padding: 4rem 4rem 0;
+  justify-content: space-between;
+  .txt-area {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem;
+    color: #272136;
+
+    .tit {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    .txt {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+  .m-box {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 30px;
+    .m-icon {
+      margin: 30px auto 10px;
+      .icon {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        background: #fff3d0;
+        border-radius: 50%;
+        i {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+          font-size: 5rem;
+          color: #ffc000;
+        }
+      }
+    }
+    .certified-btn {
+      margin: 0 auto;
+      text-align: center;
+      a {
+        @include button(0 25px, var(--mainColor), #fff, 16px);
+        display: inline-block !important;
+      }
+    }
+    .s-btn.main {
+      margin-right: 0px;
+    }
+  }
+  .b-box {
+    .inquiry {
+      align-items: center;
+      .txt {
+        margin-left: 3rem;
+        p {
+          font-size: 1.6rem;
+          margin-bottom: 2rem;
+          font-weight: 500;
+        }
+        span {
+          font-size: 1.4rem;
+          display: block;
+          line-height: 1.5;
+        }
+      }
+      .call {
+        align-items: center;
+        margin-left: 5rem;
+        margin-top: 10px;
+        .icon {
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: #dbf5ff;
+          i {
+            font-size: 1.6rem;
+            color: #00b0f0;
+          }
+        }
+        p {
+          font-size: 1.8rem;
+          margin-left: 10px;
+          color: #4b4855;
+        }
+      }
+    }
+  }
+}
+
+/* *****************************************
+ * 설명 : sub_4_프로그램신청_입력전.html
+ ******************************************* */
+.check-area {
+  margin: 30px 0;
+  font-size: 1.5rem;
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .txt-area {
+    padding: 2rem 3rem;
+    border: 1px solid #d7d7d7;
+    align-items: start;
+    color: #4b4855;
+    line-height: 1.5;
+    b {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 10px;
+    }
+    b.two {
+      margin-top: 10px;
+    }
+  }
+  .chk-area {
+    margin: 20px 0 0;
+    align-items: center;
+    input[type="checkbox"] {
+      position: relative;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      outline: none;
+      content: none;
+      border: 1px solid #d7d7d7;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    input[type="checkbox"]:before {
+      font-family: "FontAwesome";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "\f00c";
+      font-size: 14px;
+      color: transparent !important;
+      display: block;
+    }
+    input[type="checkbox"]:checked {
+      background: var(--mainColor);
+      border: 1px solid var(--mainColor);
+    }
+    input[type="checkbox"]:checked:before {
+      color: #fff !important;
+    }
+    label {
+      padding-left: 12px;
+    }
+    .error {
+      display: none;
+      color: #ff4d4d;
+      padding-left: 10px;
+    }
+    .error.on {
+      display: block;
+    }
+  }
+}
+.precautions {
+  padding: 2rem 3rem;
+  width: 100%;
+  height: 90px;
+  border: 1px solid var(--mainColor);
+  border-radius: 5px;
+  justify-content: center;
+  .tit {
+    color: var(--mainColor);
+    font-size: 1.8rem;
+    font-weight: 500;
+    i {
+      padding-right: 1rem;
+    }
+  }
+  .txt {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    line-height: 1.3;
+    color: #4b4855;
+    span {
+      color: red;
+    }
+  }
+}
+
+.write-area {
+  .line-title {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #d7d7d7;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-top: 10px;
+    margin: 50px 0 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8.5%;
+      height: 4px;
+      top: -3px;
+      left: 0;
+      background: #272136;
+    }
+  }
+  select {
+    border: 1px solid #ced0d5;
+    appearance: none;
+    /*  화살표 이미지 첨부 */
+    background-image: url(../images/icon/select-box.png);
+    background-position: calc(100% - 5px);
+    background-repeat: no-repeat;
+    font-size: 1.45rem;
+  }
+  select {
+    option:not(:first-of-type) {
+      color: #333;
+    }
+  }
+  // input:not(:valid) {
+  //   border: 1px solid red;
+  // }
+  input {
+    background: #fafafa;
+  }
+  input:valid {
+    background: #fff !important;
+  }
+  input::placeholder {
+    font-size: 1.45rem;
+  }
+
+  .row-box-1 {
+    width: 100%;
+    margin-top: 30px;
+    .com-row {
+      width: 100%;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      gap: 20px;
+      .sort {
+        width: calc(50% - 20px);
+        span.tit {
+          display: block;
+          font-size: 1.6rem;
+          margin-bottom: 12px;
+        }
+        input[type="text"] {
+          width: calc(100% - 20px);
+          border-radius: 4px;
+          background: #fafafa;
+        }
+        input[type="text"]:read-only {
+          background: #e8e8e8;
+        }
+
+        // 주소박스
+        .add-sort {
+          justify-content: space-between;
+          input.add {
+            width: 72% !important;
+          }
+          .address-btn {
+            @include button(0 25px, #fff, var(--mainColor), 14px);
+            border: 1px solid var(--mainColor);
+            margin-top: 0px;
+            width: 130px;
+          }
+        }
+        //이메일박스
+        .email {
+          align-items: center;
+          span {
+            font-size: 1.6rem;
+            padding: 0 1rem;
+          }
+          input {
+            width: 30% !important;
+          }
+          input:disabled {
+            background: #fafafa !important;
+          }
+          select {
+            width: 30%;
+            margin-left: 1rem;
+            border-radius: 4px;
+          }
+        }
+        // 전화번호박스
+        .call {
+          gap: 10px;
+          input {
+            width: 35% !important;
+          }
+          input:first-child {
+            border-radius: 0px;
+            width: 25% !important;
+          }
+        }
+        // 참여인원수
+        .count {
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          height: 42px;
+          .box {
+            width: 23%;
+            margin-top: 10px;
+            justify-content: space-between;
+            align-items: center;
+            .two-tit {
+              width: 50%;
+              font-size: 1.5rem;
+              margin-right: 10px;
+            }
+            input {
+              width: 55%;
+              height: 35px;
+              display: inline-block;
+              border-radius: 3px;
+              font-size: 1.4rem;
+              padding: 0 0 0 10px;
+            }
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+              -webkit-appearance: inner-spin-button;
+              opacity: 1;
+            }
+            input[type="number"]::-webkit-inner-spin-button {
+              height: 35px;
+            }
+          }
+          .box:first-child {
+            width: 120px;
+            input {
+              width: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .line-title-2 {
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #d7d7d7;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-top: 10px;
+    margin: 50px 0 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 9.5%;
+      height: 4px;
+      top: -3px;
+      left: 0;
+      background: #272136;
+    }
+  }
+  .row-box-2 {
+    .sort {
+      width: calc(50% - 20px);
+      padding-bottom: 25px;
+      span.tit {
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+      .count {
+        flex-wrap: wrap;
+        .box {
+          width: calc(100% / 3 - 10px);
+          align-items: center;
+          margin-top: 20px;
+          margin-right: 10px;
+          .two-tit {
+            width: 40%;
+            font-size: 1.6rem;
+          }
+          .two-tit-2 {
+            width: 8%;
+            font-size: 1.6rem;
+          }
+          select {
+            width: 100%;
+            border-radius: 4px;
+          }
+          input {
+            width: 100%;
+            border-radius: 4px;
+          }
+          .add-sort {
+            width: 90.5% !important;
+            justify-content: space-between;
+            input.add {
+              width: 70% !important;
+            }
+            .address-btn {
+              @include button(0 25px, #fff, var(--mainColor), 14px);
+              border: 1px solid var(--mainColor);
+              margin-top: 0px;
+              width: 130px;
+            }
+          }
+        }
+      }
+    }
+    .sort:nth-child(2n-1) {
+      margin-right: 40px;
+    }
+  }
+  .btn-box {
+    margin: 3.5rem 0 0;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+}
+
+/* *****************************************
+ * 설명 : sub_9_신청조회_전화번호.html
+          sub_10_신청조회_이메일.html
+ ******************************************* */
+.inquire-box {
+  width: 55%;
+  max-width: 640px;
+  height: 150px;
+  border: 10px solid #fff3d0;
+  margin: 40px auto 0;
+  padding: 2rem;
+  .top-box {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .left {
+      width: 20%;
+    }
+    .right {
+      padding-left: 1rem;
+      width: 80%;
+      h3 {
+        font-size: 1.7rem;
+        font-family: "recipe", sans-serif;
+        margin-bottom: 1.5rem;
+      }
+      .list-box {
+        font-size: 1.4rem;
+        li {
+          position: relative;
+          line-height: 1.5;
+          text-indent: 15px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #4b4855;
+          }
+        }
+      }
+    }
+  }
+}
+.find-box {
+  max-width: 700px;
+  margin: 0 auto;
+  .tab-btn-box {
+    width: 100%;
+    margin: 20px 0;
+    gap: 30px;
+    .f-btn.on {
+      @include button(0 25px, #fff, var(--mainColor), 18px);
+      border: 2px solid var(--mainColor);
+      width: calc(50% - 15px);
+    }
+
+    .f-btn {
+      @include button(0 25px, #fff, #818181, 18px);
+      border: 1px solid #d7d7d7;
+      width: calc(50% - 15px);
+    }
+  }
+  .write-form {
+    height: auto;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    padding: 3rem;
+    .sort {
+      width: 100%;
+      margin-bottom: 20px;
+      span.tit {
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+      }
+      input[type="text"] {
+        width: 96%;
+        border-radius: 4px;
+      }
+      .call {
+        gap: 20px;
+        select {
+          width: 20%;
+        }
+        input[type="text"] {
+          width: 25%;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+  .find-btn-box {
+    margin: 30px 0 0;
+    .find-btn {
+      @include button(0 25px, var(--mainColor), #fff, 16px);
+      margin: 0 auto;
+    }
+  }
+  //이메일박스
+  .email {
+    align-items: center;
+    span {
+      font-size: 1.6rem;
+      padding: 0 1rem;
+    }
+    input {
+      width: 30% !important;
+    }
+    input:disabled {
+      background: #fafafa !important;
+    }
+    select {
+      width: 30%;
+      margin-left: 1rem;
+      border-radius: 4px;
+    }
+  }
+}
+
+/* *****************************************
+ * 설명 : sub_11_신청조회_확인페이지.html
+ ******************************************* */
+
+.inq-complete {
+  min-height: 580px;
+  .top-box {
+    width: 100%;
+    border: 10px solid #fff3d0;
+    margin: 40px auto 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    .tit-box {
+      align-items: center;
+      i {
+        color: var(--mainColor);
+        font-size: 2.5rem;
+      }
+      .tit {
+        font-family: "recipe", sans-serif;
+        font-size: 1.7rem;
+        margin-left: 10px;
+        padding-top: 8px;
+      }
+    }
+    ul {
+      margin-top: 20px;
+      li {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: #4b4855;
+      }
+    }
+  }
+  .t-comp {
+    @include table-layout(#32afdd, null, 15px);
+    text-align: center;
+    border-left: 1px solid #ced0d5;
+    margin-top: 30px;
+    th {
+      @include table-th(#ced0d5, 2rem, 1.4rem, #efefef);
+      line-height: 1.2;
+      word-break: keep-all;
+    }
+
+    td {
+      @include table-td(#ced0d5, 1.5rem, 1.4rem, #fff);
+      word-break: keep-all;
+      button {
+        @include button(0 10px, #fff, #ff4d4d, 14px);
+        border: 1px solid #ff4d4d;
+        width: 80px;
+        height: 35px;
+        line-height: 35px;
+        margin-right: 0;
+        display: inline-block;
+        margin-top: 0px;
+      }
+      &.approval {
+        color: #009733;
+      }
+      &.cancel {
+        color: #ff4d4d;
+      }
+    }
+  }
+  .bt-btn-box {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+/* ****************** 반응형 시작  ********************** */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+/* Wide Screen Desktop (해상도 1440px) */
+@media screen and (max-width: 1440px) {
+}
+/* Desktop (해상도 1280px) */
+@media screen and (max-width: 1280px) {
+}
+/* PC (해상도 800px ~ 1024px)*/
+@media screen and (max-width: 1024px) {
+}
+/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
+@media screen and (max-width: 830px) {
+}
+/* 테블릿 세로 (해상도 600px ~ 767px)*/
+@media screen and (max-width: 768px) {
+}
+/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
+@media screen and (max-width: 480px) {
+}
+/* 아이폰(해상도 375px 이하)*/
+@media screen and (max-width: 375px) {
+}
+/* 갤럭시 fold(해상도 280px 이하)*/
+@media screen and (max-width: 320px) {
+}
+/* 갤럭시 fold , flip */
+@media screen and (max-height: 586px) {
+}

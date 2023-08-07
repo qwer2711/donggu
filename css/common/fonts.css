@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Pretendard";
+  src: url(../../fonts/pretendard/Pretendard-Thin.woff);
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url(../../fonts/pretendard/Pretendard-Light.woff);
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url(../../fonts/pretendard/Pretendard-Regular.woff);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url(../../fonts/pretendard/Pretendard-Medium.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url(../../fonts/pretendard/Pretendard-Bold.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url(../../fonts/pretendard/Pretendard-SemiBold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url(../../fonts/pretendard/Pretendard-ExtraBold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "recipe";
+  src: url(../../fonts/recipeKorea/Recipekorea-레코체-FONT.woff);
+}
