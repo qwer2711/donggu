@@ -1430,8 +1430,7 @@
     text-align: center;
   }
   .line-tit h2 {
-    font-size: 2rem;
-    text-align: center;
+    display: none;
   }
   .program-area h3 {
     text-align: center;
