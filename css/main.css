@@ -329,8 +329,8 @@
 /* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
   .m-container {
-    padding: 3.5vh 0;
-    padding: calc(var(--vh, 1vh) * 3.5) 0;
+    padding: 2vh 0;
+    padding: calc(var(--vh, 1vh) * 2) 0;
   }
   .top-banner .banner .item {
     height: 350px;
@@ -359,35 +359,10 @@
     font-size: 1.5rem;
   }
   .top-banner .banner .slick-arrow {
-    bottom: auto;
-    top: 33.5vh;
-    top: calc(var(--vh, 1vh) * 33.5);
-    transform: translate(-50%, 0%);
-    background: transparent !important;
-  }
-  .top-banner .banner .slick-prev i,
-  .top-banner .banner .slick-next i {
-    color: var(--grayColor);
-  }
-  .top-banner .banner .slick-prev:hover,
-  .top-banner .banner .slick-next:hover {
-    background: transparent !important;
-  }
-  .top-banner .banner .slick-prev {
-    right: calc(100% - 40vw);
-  }
-  .top-banner .banner .slick-next {
-    right: calc(100% - 75vw);
+    display: none !important;
   }
   .top-banner .banner .slick-dots {
-    top: 35vh;
-    top: calc(var(--vh, 1vh) * 35);
-    left: 50%;
-    transform: translate(-50%, 0%);
-    width: auto;
-  }
-  .top-banner .banner .slick-dots li button {
-    background: #cfcfcf;
+    display: none !important;
   }
   .top-banner .banner .item .txt-box .btn-box {
     justify-content: center;
@@ -395,15 +370,37 @@
   .top-banner .banner .item .txt-box .btn-box .s-btn.join {
     background: var(--mainColor);
   }
+  .program-list .slick-arrow {
+    background: transparent;
+    padding: 15px;
+  }
+  .program-list .slick-prev:hover,
+  .program-list .slick-next:hover {
+    background: transparent;
+  }
   .program-list .slick-prev {
     left: -11vw;
   }
   .program-list .slick-next {
     right: -11vw;
   }
+  .program-list .slick-arrow i {
+    color: var(--grayColor);
+  }
   .main.btn-box {
-    margin: 20px 0 0;
+    margin: 20px 0 30px;
   }
 }
 /* 아이폰(해상도 375px 이하)*/
-/* 갤럭시 fold(해상도 280px 이하)*//*# sourceMappingURL=main.css.map */
+/* 갤럭시 fold(해상도 280px 이하)*/
+@media screen and (max-width: 320px) {
+  .top-banner .banner .item .txt-box {
+    padding: 2vh 3vw;
+  }
+  .top-banner .banner .item .txt-box p {
+    font-size: 2rem;
+  }
+  .top-banner .banner .slick-next {
+    right: calc(100% - 82vw);
+  }
+}/*# sourceMappingURL=main.css.map */
