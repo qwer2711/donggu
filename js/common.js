@@ -31,18 +31,12 @@ window.addEventListener("load", function () {
       '<a class="slick-next" href="#"><i class="fa-solid fa-chevron-right"></i></a>',
   });
 
-  let flag = "false";
-  $(".top-banner .pause-btn").on("click", function () {
-    if (flag == "false") {
-      $("#slider-div").slick("slickPlay");
-      $(".pause-btn i").attr("class", "fa-solid fa-pause");
-      flag = "true";
-    } else {
-      $("#slider-div").slick("slickPause");
-      $(".pause-btn i").attr("class", "fa-solid fa-play");
-      flag = "false";
-    }
-  });
+  // $(".top-banner .banner .slick-arrow").click(function () {
+  //   // const pageNumber = document.querySelector(".page-num");
+  //   const dots = document.querySelectorAll(".slick-dots");
+  //   const dotActive = $(".banner .slick-active");
+  //   alert(dotActive.length);
+  // });
 
   $("#programList").slick({
     autoplay: true,

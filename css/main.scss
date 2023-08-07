@@ -91,7 +91,7 @@
   z-index: 1000;
   width: 100%;
   height: var(--headerHeight);
-  background: var(--mainColor);
+  background: transparent;
 
   .title {
     width: 100%;
@@ -111,30 +111,13 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding-top: var(--headerHeight);
+  .page-num {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 1000;
+  }
 
-  //배너 자동슬라이드 중지
-  // .pause-btn {
-  //   position: absolute;
-  //   top: auto;
-  //   bottom: 3.2vh;
-  //   left: 34.5vh;
-  //   z-index: 1000;
-  //   width: 26px;
-  //   height: 26px;
-  //   text-align: center;
-  //   border-radius: 50%;
-  //   background: #fff;
-  //   i {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //     font-size: 1.3rem;
-  //     display: inline-block;
-  //     color: var(--blackColor);
-  //   }
-  // }
   .banner {
     position: relative;
     width: 100%;
@@ -142,7 +125,7 @@
     .item {
       position: relative;
       width: 100%;
-      height: 400px;
+      height: 480px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -165,19 +148,12 @@
           display: block;
           margin-top: 10px;
           color: var(--blackColor);
+
           i {
             display: inline-block;
             margin-right: 20px;
             font-size: 1.5rem;
             width: 10px;
-          }
-        }
-        .btn-box {
-          margin-top: 30px;
-          .s-btn.join {
-            border: 2px solid #fff;
-            @include button(12px 35px, transparent, #fff, 16px);
-            border-radius: 4px;
           }
         }
       }
@@ -191,35 +167,35 @@
       display: block;
       z-index: 50;
       font-size: 1.6rem;
-      background: #ffc000;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
+      background: #fff;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
       text-align: center;
+      box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+      i {
+        color: #818181;
+      }
+      &:hover {
+        i {
+          color: var(--blackColor);
+        }
+      }
     }
 
     .slick-prev {
-      right: 19vw;
+      right: 19.8vw;
       left: auto;
       border-top-left-radius: 45%;
       border-bottom-left-radius: 45%;
-      i {
-        color: #fff;
-      }
     }
     .slick-next {
       left: auto;
       right: 17vw;
       border-top-right-radius: 45%;
       border-bottom-right-radius: 45%;
-      i {
-        color: #fff;
-      }
     }
-    .slick-prev:hover,
-    .slick-next:hover {
-      background: var(--mainColor);
-    }
+
     /* 페이지버튼 */
     .slick-dots {
       position: absolute;
@@ -299,31 +275,35 @@
   /* 사이드 버튼 */
   .slick-arrow {
     position: absolute;
-    top: 50%;
+    top: -10%;
     transform: translateY(-50%);
-
     display: block;
     z-index: 50;
     font-size: 1.6rem;
-    background: #ffc000;
-    padding: 15px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
     i {
-      color: #fff;
+      color: #818181;
+    }
+    &:hover {
+      i {
+        color: var(--blackColor);
+      }
     }
   }
   .slick-prev {
-    left: -5vw;
-    right: auto;
+    left: auto;
+
     border-top-left-radius: 45%;
     border-bottom-left-radius: 45%;
   }
-  .slick-prev:hover,
-  .slick-next:hover {
-    background: var(--mainColor);
-  }
+
   .slick-next {
-    left: auto;
-    right: -5vw;
+    left: 2.2vw;
     border-top-right-radius: 45%;
     border-bottom-right-radius: 45%;
   }
@@ -336,6 +316,7 @@
   a {
     @include button(12px 35px, var(--mainColor), #fff, 16px);
     border-radius: 3px;
+    display: none;
   }
 }
 
@@ -383,12 +364,8 @@
   .shortcut-btn {
     display: none;
   }
-  .top-banner .banner .slick-arrow {
-    background: var(--mainColor) !important;
-  }
-  .top-banner .banner .slick-prev:hover,
-  .top-banner .banner .slick-next:hover {
-    background: var(--mainColor) !important;
+  .main.btn-box a {
+    display: block !important;
   }
 
   .top-banner .banner .slick-prev {
@@ -451,21 +428,14 @@
     background: var(--mainColor);
   }
   .program-list .slick-arrow {
-    background: transparent;
     padding: 15px;
   }
-  .program-list .slick-prev:hover,
-  .program-list .slick-next:hover {
-    background: transparent;
-  }
+
   .program-list .slick-prev {
     left: -11vw;
   }
   .program-list .slick-next {
     right: -11vw;
-  }
-  .program-list .slick-arrow i {
-    color: var(--grayColor);
   }
   .main.btn-box {
     margin: 20px 0 30px;
