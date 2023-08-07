@@ -170,15 +170,16 @@
       justify-content: center;
       .top-area {
         width: 100%;
-        height: 20%;
+        height: auto;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #d7d7d7;
+        padding-bottom: 1.5vh;
         .title {
           position: relative;
           width: 60%;
           font-size: 3.3rem;
-          margin-top: 1rem;
+          margin-top: 3vh;
           font-weight: 500;
           font-family: "recipe", Sans-serif;
           letter-spacing: -1px;
@@ -335,7 +336,7 @@
               .question-box {
                 position: absolute;
                 top: 25px;
-                left: 90%;
+                left: -100%;
                 width: 32vw;
                 padding: 1rem;
                 background: #fafafa;
@@ -346,6 +347,7 @@
                 font-size: 1.3rem;
                 text-indent: 0px;
                 display: none;
+                z-index: 1000;
               }
               .question-hover {
                 position: relative;
@@ -581,13 +583,15 @@
  ******************************************* */
 
 .write-nav {
-  margin-top: 40px;
+  width: 80%;
+  margin: 30px auto 0;
+  margin-top: 3vh;
   justify-content: space-between;
   align-items: center;
   .step {
     position: relative;
-    width: 250px;
-    height: 75px;
+    width: 15vw;
+    height: 7.5vh;
     border: 1px solid #d7d7d7;
     background: #efefef;
     border-radius: 40px;
@@ -595,7 +599,7 @@
       position: absolute;
       top: 50%;
       left: 5%;
-      width: 22%;
+      width: 55px;
       height: 55px;
       transform: translateY(-50%);
       .icon {
@@ -832,11 +836,12 @@
 }
 .precautions {
   padding: 2rem 3rem;
-  width: 100%;
+  width: calc(100% - 6rem);
   height: 90px;
   border: 1px solid var(--mainColor);
   border-radius: 5px;
   justify-content: center;
+  word-break: keep-all;
   .tit {
     color: var(--mainColor);
     font-size: 1.8rem;
@@ -863,16 +868,16 @@
     border-top: 1px solid #d7d7d7;
     font-size: 1.6rem;
     font-weight: 500;
-    padding-top: 10px;
-    margin: 50px 0 30px;
+    padding-top: 12px;
+    margin: 6vh 0 3vh;
     &::before {
       content: "";
       position: absolute;
       width: 8.5%;
       height: 4px;
-      top: -3px;
+      top: -5px;
       left: 0;
-      background: #272136;
+      background: var(--mainColor);
     }
   }
   select {
@@ -933,7 +938,7 @@
             width: 72% !important;
           }
           .address-btn {
-            @include button(0 25px, #fff, var(--mainColor), 14px);
+            @include button(0 0, #fff, var(--mainColor), 14px);
             border: 1px solid var(--mainColor);
             margin-top: 0px;
             width: 130px;
@@ -1017,18 +1022,19 @@
     position: relative;
     width: 100%;
     border-top: 1px solid #d7d7d7;
+    border-top: 1px solid #d7d7d7;
     font-size: 1.6rem;
     font-weight: 500;
-    padding-top: 10px;
+    padding-top: 12px;
     margin: 50px 0 30px;
     &::before {
       content: "";
       position: absolute;
-      width: 9.5%;
+      width: 10%;
       height: 4px;
-      top: -3px;
+      top: -5px;
       left: 0;
-      background: #272136;
+      background: var(--mainColor);
     }
   }
   .row-box-2 {
@@ -1071,7 +1077,7 @@
               width: 70% !important;
             }
             .address-btn {
-              @include button(0 25px, #fff, var(--mainColor), 14px);
+              @include button(0 0, #fff, var(--mainColor), 14px);
               border: 1px solid var(--mainColor);
               margin-top: 0px;
               width: 130px;
@@ -1300,6 +1306,9 @@
 }
 /* Wide Screen Desktop (해상도 1440px) */
 @media screen and (max-width: 1440px) {
+  .write-nav .step {
+    width: 18vw;
+  }
 }
 /* Desktop (해상도 1280px) */
 @media screen and (max-width: 1280px) {
@@ -1313,6 +1322,10 @@
   .poster-area .p-box .poster-txt .info-area.web-view .left-side {
     width: 23%;
   }
+  // 프로그램 입력전
+  .write-nav .step {
+    width: 22vw;
+  }
 }
 /* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
 @media screen and (max-width: 830px) {
@@ -1324,8 +1337,8 @@
   }
 
   .s-container .cont {
-    width: calc(100% - 4vw);
-    margin: 5vh 2vw;
+    width: calc(100% - 8vw);
+    margin: 5vh 4vw;
   }
   .line-tit {
     border-bottom: 0px solid #d7d7d7;
@@ -1349,6 +1362,7 @@
   }
   .poster-area .p-box .poster-txt {
     width: 90%;
+    justify-content: space-evenly;
   }
   .poster-area .p-box .poster-txt .top-area .title {
     font-size: 3rem;
@@ -1362,6 +1376,81 @@
   .poster-area .p-box .poster-txt .item-area {
     align-items: end;
     justify-content: space-between;
+  }
+
+  // 프로그램 입력전
+  .write-nav {
+    width: 100%;
+    margin: 3vh auto 3vh;
+    margin-top: 3vh;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .write-nav .step {
+    width: 28vw;
+    height: 8vh;
+  }
+
+  .write-area .row-box-1 .com-row .sort {
+    width: 100%;
+    margin-top: 1.8vh;
+  }
+  .write-area .row-box-1 .com-row {
+    gap: 0px;
+    flex-flow: wrap;
+    margin-bottom: 0;
+  }
+  .write-area .row-box-2 .sort {
+    width: 100%;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  .write-area .row-box-2 .sort:last-child {
+    border-bottom: 0px solid #d7d7d7;
+  }
+  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
+    width: 22vw;
+  }
+
+  .write-area .btn-box {
+    margin: 0 0 0;
+  }
+  .write-area .line-title::before,
+  .write-area .line-title-2::before {
+    width: 22%;
+  }
+  .write-area .row-box-1 .com-row .sort .count {
+    height: auto;
+    flex-flow: wrap;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box input {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box:first-child {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box:first-child input {
+    width: 100%;
+  }
+  .write-area .row-box-2 .sort .count .box {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .write-area .row-box-2 .sort .count .box .add-sort {
+    width: 100% !important;
+    justify-content: space-between;
+  }
+
+  .write-area .row-box-2 .sort .count .box .two-tit {
+    width: 10%;
+    font-size: 1.6rem;
+  }
+  .write-area .row-box-2 .sort .count .box .two-tit-2 {
+    width: 10%;
   }
 }
 /* 테블릿 세로 (해상도 600px ~ 767px)*/
@@ -1393,6 +1482,9 @@
   .poster-area .p-box .poster-txt .info-area .left-side {
     width: 27%;
   }
+  .poster-area .p-box .poster-txt .info-area .right-side {
+    width: 76%;
+  }
   .poster-area .p-box .poster-txt .info-area .left-side li,
   .poster-area .p-box .poster-txt .info-area .right-side li {
     font-size: 1.3rem;
@@ -1409,6 +1501,56 @@
     span.dot:last-child {
     margin-left: 0px;
   }
+
+  //프로그램 입력전
+  .write-nav {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  .write-nav .step {
+    width: 100%;
+    height: 6vh;
+  }
+  .write-nav .step .l-icon {
+    display: none;
+  }
+  .write-nav .step .r-txt {
+    left: 0%;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .write-nav .step .r-txt,
+  .write-nav .step .r-txt span.txt {
+    font-size: 1.4rem;
+  }
+  .write-nav .arrow {
+    transform: rotate(90deg);
+  }
+  .check-area .chk-area {
+    font-size: 1.3rem;
+  }
+  .write-area .row-box-1 {
+    margin-top: 0px;
+  }
+  .precautions {
+    padding: 2rem 2rem;
+  }
+  .precautions .tit {
+    font-size: 1.5rem;
+  }
+  .precautions .txt {
+    font-size: 1.4rem;
+  }
+  .write-area .line-title {
+    margin: 4vh 0 1vh;
+  }
+
+  .write-area .line-title-2 {
+    margin: 4vh 0 3vh;
+  }
+  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
+    width: 27vw;
+  }
 }
 /* 아이폰(해상도 375px 이하)*/
 @media screen and (max-width: 375px) {
@@ -1417,7 +1559,7 @@
     margin: 5vh 4vw;
   }
   .poster-area {
-    height: 62vh;
+    height: 55vh;
   }
   .poster-area .p-box .poster-txt .top-area .title {
     font-size: 2.5rem;
@@ -1434,13 +1576,13 @@
     font-size: 1.3rem;
   }
   .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 34%;
+    width: 37vw;
   }
   .poster-area .p-box .poster-txt .info-area .right-side li span.red {
     width: 100%;
   }
   .poster-area .p-box .poster-txt .item-area {
-    height: 37%;
+    height: 16vh;
 
     justify-content: start;
     flex-flow: wrap;
@@ -1456,9 +1598,18 @@
     text-indent: 15px;
     line-height: 1.3;
   }
+
+  // 프로그램 입력전
+  .write-nav .step .r-txt,
+  .write-nav .step .r-txt span.txt {
+    font-size: 1.2rem;
+  }
 }
 /* 갤럭시 fold(해상도 280px 이하)*/
 @media screen and (max-width: 320px) {
+  .precautions {
+    padding: 4rem 2rem;
+  }
 }
 /* 갤럭시 fold , flip */
 @media screen and (max-height: 586px) {
