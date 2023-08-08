@@ -259,6 +259,9 @@
   margin-top: 0px;
   border-top: 1px solid #ced0d5;
 }
+.poster-area .p-box .poster-txt .info-area .t-info .wait {
+  color: red;
+}
 .poster-area .p-box .poster-txt .info-area .t-info th {
   border-bottom: 1px solid #ced0d5;
   border-right: 1px solid #ced0d5;
@@ -284,6 +287,34 @@
 .poster-area .p-box .poster-txt .info-area .t-info td .dot {
   width: 100%;
   display: inline-block;
+}
+.poster-area .p-box .poster-txt .info-area .t-info td .question-box {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 32vw;
+  padding: 1rem;
+  background: #fafafa;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  color: #818181;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  text-indent: 0px;
+  display: none;
+  z-index: 1000;
+}
+.poster-area .p-box .poster-txt .info-area .t-info td .question-hover {
+  position: relative;
+  display: inline-block;
+  text-indent: 0px;
+}
+.poster-area .p-box .poster-txt .info-area .t-info td .question-hover .fa-circle-question {
+  color: #bebebe;
+  text-indent: 5px;
+}
+.poster-area .p-box .poster-txt .info-area .t-info td .question-hover:hover .question-box {
+  display: block;
 }
 .poster-area .p-box .poster-txt .item-area {
   width: 100%;
@@ -1227,6 +1258,152 @@
   padding-top: 2rem;
 }
 
+/* Wide Screen Desktop (해상도 1440px) */
+@media screen and (max-width: 1440px) {
+  .write-nav .step {
+    width: 18vw;
+  }
+}
+/* PC (해상도 800px ~ 1024px)*/
+@media screen and (max-width: 1024px) {
+  .write-nav .step {
+    width: 22vw;
+  }
+}
+/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
+@media screen and (max-width: 830px) {
+  .mobile-view {
+    display: block !important;
+  }
+  .web-view {
+    display: none !important;
+  }
+  .write-nav {
+    width: 100%;
+    margin: 3vh auto 3vh;
+    margin-top: 3vh;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .write-nav .step {
+    width: 28vw;
+    height: 8vh;
+  }
+  .write-area .row-box-1 .com-row .sort {
+    width: 100%;
+    margin-top: 1.8vh;
+  }
+  .write-area .row-box-1 .com-row {
+    gap: 0px;
+    flex-flow: wrap;
+    margin-bottom: 0;
+  }
+  .write-area .row-box-2 .sort {
+    width: 100%;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  .write-area .row-box-2 .sort:last-child {
+    border-bottom: 0px solid #d7d7d7;
+  }
+  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
+    width: 22vw;
+  }
+  .write-area .btn-box {
+    margin: 0 0 0;
+  }
+  .write-area .line-title::before,
+  .write-area .line-title-2::before {
+    width: 22%;
+  }
+  .write-area .row-box-1 .com-row .sort .count {
+    height: auto;
+    flex-flow: wrap;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box input {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box:first-child {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box:first-child input {
+    width: 100%;
+  }
+  .write-area .row-box-2 .sort .count .box {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .write-area .row-box-2 .sort .count .box .add-sort {
+    width: 100% !important;
+    justify-content: space-between;
+  }
+  .write-area .row-box-2 .sort .count .box .two-tit {
+    width: 10%;
+  }
+  .write-area .row-box-2 .sort .count .box .two-tit-2 {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .write-nav {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  .write-nav .step {
+    width: 100%;
+    height: 6vh;
+  }
+  .write-nav .step .l-icon {
+    display: none;
+  }
+  .write-nav .step .r-txt {
+    left: 0%;
+    width: 100%;
+  }
+  .write-nav .arrow {
+    transform: rotate(90deg);
+  }
+}
+/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
+@media screen and (max-width: 480px) {
+  .write-nav {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  .write-nav .step {
+    width: 100%;
+    height: 6vh;
+  }
+  .write-nav .step .l-icon {
+    display: none;
+  }
+  .write-nav .step .r-txt {
+    left: 0%;
+    width: 100%;
+  }
+  .write-nav .arrow {
+    transform: rotate(90deg);
+  }
+  .write-area .row-box-1 {
+    margin-top: 0px;
+  }
+  .precautions {
+    padding: 2rem 2rem;
+  }
+  .write-area .line-title {
+    margin: 4vh 0 1vh;
+  }
+  .write-area .line-title-2 {
+    margin: 4vh 0 3vh;
+  }
+  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
+    width: 27vw;
+  }
+}
 /* *****************************************
  * 설명 : sub_9_신청조회_전화번호.html
           sub_10_신청조회_이메일.html
@@ -1480,6 +1657,4 @@
 }
 .inq-complete .bt-btn-box a {
   display: inline-block;
-}
-
-/* ****************** 반응형 시작  ********************** *//*# sourceMappingURL=sub.css.map */
+}/*# sourceMappingURL=sub.css.map */

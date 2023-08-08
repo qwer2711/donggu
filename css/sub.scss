@@ -303,6 +303,9 @@
           border-left: 1px solid #ced0d5;
           margin-top: 0px;
           border-top: 1px solid #ced0d5;
+          .wait {
+            color: red;
+          }
           th {
             @include table-th(#ced0d5, 1rem, var(--w-fz10), #efefef);
             line-height: 1.2;
@@ -316,6 +319,36 @@
             .dot {
               width: 100%;
               display: inline-block;
+            }
+            .question-box {
+              position: absolute;
+              top: 25px;
+              left: 0;
+              width: 32vw;
+              padding: 1rem;
+              background: #fafafa;
+              border: 1px solid #d7d7d7;
+              border-radius: 3px;
+              color: #818181;
+              line-height: 1.6;
+              font-size: 1.3rem;
+              text-indent: 0px;
+              display: none;
+              z-index: 1000;
+            }
+            .question-hover {
+              position: relative;
+              display: inline-block;
+              text-indent: 0px;
+              .fa-circle-question {
+                color: #bebebe;
+                text-indent: 5px;
+              }
+              &:hover {
+                .question-box {
+                  display: block;
+                }
+              }
             }
           }
         }
@@ -1226,6 +1259,166 @@
   }
 }
 
+/* Wide Screen Desktop (해상도 1440px) */
+@media screen and (max-width: 1440px) {
+  // 프로그램 상세
+  .write-nav .step {
+    width: 18vw;
+  }
+}
+/* PC (해상도 800px ~ 1024px)*/
+@media screen and (max-width: 1024px) {
+  // 프로그램 입력전
+  .write-nav .step {
+    width: 22vw;
+  }
+}
+/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
+@media screen and (max-width: 830px) {
+  .mobile-view {
+    display: block !important;
+  }
+  .web-view {
+    display: none !important;
+  }
+
+  // 프로그램 입력전
+  .write-nav {
+    width: 100%;
+    margin: 3vh auto 3vh;
+    margin-top: 3vh;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .write-nav .step {
+    width: 28vw;
+    height: 8vh;
+  }
+
+  .write-area .row-box-1 .com-row .sort {
+    width: 100%;
+    margin-top: 1.8vh;
+  }
+  .write-area .row-box-1 .com-row {
+    gap: 0px;
+    flex-flow: wrap;
+    margin-bottom: 0;
+  }
+  .write-area .row-box-2 .sort {
+    width: 100%;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+  .write-area .row-box-2 .sort:last-child {
+    border-bottom: 0px solid #d7d7d7;
+  }
+  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
+    width: 22vw;
+  }
+
+  .write-area .btn-box {
+    margin: 0 0 0;
+  }
+  .write-area .line-title::before,
+  .write-area .line-title-2::before {
+    width: 22%;
+  }
+  .write-area .row-box-1 .com-row .sort .count {
+    height: auto;
+    flex-flow: wrap;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box input {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box:first-child {
+    width: 100%;
+  }
+  .write-area .row-box-1 .com-row .sort .count .box:first-child input {
+    width: 100%;
+  }
+  .write-area .row-box-2 .sort .count .box {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .write-area .row-box-2 .sort .count .box .add-sort {
+    width: 100% !important;
+    justify-content: space-between;
+  }
+  .write-area .row-box-2 .sort .count .box .two-tit {
+    width: 10%;
+  }
+  .write-area .row-box-2 .sort .count .box .two-tit-2 {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .write-nav {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  .write-nav .step {
+    width: 100%;
+    height: 6vh;
+  }
+  .write-nav .step .l-icon {
+    display: none;
+  }
+  .write-nav .step .r-txt {
+    left: 0%;
+    width: 100%;
+  }
+
+  .write-nav .arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
+@media screen and (max-width: 480px) {
+  //프로그램 입력전
+  .write-nav {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  .write-nav .step {
+    width: 100%;
+    height: 6vh;
+  }
+  .write-nav .step .l-icon {
+    display: none;
+  }
+  .write-nav .step .r-txt {
+    left: 0%;
+    width: 100%;
+  }
+
+  .write-nav .arrow {
+    transform: rotate(90deg);
+  }
+
+  .write-area .row-box-1 {
+    margin-top: 0px;
+  }
+  .precautions {
+    padding: 2rem 2rem;
+  }
+
+  .write-area .line-title {
+    margin: 4vh 0 1vh;
+  }
+
+  .write-area .line-title-2 {
+    margin: 4vh 0 3vh;
+  }
+  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
+    width: 27vw;
+  }
+}
+
 /* *****************************************
  * 설명 : sub_9_신청조회_전화번호.html
           sub_10_신청조회_이메일.html
@@ -1425,280 +1618,3 @@
     }
   }
 }
-
-/* ****************** 반응형 시작  ********************** */
-
-// @media (prefers-reduced-motion: reduce) {
-//   html {
-//     scroll-behavior: smooth;
-//   }
-// }
-// /* Wide Screen Desktop (해상도 1440px) */
-// @media screen and (max-width: 1440px) {
-//   // 프로그램 상세
-
-//   .write-nav .step {
-//     width: 18vw;
-//   }
-// }
-// /* Desktop (해상도 1280px) */
-// @media screen and (max-width: 1280px) {
-//   // 프로그램 상세
-//   .s-container .cont {
-//     width: calc(100% - 5vw);
-//     padding: 0 2.5vw;
-//   }
-//   .poster-area .p-box .poster-txt .info-area .info-list ul li span.dot {
-//     text-indent: 1vw;
-//   }
-// }
-// /* PC (해상도 800px ~ 1024px)*/
-// @media screen and (max-width: 1024px) {
-//   .poster-area .p-box .poster-txt {
-//     width: 60%;
-//   }
-//   .poster-area .p-box .poster-txt .info-area .info-list .list {
-//     padding: 0.5vh 0;
-//     padding: calc(var(--vh, 1vh) * 0.5) 0;
-//   }
-//   .poster-area .p-box .poster-txt .info-area .info-list ul li span.tit i {
-//     width: 3vw;
-//   }
-
-//   // 프로그램 입력전
-//   .write-nav .step {
-//     width: 22vw;
-//   }
-// }
-// /* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
-// @media screen and (max-width: 830px) {
-//   .mobile-view {
-//     display: block !important;
-//   }
-//   .web-view {
-//     display: none !important;
-//   }
-
-//   .s-container .cont {
-//     width: calc(100% - 6vw);
-//     padding: 0 3vw;
-//     margin: 3vh auto;
-//   }
-
-//   .line-tit {
-//     border-bottom: 0px solid #d7d7d7;
-//     text-align: center;
-//     display: none;
-//   }
-
-//   .poster-area {
-//     min-height: calc(var(--vh, 1vh) * 53);
-//     margin-top: 0px;
-//     background-image: none;
-//     border: 1px solid #d7d7d7;
-//     border-radius: 5px;
-//   }
-//   .poster-area .p-box {
-//     height: calc(100% - 6vh);
-//     padding: 3vh 0;
-//   }
-//   .poster-area .p-box .poter-img {
-//     display: none;
-//   }
-//   .poster-area .p-box .poster-txt {
-//     width: 90%;
-//   }
-
-//   .poster-area .p-box .poster-txt .question-hover {
-//     display: none !important;
-//   }
-//   .poster-area .p-box .poster-txt .item-area {
-//     align-items: end;
-//     justify-content: space-between;
-//   }
-
-//   // 프로그램 입력전
-//   .write-nav {
-//     width: 100%;
-//     margin: 3vh auto 3vh;
-//     margin-top: 3vh;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-//   .write-nav .step {
-//     width: 28vw;
-//     height: 8vh;
-//   }
-
-//   .write-area .row-box-1 .com-row .sort {
-//     width: 100%;
-//     margin-top: 1.8vh;
-//   }
-//   .write-area .row-box-1 .com-row {
-//     gap: 0px;
-//     flex-flow: wrap;
-//     margin-bottom: 0;
-//   }
-//   .write-area .row-box-2 .sort {
-//     width: 100%;
-//     border-bottom: 1px solid #d7d7d7;
-//     padding-bottom: 25px;
-//     padding-top: 25px;
-//   }
-//   .write-area .row-box-2 .sort:last-child {
-//     border-bottom: 0px solid #d7d7d7;
-//   }
-//   .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
-//     width: 22vw;
-//   }
-
-//   .write-area .btn-box {
-//     margin: 0 0 0;
-//   }
-//   .write-area .line-title::before,
-//   .write-area .line-title-2::before {
-//     width: 22%;
-//   }
-//   .write-area .row-box-1 .com-row .sort .count {
-//     height: auto;
-//     flex-flow: wrap;
-//   }
-//   .write-area .row-box-1 .com-row .sort .count .box {
-//     width: 100%;
-//   }
-//   .write-area .row-box-1 .com-row .sort .count .box input {
-//     width: 100%;
-//   }
-//   .write-area .row-box-1 .com-row .sort .count .box:first-child {
-//     width: 100%;
-//   }
-//   .write-area .row-box-1 .com-row .sort .count .box:first-child input {
-//     width: 100%;
-//   }
-//   .write-area .row-box-2 .sort .count .box {
-//     width: 100%;
-//     margin-right: 0px;
-//   }
-//   .write-area .row-box-2 .sort .count .box .add-sort {
-//     width: 100% !important;
-//     justify-content: space-between;
-//   }
-
-//   .write-area .row-box-2 .sort .count .box .two-tit-2 {
-//     width: 10%;
-//   }
-// }
-// /* 테블릿 세로 (해상도 600px ~ 767px)*/
-// @media screen and (max-width: 768px) {
-// }
-// /* 보완 */
-// @media screen and (max-width: 598px) {
-//   .poster-area .p-box .poster-txt .top-area {
-//     flex-direction: column;
-//     justify-content: center;
-//     text-align: center;
-//   }
-//   .poster-area .p-box .poster-txt .top-area .join-btn span {
-//     display: none;
-//   }
-//   .poster-area .p-box .poster-txt .top-area {
-//     padding-bottom: 2vh;
-//   }
-//   .poster-area .p-box .poster-txt .top-area .title {
-//     font-size: var(--m-fz40);
-//     width: 100%;
-//     margin-top: 0vh;
-//   }
-
-//   .poster-area .p-box .poster-txt .top-area .title::before {
-//     display: none;
-//   }
-//   .poster-area .p-box .poster-txt .info-area {
-//     font-size: var(--m-fz20);
-//   }
-// }
-// /* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
-// @media screen and (max-width: 480px) {
-//   .program-area h3 {
-//     text-align: center;
-//   }
-//   .poster-area {
-//     min-height: calc(var(--vh, 1vh) * 45);
-//   }
-//   .poster-area .p-box .poster-txt .info-area {
-//     font-size: var(--m-fz10);
-//   }
-
-//   //프로그램 입력전
-//   .write-nav {
-//     flex-flow: wrap;
-//     justify-content: center;
-//   }
-//   .write-nav .step {
-//     width: 100%;
-//     height: 6vh;
-//   }
-//   .write-nav .step .l-icon {
-//     display: none;
-//   }
-//   .write-nav .step .r-txt {
-//     left: 0%;
-//     width: 100%;
-//   }
-
-//   .write-nav .arrow {
-//     transform: rotate(90deg);
-//   }
-
-//   .write-area .row-box-1 {
-//     margin-top: 0px;
-//   }
-//   .precautions {
-//     padding: 2rem 2rem;
-//   }
-
-//   .write-area .line-title {
-//     margin: 4vh 0 1vh;
-//   }
-
-//   .write-area .line-title-2 {
-//     margin: 4vh 0 3vh;
-//   }
-//   .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
-//     width: 27vw;
-//   }
-// }
-// /* 아이폰(해상도 375px 이하)*/
-// @media screen and (max-width: 375px) {
-//   .poster-area {
-//     height: 55vh;
-//   }
-//   .poster-area .p-box .poster-txt .top-area .title {
-//     font-size: var(--m-fz30);
-//   }
-
-//   .poster-area .p-box .poster-txt .item-area {
-//     height: 16vh;
-
-//     justify-content: start;
-//     flex-flow: wrap;
-//     gap: 10px;
-//   }
-//   .poster-area .p-box .poster-txt .item-area div {
-//     width: 25%;
-//   }
-
-//   .program-area .guide div {
-//     text-indent: 15px;
-//     line-height: 1.3;
-//   }
-// }
-// /* 갤럭시 fold(해상도 280px 이하)*/
-// @media screen and (max-width: 320px) {
-//   .precautions {
-//     padding: 4rem 2rem;
-//   }
-// }
-// /* 갤럭시 fold , flip */
-// @media screen and (max-height: 586px) {
-// }
