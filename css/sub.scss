@@ -152,7 +152,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: calc(var(--vh, 1vh) * 56);
+  min-height: calc(var(--vh, 1vh) * 65);
   margin-top: 40px;
   background-image: url(../images/sub/poster_box.png);
   background-position: center;
@@ -183,7 +183,6 @@
         padding-bottom: 1vh;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #d7d7d7;
         .title {
           position: relative;
           width: 56.5vw;
@@ -292,91 +291,18 @@
         align-items: center;
         color: #4b4855;
         font-size: var(--w-fz10);
-        .info-list {
-          width: 100%;
-          .list {
-            width: 100%;
-            padding: 1vh 0;
-            padding: calc(var(--vh, 1vh) * 1) 0;
-            span {
-              display: inline-block;
-              padding: 0.8vh 0;
-              padding: calc(var(--vh, 1vh) * 0.8) 0;
-              margin-right: 1vw;
-            }
-            span.dot {
-              position: relative;
-              text-indent: 1vw;
-              &::before {
-                content: "";
-                position: absolute;
-                top: 45%;
-                left: 0;
-                transform: translateY(-50%);
-                width: 5px;
-                height: 5px;
-                background: #ffb800;
-                border-radius: 50%;
-              }
-            }
-            span.dot.red {
-              color: red;
-              margin-right: 0.2vw;
-            }
 
-            .question-hover {
-              position: relative;
-              display: inline-block;
-              text-indent: 0px;
-              .fa-circle-question {
-                color: #bebebe;
-                text-indent: 5px;
-              }
-              &:hover {
-                .question-box {
-                  display: block;
-                }
-              }
-            }
-            .question-box {
-              position: absolute;
-              top: 20px;
-              left: -0%;
-              width: 17vw;
-              padding: 1rem;
-              background: #fafafa;
-              border: 1px solid #d7d7d7;
-              border-radius: 3px;
-              color: #818181;
-              line-height: 1.6;
-              font-size: 1.3rem;
-              text-indent: 0px;
-              display: none;
-              z-index: 1000;
-            }
-
-            .r-line {
-              border-right: 1px solid #d7d7d7;
-              margin: 0 2vw;
-            }
-            .fl-area {
-              width: auto;
-            }
-            span.tit {
-              width: 130px;
-              i {
-                color: #818181;
-                display: inline-block;
-                width: 25px;
-              }
-            }
-          }
-        }
-        .t-info.mobile-view {
-          @include table-layout(#32afdd, null, 15px);
+        // .m-poter-img {
+        //   text-align: center;
+        //   width: 50%;
+        //   padding: 2vh 0;
+        // }
+        .t-info {
+          @include table-layout(#ced0d5, null, 15px);
           text-align: center;
           border-left: 1px solid #ced0d5;
           margin-top: 0px;
+          border-top: 1px solid #ced0d5;
           th {
             @include table-th(#ced0d5, 1rem, var(--w-fz10), #efefef);
             line-height: 1.2;
@@ -539,6 +465,7 @@
   }
 
   .poster-area {
+    min-height: calc(var(--vh, 1vh) * 62);
     margin-top: 0px;
     background-image: none;
     border: 1px solid #d7d7d7;
@@ -637,8 +564,15 @@
 }
 /* 아이폰(해상도 375px 이하)*/
 @media screen and (max-width: 375px) {
+  .poster-area {
+    min-height: calc(var(--vh, 1vh) * 60);
+  }
   .poster-area .p-box .poster-txt .top-area .title {
     font-size: var(--m-fz30);
+  }
+  .poster-area .p-box .poster-txt .info-area .t-info th,
+  .poster-area .p-box .poster-txt .info-area .t-info td {
+    font-size: var(--w-fz5);
   }
   .poster-area .p-box .poster-txt .info-area .info-list .list span.tit {
     width: 180px;
