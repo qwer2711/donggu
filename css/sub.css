@@ -53,6 +53,12 @@
   margin: calc(var(--vh, 1vh) * 5) auto;
 }
 
+@media screen and (max-width: 1280px) {
+  .s-container .cont {
+    width: calc(100% - 5vw);
+    padding: 0 2.5vw;
+  }
+}
 .line-tit {
   border-bottom: 1px solid #d7d7d7;
   text-align: center;
@@ -105,7 +111,8 @@
 .poster-area {
   position: relative;
   width: 100%;
-  height: 58vh;
+  height: auto;
+  min-height: calc(var(--vh, 1vh) * 58);
   margin-top: 40px;
   background-image: url(../images/sub/poster_box.png);
   background-position: center;
@@ -239,109 +246,90 @@
 }
 .poster-area .p-box .poster-txt .info-area {
   width: 100%;
-  height: 28vh;
+  height: auto;
   align-items: center;
   color: #4b4855;
   font-size: var(--w-fz10);
 }
-.poster-area .p-box .poster-txt .info-area .left-side {
-  width: 8vw;
-  font-weight: 400;
+.poster-area .p-box .poster-txt .info-area .info-list {
+  width: 100%;
 }
-.poster-area .p-box .poster-txt .info-area .left-side li span {
-  width: 20px;
-  display: block;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
+.poster-area .p-box .poster-txt .info-area .info-list .list {
+  width: 100%;
+  padding: 1vh 0;
+  padding: calc(var(--vh, 1vh) * 1) 0;
 }
-.poster-area .p-box .poster-txt .info-area .left-side li span i {
-  color: #818181;
+.poster-area .p-box .poster-txt .info-area .info-list .list span {
+  display: inline-block;
+  padding: 0.8vh 0;
+  padding: calc(var(--vh, 1vh) * 0.8) 0;
+  margin-right: 1vw;
 }
-.poster-area .p-box .poster-txt .info-area .right-side {
-  width: auto;
-  font-weight: 400;
-}
-.poster-area .p-box .poster-txt .info-area .right-side li {
-  height: 20px;
-  padding-left: 3rem;
-  border-left: 1px solid #d7d7d7;
-}
-.poster-area .p-box .poster-txt .info-area .right-side li span {
+.poster-area .p-box .poster-txt .info-area .info-list .list span.dot {
   position: relative;
+  text-indent: 1vw;
 }
-.poster-area .p-box .poster-txt .info-area .right-side li span:first-child {
-  display: block;
-}
-.poster-area .p-box .poster-txt .info-area .right-side li span.dot {
-  text-indent: 12px;
-}
-.poster-area .p-box .poster-txt .info-area .right-side li span.dot::before {
+.poster-area .p-box .poster-txt .info-area .info-list .list span.dot::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0;
   transform: translateY(-50%);
   width: 5px;
   height: 5px;
-  border-radius: 50%;
   background: #ffb800;
+  border-radius: 50%;
 }
-.poster-area .p-box .poster-txt .info-area .right-side li span.dot:last-child {
-  margin-left: 1vw;
-}
-.poster-area .p-box .poster-txt .info-area .right-side li span.red {
-  position: relative;
+.poster-area .p-box .poster-txt .info-area .info-list .list span.dot.red {
   color: red;
-  align-items: center;
+  margin-right: 0.2vw;
 }
-.poster-area .p-box .poster-txt .info-area .right-side li span.red .question-box {
+.poster-area .p-box .poster-txt .info-area .info-list .list .question-hover {
+  position: relative;
+  display: inline-block;
+  text-indent: 0px;
+}
+.poster-area .p-box .poster-txt .info-area .info-list .list .question-hover .fa-circle-question {
+  color: #bebebe;
+  text-indent: 5px;
+}
+.poster-area .p-box .poster-txt .info-area .info-list .list .question-hover:hover .question-box {
+  display: block;
+}
+.poster-area .p-box .poster-txt .info-area .info-list .list .question-box {
   position: absolute;
-  top: 25px;
-  left: -100%;
-  width: 32vw;
+  top: 20px;
+  left: 0%;
+  width: 17vw;
   padding: 1rem;
   background: #fafafa;
   border: 1px solid #d7d7d7;
   border-radius: 3px;
   color: #818181;
   line-height: 1.6;
-  font-size: var(--w-fz5);
+  font-size: 1.3rem;
   text-indent: 0px;
   display: none;
   z-index: 1000;
 }
-.poster-area .p-box .poster-txt .info-area .right-side li span.red .question-hover {
-  position: relative;
+.poster-area .p-box .poster-txt .info-area .info-list .list .r-line {
+  border-right: 1px solid #d7d7d7;
+  margin: 0 2vw;
+}
+.poster-area .p-box .poster-txt .info-area .info-list .list .fl-area {
+  width: auto;
+}
+.poster-area .p-box .poster-txt .info-area .info-list .list span.tit {
+  width: 130px;
+}
+.poster-area .p-box .poster-txt .info-area .info-list .list span.tit i {
+  color: #818181;
   display: inline-block;
-  text-indent: 0px;
-}
-.poster-area .p-box .poster-txt .info-area .right-side li span.red .question-hover .fa-circle-question {
-  color: #bebebe;
-  text-indent: 5px;
-}
-.poster-area .p-box .poster-txt .info-area .right-side li span.red:hover .question-box {
-  display: block;
-}
-.poster-area .p-box .poster-txt .info-area .left-side li,
-.poster-area .p-box .poster-txt .info-area .right-side li {
-  display: block;
-  width: 100%;
-  height: 30px;
-  margin: 2vh 0;
-  line-height: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.poster-area .p-box .poster-txt .info-area .left-side li span,
-.poster-area .p-box .poster-txt .info-area .right-side li span {
-  display: block;
-  margin-right: 10px;
+  width: 25px;
 }
 .poster-area .p-box .poster-txt .item-area {
   width: 100%;
-  height: 20%;
+  height: auto;
   align-items: end;
 }
 .poster-area .p-box .poster-txt .item-area div {
@@ -382,7 +370,7 @@
   border-bottom: 1px solid #ced0d5;
   border-right: 1px solid #ced0d5;
   padding: 2rem;
-  font-size: 1.6rem;
+  font-size: var(--w-fz10);
   background: #efefef;
   vertical-align: middle;
   font-weight: 400;
@@ -410,7 +398,7 @@
   border-bottom: 1px solid #ced0d5;
   border-right: 1px solid #ced0d5;
   padding: 2rem;
-  font-size: 1.6rem;
+  font-size: var(--w-fz10);
   background: #efefef;
   vertical-align: middle;
   font-weight: 400;
@@ -418,7 +406,7 @@
 }
 .program-area .t-prog.mobile-view td {
   padding: 2rem;
-  font-size: 1.6rem;
+  font-size: var(--w-fz10);
   background: #fff;
   border-bottom: 1px solid #ced0d5;
   border-right: 1px solid #ced0d5;
@@ -459,6 +447,177 @@
   justify-content: center;
 }
 
+/* ****************** 반응형 시작  ********************** */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+/* Wide Screen Desktop (해상도 1440px) */
+/* Desktop (해상도 1280px) */
+/* PC (해상도 800px ~ 1024px)*/
+@media screen and (max-width: 1024px) {
+  .poster-area .p-box .poster-txt {
+    width: 60%;
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list span.dot {
+    text-indent: 1vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .poster-area .p-box .poster-txt .info-area {
+    font-size: 1.5rem;
+  }
+}
+/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
+@media screen and (max-width: 830px) {
+  .mobile-view {
+    display: block !important;
+  }
+  .web-view {
+    display: none !important;
+  }
+  .s-container .cont {
+    width: calc(100% - 6vw);
+    padding: 0 3vw;
+    margin: 3vh auto;
+  }
+  .line-tit {
+    border-bottom: 0px solid #d7d7d7;
+    text-align: center;
+    display: none;
+  }
+  .poster-area {
+    min-height: calc(var(--vh, 1vh) * 53);
+    margin-top: 0px;
+    background-image: none;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+  }
+  .poster-area .p-box {
+    height: calc(100% - 6vh);
+    padding: 3vh 0;
+  }
+  .poster-area .p-box .poter-img {
+    display: none;
+  }
+  .poster-area .p-box .poster-txt {
+    width: 90%;
+  }
+  .poster-area .p-box .poster-txt .question-hover {
+    display: none !important;
+  }
+  .poster-area .p-box .poster-txt .item-area {
+    align-items: end;
+    justify-content: space-between;
+  }
+}
+/* 테블릿 세로 (해상도 600px ~ 767px)*/
+/* 보완 */
+@media screen and (max-width: 598px) {
+  .poster-area .p-box .poster-txt .top-area {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .poster-area .p-box .poster-txt .top-area .join-btn span {
+    display: none;
+  }
+  .poster-area .p-box .poster-txt .top-area {
+    padding-bottom: 2vh;
+  }
+  .poster-area .p-box .poster-txt .top-area .title {
+    font-size: var(--m-fz40);
+    width: 100%;
+    margin-top: 0vh;
+  }
+  .poster-area .p-box .poster-txt .top-area .title::before {
+    display: none;
+  }
+  .poster-area .p-box .poster-txt .info-area {
+    font-size: 1.4rem;
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list {
+    padding: 0.6vh 0;
+    padding: calc(var(--vh, 1vh) * 0.6) 0;
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list span.dot {
+    text-indent: 2vw;
+    width: 100%;
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list .fl-area {
+    flex-flow: wrap;
+  }
+}
+/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
+@media screen and (max-width: 480px) {
+  .poster-area {
+    min-height: 47vh;
+    min-height: calc(var(--vh, 1vh) * 47);
+  }
+  .poster-area .p-box .poster-txt .info-area {
+    font-size: var(--m-fz10);
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list span {
+    width: 100%;
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list span.tit {
+    width: 160px;
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list .r-line {
+    margin: 0 4vw;
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list .fl-area {
+    width: 100%;
+    flex-flow: wrap;
+  }
+  .program-area .guide {
+    font-size: 1.3rem;
+    padding: 1rem 1rem;
+  }
+}
+/* 아이폰(해상도 375px 이하)*/
+@media screen and (max-width: 375px) {
+  .poster-area {
+    min-height: 58vh;
+    min-height: calc(var(--vh, 1vh) * 58);
+  }
+  .poster-area .p-box .poster-txt .top-area .title {
+    font-size: var(--m-fz30);
+  }
+  .poster-area .p-box .poster-txt .info-area .info-list .list span.tit {
+    width: 180px;
+  }
+  .poster-area .p-box .poster-txt .item-area {
+    height: 16vh;
+    justify-content: start;
+    flex-flow: wrap;
+    gap: 10px;
+  }
+  .poster-area .p-box .poster-txt .item-area div {
+    width: 25%;
+  }
+}
+/* 갤럭시 fold(해상도 280px 이하)*/
+@media screen and (max-width: 320px) {
+  .poster-area .p-box .poster-txt .info-area {
+    font-size: 1.2rem;
+  }
+  .program-area .guide div::before {
+    display: none;
+  }
+  .program-area .guide {
+    font-size: 1.2rem;
+  }
+  .program-area .guide div {
+    text-indent: 0px;
+  }
+  .s-btn {
+    background: #fff;
+    font-size: var(--w-fz5) !important;
+  }
+}
+/* 갤럭시 fold , flip */
 /* **********************************
  * 설명 : sub_2_1_확인모달.html
  ************************************ */
@@ -1363,277 +1522,4 @@
   display: inline-block;
 }
 
-/* ****************** 반응형 시작  ********************** */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-/* Wide Screen Desktop (해상도 1440px) */
-@media screen and (max-width: 1440px) {
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 10vw;
-  }
-  .write-nav .step {
-    width: 18vw;
-  }
-}
-/* Desktop (해상도 1280px) */
-@media screen and (max-width: 1280px) {
-  .s-container .cont {
-    width: calc(100% - 5vw);
-    padding: 0 2.5vw;
-  }
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 11.5vw;
-  }
-}
-/* PC (해상도 800px ~ 1024px)*/
-@media screen and (max-width: 1024px) {
-  .poster-area .p-box .poster-txt {
-    width: 60%;
-  }
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 14vw;
-  }
-  .write-nav .step {
-    width: 22vw;
-  }
-}
-/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
-@media screen and (max-width: 830px) {
-  .mobile-view {
-    display: block !important;
-  }
-  .web-view {
-    display: none !important;
-  }
-  .s-container .cont {
-    width: calc(100% - 6vw);
-    padding: 0 3vw;
-    margin: 3vh auto;
-  }
-  .line-tit {
-    border-bottom: 0px solid #d7d7d7;
-    text-align: center;
-    display: none;
-  }
-  .poster-area {
-    height: 53vh;
-    margin-top: 0px;
-    background-image: none;
-    border: 1px solid #d7d7d7;
-    border-radius: 5px;
-  }
-  .poster-area .p-box {
-    height: 90%;
-  }
-  .poster-area .p-box .poter-img {
-    display: none;
-  }
-  .poster-area .p-box .poster-txt {
-    width: 90%;
-    justify-content: space-evenly;
-  }
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 22vw;
-  }
-  .poster-area .p-box .poster-txt .question-hover {
-    display: none !important;
-  }
-  .poster-area .p-box .poster-txt .item-area {
-    align-items: end;
-    justify-content: space-between;
-  }
-  .write-nav {
-    width: 100%;
-    margin: 3vh auto 3vh;
-    margin-top: 3vh;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .write-nav .step {
-    width: 28vw;
-    height: 8vh;
-  }
-  .write-area .row-box-1 .com-row .sort {
-    width: 100%;
-    margin-top: 1.8vh;
-  }
-  .write-area .row-box-1 .com-row {
-    gap: 0px;
-    flex-flow: wrap;
-    margin-bottom: 0;
-  }
-  .write-area .row-box-2 .sort {
-    width: 100%;
-    border-bottom: 1px solid #d7d7d7;
-    padding-bottom: 25px;
-    padding-top: 25px;
-  }
-  .write-area .row-box-2 .sort:last-child {
-    border-bottom: 0px solid #d7d7d7;
-  }
-  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
-    width: 22vw;
-  }
-  .write-area .btn-box {
-    margin: 0 0 0;
-  }
-  .write-area .line-title::before,
-  .write-area .line-title-2::before {
-    width: 22%;
-  }
-  .write-area .row-box-1 .com-row .sort .count {
-    height: auto;
-    flex-flow: wrap;
-  }
-  .write-area .row-box-1 .com-row .sort .count .box {
-    width: 100%;
-  }
-  .write-area .row-box-1 .com-row .sort .count .box input {
-    width: 100%;
-  }
-  .write-area .row-box-1 .com-row .sort .count .box:first-child {
-    width: 100%;
-  }
-  .write-area .row-box-1 .com-row .sort .count .box:first-child input {
-    width: 100%;
-  }
-  .write-area .row-box-2 .sort .count .box {
-    width: 100%;
-    margin-right: 0px;
-  }
-  .write-area .row-box-2 .sort .count .box .add-sort {
-    width: 100% !important;
-    justify-content: space-between;
-  }
-  .write-area .row-box-2 .sort .count .box .two-tit-2 {
-    width: 10%;
-  }
-}
-/* 테블릿 세로 (해상도 600px ~ 767px)*/
-@media screen and (max-width: 768px) {
-  .poster-area .p-box .poster-txt .info-area .right-side li {
-    padding-left: 2rem;
-  }
-  .poster-area .p-box .poster-txt .info-area .right-side li span.dot:last-child {
-    margin-left: 0px;
-  }
-}
-/* 보완 */
-@media screen and (max-width: 598px) {
-  .poster-area .p-box .poster-txt .top-area .title {
-    width: 100%;
-  }
-  .poster-area .p-box .poster-txt .top-area {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .poster-area .p-box .poster-txt .top-area .join-btn span {
-    display: none;
-  }
-  .poster-area .p-box .poster-txt .top-area .title {
-    font-size: var(--w-fz30);
-  }
-  .poster-area .p-box .poster-txt .info-area {
-    font-size: var(--w-fz5);
-  }
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 24vw;
-  }
-  .poster-area .p-box .poster-txt .info-area .left-side li,
-  .poster-area .p-box .poster-txt .info-area .right-side li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-flow: wrap;
-  }
-}
-/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
-@media screen and (max-width: 480px) {
-  .program-area h3 {
-    text-align: center;
-  }
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 30vw;
-  }
-  .write-nav {
-    flex-flow: wrap;
-    justify-content: center;
-  }
-  .write-nav .step {
-    width: 100%;
-    height: 6vh;
-  }
-  .write-nav .step .l-icon {
-    display: none;
-  }
-  .write-nav .step .r-txt {
-    left: 0%;
-    width: 100%;
-  }
-  .write-nav .arrow {
-    transform: rotate(90deg);
-  }
-  .write-area .row-box-1 {
-    margin-top: 0px;
-  }
-  .precautions {
-    padding: 2rem 2rem;
-  }
-  .write-area .line-title {
-    margin: 4vh 0 1vh;
-  }
-  .write-area .line-title-2 {
-    margin: 4vh 0 3vh;
-  }
-  .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
-    width: 27vw;
-  }
-}
-/* 아이폰(해상도 375px 이하)*/
-@media screen and (max-width: 375px) {
-  .poster-area {
-    height: 55vh;
-  }
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 55vw;
-  }
-  .poster-area .p-box .poster-txt .info-area .right-side li span.red {
-    width: 100%;
-  }
-  .poster-area .p-box .poster-txt .item-area {
-    height: 16vh;
-    justify-content: start;
-    flex-flow: wrap;
-    gap: 10px;
-  }
-  .poster-area .p-box .poster-txt .item-area div {
-    width: 25%;
-  }
-  .program-area .guide div {
-    text-indent: 15px;
-    line-height: 1.3;
-  }
-}
-/* 갤럭시 fold(해상도 280px 이하)*/
-@media screen and (max-width: 320px) {
-  .poster-area .p-box .poster-txt .info-area .left-side {
-    width: 56vw;
-  }
-  .poster-area .p-box .poster-txt .info-area .right-side li {
-    padding-left: 1rem;
-  }
-  .poster-area .p-box .poster-txt .info-area .right-side li span.dot {
-    text-indent: 0px;
-  }
-  .poster-area .p-box .poster-txt .info-area .right-side li span.dot::before {
-    display: none;
-  }
-  .precautions {
-    padding: 4rem 2rem;
-  }
-}
-/* 갤럭시 fold , flip *//*# sourceMappingURL=sub.css.map */
+/* ****************** 반응형 시작  ********************** *//*# sourceMappingURL=sub.css.map */
