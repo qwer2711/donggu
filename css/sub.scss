@@ -610,7 +610,13 @@
   }
   .program-area .guide {
     font-size: 1.3rem;
-    padding: 1rem 1rem;
+    padding: 1rem 0rem;
+  }
+  .program-area .guide div {
+    text-indent: 12px;
+  }
+  .program-area .guide div::before {
+    display: none;
   }
 }
 /* 아이폰(해상도 375px 이하)*/
@@ -641,9 +647,7 @@
   .poster-area .p-box .poster-txt .info-area {
     font-size: 1.2rem;
   }
-  .program-area .guide div::before {
-    display: none;
-  }
+
   .program-area .guide {
     font-size: 1.2rem;
   }
