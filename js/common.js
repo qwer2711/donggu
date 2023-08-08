@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
   //   const dotActive = $(".banner .slick-active");
   //   alert(dotActive.length);
   // });
-
+  var slider = $("#programList");
   $("#programList").slick({
     autoplay: true,
     autoplaySpeed: 1800,
@@ -70,11 +70,25 @@ window.addEventListener("load", function () {
         },
       },
       {
+        breakpoint: 830,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
         breakpoint: 481,
         settings: {
           slidesToShow: 1,
         },
       },
     ],
+  });
+
+  $(window).on("load resize", function () {
+    if ($(window).width() < 767) {
+      slider.slick("unslick");
+    } else {
+      slider.not(".slick-initialized").slick(slickOptions);
+    }
   });
 });

@@ -31,6 +31,21 @@
   --mg40: 40px;
   --mg50: 50px;
   --mg60: 60px;
+
+  /* web font */
+  --w-fz50: 3.5rem;
+  --w-fz40: 3rem;
+  --w-fz30: 2.5rem;
+  --w-fz20: 2rem;
+  --w-fz10: 1.6rem;
+  --w-fz5: 1.3rem;
+
+  /* mobile font */
+  --m-fz50: 3.2rem;
+  --m-fz40: 2.7rem;
+  --m-fz30: 2.2rem;
+  --m-fz20: 1.7rem;
+  --m-fz10: 1.3rem;
 }
 
 /* ****************** layout ********************** */

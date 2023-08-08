@@ -83,8 +83,9 @@
 }
 
 .shortcut-btn {
-  position: absolute;
-  top: 45%;
+  position: fixed;
+  bottom: 30%;
+  top: auto;
   right: 0;
   z-index: 1000;
 }
@@ -257,6 +258,7 @@
     border: 1px solid #d7d7d7;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: calc(var(--vh, 1vh) * 3);
     .txt-box {
       padding: 1rem;
       .b-tit {
@@ -316,17 +318,6 @@
   }
 }
 
-.main.btn-box {
-  width: 100%;
-  justify-content: center;
-  margin: 40px 0 0;
-  a {
-    @include button(12px 35px, var(--mainColor), #fff, 16px);
-    border-radius: 3px;
-    display: none;
-  }
-}
-
 /* ****************** 반응형 시작  ********************** */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -341,9 +332,6 @@
 }
 /* Desktop (해상도 1280px) */
 @media screen and (max-width: 1280px) {
-  .shortcut-btn {
-    top: 38%;
-  }
   .top-banner .banner .item .txt-box,
   .top-banner .banner .slick-dots {
     left: 10vw;
@@ -374,12 +362,6 @@
   .web-view {
     display: none !important;
   }
-  .shortcut-btn {
-    display: none;
-  }
-  .main.btn-box a {
-    display: block !important;
-  }
 
   .top-banner .banner .slick-prev {
     right: 19.8vw;
@@ -396,15 +378,15 @@
 }
 /* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
+  .shortcut-btn {
+    bottom: 5%;
+  }
   .m-container {
     padding: 2vh 0;
     padding: calc(var(--vh, 1vh) * 2) 0;
   }
   .top-banner .banner .item {
     height: 350px;
-  }
-  .shortcut-btn {
-    display: none;
   }
   .top-banner .banner .item {
     background-position: -780px -50px;
@@ -449,9 +431,6 @@
   }
   .program-list .slick-next {
     right: -11vw;
-  }
-  .main.btn-box {
-    margin: 20px 0 30px;
   }
 }
 /* 아이폰(해상도 375px 이하)*/
