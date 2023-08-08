@@ -152,7 +152,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: calc(var(--vh, 1vh) * 58);
+  min-height: calc(var(--vh, 1vh) * 56);
   margin-top: 40px;
   background-image: url(../images/sub/poster_box.png);
   background-position: center;
@@ -372,6 +372,27 @@
             }
           }
         }
+        .t-info.mobile-view {
+          @include table-layout(#32afdd, null, 15px);
+          text-align: center;
+          border-left: 1px solid #ced0d5;
+          margin-top: 0px;
+          th {
+            @include table-th(#ced0d5, 1rem, var(--w-fz10), #efefef);
+            line-height: 1.2;
+          }
+
+          td {
+            @include table-td(#ced0d5, 1rem, var(--w-fz10), #fff);
+            line-height: 1.2;
+            word-break: keep-all;
+            text-align: left;
+            .dot {
+              width: 100%;
+              display: inline-block;
+            }
+          }
+        }
       }
       .item-area {
         width: 100%;
@@ -518,7 +539,6 @@
   }
 
   .poster-area {
-    min-height: calc(var(--vh, 1vh) * 53);
     margin-top: 0px;
     background-image: none;
     border: 1px solid #d7d7d7;
@@ -586,10 +606,6 @@
 }
 /* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
-  .poster-area {
-    min-height: 47vh;
-    min-height: calc(var(--vh, 1vh) * 47);
-  }
   .poster-area .p-box .poster-txt .info-area {
     font-size: var(--m-fz10);
   }
@@ -621,10 +637,6 @@
 }
 /* 아이폰(해상도 375px 이하)*/
 @media screen and (max-width: 375px) {
-  .poster-area {
-    min-height: 58vh;
-    min-height: calc(var(--vh, 1vh) * 58);
-  }
   .poster-area .p-box .poster-txt .top-area .title {
     font-size: var(--m-fz30);
   }
