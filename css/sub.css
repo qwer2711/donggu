@@ -984,7 +984,8 @@
 .precautions {
   padding: 2rem 3rem;
   width: calc(100% - 6rem);
-  height: 90px;
+  height: 10vh;
+  height: calc(var(--vh, 1vh) * 10);
   border: 1px solid var(--mainColor);
   border-radius: 5px;
   justify-content: center;
@@ -992,14 +993,14 @@
 }
 .precautions .tit {
   color: var(--mainColor);
-  font-size: 1.8rem;
+  font-size: var(--w-fz20);
   font-weight: 500;
 }
 .precautions .tit i {
   padding-right: 1rem;
 }
 .precautions .txt {
-  font-size: 1.6rem;
+  font-size: var(--m-fz10);
   margin-top: 20px;
   line-height: 1.3;
   color: #4b4855;
@@ -1368,6 +1369,19 @@
     transform: rotate(90deg);
   }
 }
+@media screen and (max-width: 598px) {
+  .check-area .chk-area {
+    flex-wrap: wrap;
+  }
+  .check-area .chk-area .error.on {
+    width: 100%;
+    padding-left: 6vw;
+    padding-top: 5px;
+  }
+  .precautions {
+    padding: 2rem 2rem;
+  }
+}
 /* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
   .write-nav {
@@ -1402,6 +1416,51 @@
   }
   .write-area .row-box-1 .com-row .sort .add-sort .address-btn {
     width: 27vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .precautions .tit {
+    font-size: var(--w-fz10);
+  }
+  .precautions .txt {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .write-area .row-box-2 .sort .count .box {
+    justify-content: space-between;
+  }
+  .write-area .row-box-2 .sort .count .box input {
+    width: 80%;
+  }
+  .write-area .row-box-2 .sort .count .box select {
+    width: 85%;
+  }
+  .write-area .row-box-2 .sort .count .box .two-tit {
+    width: 20%;
+  }
+  .write-area .row-box-2 .sort .count .box .two-tit-2 {
+    width: 20%;
+  }
+  .write-area .row-box-1 .com-row .sort .email {
+    flex-flow: wrap;
+  }
+  .write-area .row-box-1 .com-row .sort .email select {
+    width: 100%;
+    margin-left: 0rem;
+    margin-top: 10px;
+  }
+  .write-area .row-box-1 .com-row .sort .email input {
+    width: 37% !important;
+  }
+  .write-area .row-box-1 .com-row .sort .call {
+    flex-flow: wrap;
+  }
+  .write-area .row-box-1 .com-row .sort .call input:first-child {
+    width: 100% !important;
+  }
+  .write-area .row-box-1 .com-row .sort .call input {
+    width: 23.7% !important;
   }
 }
 /* *****************************************
