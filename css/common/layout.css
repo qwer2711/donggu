@@ -14,7 +14,7 @@
   --grayColor: #4b4855;
 
   /* Header */
-  --headerHeight: 80px;
+  --headerHeight: calc(var(--vh, 1vh) * 10);
 
   /* Padding */
   --pd10: 10px;

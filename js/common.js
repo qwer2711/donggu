@@ -30,14 +30,14 @@ window.addEventListener("load", function () {
     nextArrow:
       '<a class="slick-next" href="#"><i class="fa-solid fa-chevron-right"></i></a>',
   });
-
-  // $(".top-banner .banner .slick-arrow").click(function () {
-  //   // const pageNumber = document.querySelector(".page-num");
-  //   const dots = document.querySelectorAll(".slick-dots");
-  //   const dotActive = $(".banner .slick-active");
-  //   alert(dotActive.length);
-  // });
   var slider = $("#programList");
+  $(window).on("load resize", function () {
+    if ($(window).width() < 767) {
+      slider.slick("unslick");
+    } else {
+      slider.not(".slick-initialized").slick(slickOptions);
+    }
+  });
   $("#programList").slick({
     autoplay: true,
     autoplaySpeed: 1800,
@@ -82,13 +82,5 @@ window.addEventListener("load", function () {
         },
       },
     ],
-  });
-
-  $(window).on("load resize", function () {
-    if ($(window).width() < 767) {
-      slider.slick("unslick");
-    } else {
-      slider.not(".slick-initialized").slick(slickOptions);
-    }
   });
 });

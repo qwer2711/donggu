@@ -83,12 +83,12 @@
   left: 0;
   z-index: 1000;
   width: 100%;
-  height: 80px;
+  height: var(--headerHeight);
   background: var(--mainColor);
 
   .title {
     width: 100%;
-    height: 80px;
+    height: var(--headerHeight);
     color: white;
     justify-content: start;
     align-items: center;
@@ -719,6 +719,131 @@
 }
 .alarm-pop-2.on {
   display: block;
+}
+
+/* **********************************
+ * 설명 : sub_2_3_우편번호찾기.html
+ ************************************ */
+.address-pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 35vw;
+  height: 35vh;
+  height: calc(var(--vh, 1vh) * 35);
+  background: #fff;
+  overflow: hidden;
+  z-index: 200;
+  display: none;
+  font-size: 1.6rem;
+  border: 1px solid #dadada;
+  .top-area {
+    background: #666666;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    .tit {
+      padding-left: 2rem;
+      color: #fff;
+      font-size: var(--w-fz10);
+    }
+    .close-btn {
+      width: 45px;
+      height: 100%;
+      background: #858585;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      i {
+        font-size: 3rem;
+        color: #fff;
+      }
+    }
+  }
+  .m-cont {
+    width: calc(100% - 3vw);
+    height: 100%;
+    padding: 1.5vw;
+
+    .box-list {
+      width: 100%;
+      margin-bottom: 2vh;
+      margin-bottom: calc(var(--vh, 1vh) * 2);
+      border: 1px solid #dadada;
+      align-items: center;
+      .tit {
+        width: 20%;
+        height: 100%;
+        background: #f5f5f5;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        @include button(0 20px, #666666, #fff, var(--w-fz10));
+        margin-top: 0;
+        margin-left: 0.8vw;
+        height: 38px;
+        line-height: 38px;
+        border-radius: 0px;
+        width: 90px;
+        border: 1px solid #626262;
+      }
+    }
+    .box-list.num {
+      justify-content: space-between;
+      .b-write {
+        width: 100%;
+        padding: 1vw;
+        justify-content: center;
+        align-items: center;
+        input {
+          width: 100%;
+          height: 38px;
+        }
+      }
+    }
+    .box-list.addre {
+      .b-write {
+        margin-bottom: 1vh;
+        flex-flow: wrap;
+        width: 100%;
+        padding: 1vw;
+        .f-box {
+          width: 100%;
+          margin-bottom: 1vh;
+          align-items: center;
+        }
+        input {
+          width: 100%;
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+.address-pop.on {
+  display: block;
+}
+
+@media screen and (max-width: 1280px) {
+  .address-pop {
+    width: 48vw;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .address-pop {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .address-pop {
+    width: 100%;
+    height: 100%;
+    margin-top: var(--headerHeight);
+  }
 }
 
 /* *****************************************
@@ -1790,4 +1915,10 @@
 .scroll {
   width: 100%;
   overflow-x: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .inq-complete .t-comp td {
+    padding: 0px 5px;
+  }
 }
