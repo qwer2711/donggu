@@ -587,7 +587,7 @@
 }
 @media screen and (max-width: 375px) {
   .poster-area {
-    min-height: calc(var(--vh, 1vh) * 60);
+    min-height: calc(var(--vh, 1vh) * 63);
   }
   .poster-area .p-box .poster-txt .top-area .title {
     font-size: var(--m-fz30);
