@@ -456,13 +456,6 @@
     scroll-behavior: smooth;
   }
 }
-/* Wide Screen Desktop (해상도 1440px) */
-@media screen and (max-width: 1440px) {
-}
-/* Desktop (해상도 1280px) */
-@media screen and (max-width: 1280px) {
-}
-/* PC (해상도 800px ~ 1024px)*/
 @media screen and (max-width: 1024px) {
   .poster-area .p-box .poster-txt {
     width: 60%;
@@ -476,7 +469,6 @@
     font-size: 1.5rem;
   }
 }
-/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
 @media screen and (max-width: 830px) {
   .mobile-view {
     display: block !important;
@@ -523,10 +515,6 @@
     justify-content: space-between;
   }
 }
-/* 테블릿 세로 (해상도 600px ~ 767px)*/
-@media screen and (max-width: 768px) {
-}
-/* 보완 */
 @media screen and (max-width: 598px) {
   .poster-area .p-box .poster-txt .top-area {
     flex-direction: column;
@@ -564,7 +552,6 @@
     flex-flow: wrap;
   }
 }
-/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
   .poster-area .p-box .poster-txt .info-area {
     font-size: var(--m-fz10);
@@ -595,7 +582,6 @@
     display: none;
   }
 }
-/* 아이폰(해상도 375px 이하)*/
 @media screen and (max-width: 375px) {
   .poster-area {
     min-height: calc(var(--vh, 1vh) * 60);
@@ -621,7 +607,6 @@
     width: 25%;
   }
 }
-/* 갤럭시 fold(해상도 280px 이하)*/
 @media screen and (max-width: 320px) {
   .poster-area .p-box .poster-txt .info-area {
     font-size: 1.2rem;
@@ -637,9 +622,6 @@
     background: #fff;
     font-size: var(--w-fz5) !important;
   }
-}
-/* 갤럭시 fold , flip */
-@media screen and (max-height: 586px) {
 }
 
 /* **********************************
@@ -816,7 +798,7 @@
   }
 }
 .certified-area {
-  width: 880px;
+  width: 70vw;
   height: 500px;
   border: 1px solid #d7d7d7;
   border-radius: 10px;
@@ -917,6 +899,73 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .certified-area .txt-area {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .certified-area {
+    width: calc(100% - 4rem);
+    margin: 0rem auto 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .certified-area {
+    padding: 0rem 2rem 0;
+    justify-content: space-evenly;
+  }
+  .certified-area .b-box .inquiry {
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .certified-area .b-box .inquiry div img {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .certified-area .txt-area .tit {
+    font-size: 2rem;
+  }
+  .certified-area .txt-area .txt {
+    font-size: 1.2rem;
+    word-break: keep-all;
+    line-height: 1.5;
+  }
+  .certified-area .b-box .inquiry .txt p {
+    font-size: 1.4rem;
+  }
+  .certified-area .b-box .inquiry .txt {
+    margin-left: 0rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .certified-area .txt-area {
+    width: 80%;
+    word-break: keep-all;
+  }
+  .certified-area .b-box .inquiry {
+    flex-direction: column;
+  }
+  .certified-area .b-box .inquiry .txt p {
+    display: none;
+  }
+  .certified-area .b-box .inquiry .call {
+    align-items: center;
+    margin-left: 0rem;
+    margin-top: 0px;
+    text-align: center;
+  }
+  .certified-area .b-box .inquiry .txt {
+    text-align: center;
+  }
+  .certified-area .b-box .inquiry .call {
+    margin-top: 10px;
   }
 }
 
@@ -1260,21 +1309,18 @@
   }
 }
 
-/* Wide Screen Desktop (해상도 1440px) */
 @media screen and (max-width: 1440px) {
   // 프로그램 상세
   .write-nav .step {
     width: 18vw;
   }
 }
-/* PC (해상도 800px ~ 1024px)*/
 @media screen and (max-width: 1024px) {
   // 프로그램 입력전
   .write-nav .step {
     width: 22vw;
   }
 }
-/* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
 @media screen and (max-width: 830px) {
   .mobile-view {
     display: block !important;
@@ -1390,7 +1436,6 @@
     padding: 2rem 2rem;
   }
 }
-/* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
   //프로그램 입력전
   .write-nav {
@@ -1482,12 +1527,13 @@
           sub_10_신청조회_이메일.html
  ******************************************* */
 .inquire-box {
-  width: 55%;
-  max-width: 640px;
+  width: 100%;
+  max-width: 650px;
   height: 150px;
   border: 10px solid #fff3d0;
   margin: 40px auto 0;
   padding: 2rem;
+  word-break: keep-all;
   .top-box {
     align-items: center;
     width: 100%;
@@ -1598,6 +1644,70 @@
       margin-left: 1rem;
       border-radius: 4px;
     }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 830px) {
+}
+@media screen and (max-width: 768px) {
+  .inquire-box {
+    max-width: 85vw;
+  }
+  .inquire-box .top-box .left {
+    display: none;
+  }
+  .inquire-box .top-box .right {
+    padding-left: 1rem;
+    width: calc(100% - 1rem);
+  }
+}
+@media screen and (max-width: 480px) {
+  .inquire-box {
+    padding: 1rem;
+  }
+  .find-box .write-form .sort .call {
+    flex-flow: wrap;
+  }
+  .find-box .write-form .sort .call select {
+    width: 100%;
+  }
+  .find-box .write-form .sort .call input[type="text"] {
+    width: 24.2%;
+  }
+  .find-box .email {
+    flex-flow: wrap;
+  }
+  .find-box .email select {
+    width: 100%;
+    margin-left: 0rem;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  .find-box .email input {
+    width: 39.5% !important;
+  }
+  .inquire-box {
+    height: 180px;
+  }
+  .find-box .tab-btn-box .f-btn {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .find-box .email input {
+    width: 36% !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .find-box .write-form {
+    padding: 2rem;
+  }
+  .find-box .email input {
+    width: 34.5% !important;
   }
 }
 
