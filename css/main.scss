@@ -78,8 +78,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 6.9vh 0;
-  padding: calc(var(--vh, 1vh) * 6.9) 0;
+  padding: 5vh 0;
+  padding: calc(var(--vh, 1vh) * 5) 0;
 }
 
 .shortcut-btn {
@@ -133,7 +133,7 @@
     .item {
       position: relative;
       width: 100%;
-      height: 480px;
+      height: calc(var(--vh, 1vh) * 46);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -258,7 +258,6 @@
     border: 1px solid #d7d7d7;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: calc(var(--vh, 1vh) * 3);
     .txt-box {
       padding: 1rem;
       .b-tit {
@@ -284,7 +283,7 @@
   /* 사이드 버튼 */
   .slick-arrow {
     position: absolute;
-    top: -10%;
+    top: 50%;
     transform: translateY(-50%);
     display: block;
     z-index: 50;
@@ -305,14 +304,13 @@
     }
   }
   .slick-prev {
-    left: auto;
-
+    left: -8%;
     border-top-left-radius: 45%;
     border-bottom-left-radius: 45%;
   }
 
   .slick-next {
-    left: 2.2vw;
+    right: -8%;
     border-top-right-radius: 45%;
     border-bottom-right-radius: 45%;
   }
@@ -326,32 +324,38 @@
 }
 /* Wide Screen Desktop (해상도 1440px) */
 @media screen and (max-width: 1440px) {
+  .top-banner .banner .item .txt-box {
+    width: 70%;
+  }
+  .top-banner .banner .slick-dots {
+    width: 70%;
+  }
+  .top-banner .banner .slick-prev {
+    right: 20.6vw;
+  }
   .program-list {
     width: 70vw;
   }
 }
 /* Desktop (해상도 1280px) */
 @media screen and (max-width: 1280px) {
+  .top-banner .banner .slick-prev {
+    right: 21vw;
+  }
   .top-banner .banner .item .txt-box,
   .top-banner .banner .slick-dots {
     left: 10vw;
     transform: translate(5%, -50%);
-    width: 50%;
+    width: 70%;
   }
   .top-banner .banner .item .txt-box p {
     font-size: 3.5rem;
-  }
-  .top-banner .banner .slick-prev {
-    right: 18vw;
-  }
-  .top-banner .banner .slick-next {
-    right: 15vw;
   }
 }
 /* PC (해상도 800px ~ 1024px)*/
 @media screen and (max-width: 1024px) {
   .top-banner .banner .slick-prev {
-    right: 18.9vw;
+    right: 22vw;
   }
 }
 /* 태블릿, 모바일 가로 (해상도 768px ~ 830px)*/
@@ -362,10 +366,10 @@
   .web-view {
     display: none !important;
   }
-
   .top-banner .banner .slick-prev {
-    right: 19.8vw;
+    right: 23vw;
   }
+
   .program-list .slick-prev {
     left: -8vw;
   }
@@ -374,7 +378,17 @@
   }
 }
 /* 테블릿 세로 (해상도 600px ~ 767px)*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .top-banner .banner .slick-prev {
+    right: 23.5vw;
+  }
+  .program-list .item {
+    margin-bottom: 3vh;
+    margin-bottom: calc(var(--vh, 1vh) * 3);
+  }
+  .program-list .slick-arrow {
+    display: none !important;
+  }
 }
 /* 모바일 가로, 모바일 세로 (해상도 320px ~ 480px)*/
 @media screen and (max-width: 480px) {
@@ -385,35 +399,17 @@
     padding: 2vh 0;
     padding: calc(var(--vh, 1vh) * 2) 0;
   }
-  .top-banner .banner .item {
-    height: 350px;
+  .top-banner .banner .slick-prev {
+    right: 16.5vw;
   }
-  .top-banner .banner .item {
-    background-position: -780px -50px;
-  }
-  .top-banner .banner .item .txt-box {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 4vh 3vw;
-    border-radius: 5px;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -35%);
-    width: 80%;
-    text-align: center;
+  .top-banner .banner .slick-next {
+    right: 6vw;
   }
   .top-banner .banner .item .txt-box p {
     font-size: 2.5rem;
-    color: var(--blackColor);
   }
   .top-banner .banner .item .txt-box span.sub-txt {
     font-size: 1.5rem;
-  }
-  .top-banner .banner .slick-arrow {
-    display: none !important;
-  }
-
-  .top-banner .banner .slick-dots {
-    display: none !important;
   }
 
   .top-banner .banner .item .txt-box .btn-box {
@@ -422,19 +418,18 @@
   .top-banner .banner .item .txt-box .btn-box .s-btn.join {
     background: var(--mainColor);
   }
-  .program-list .slick-arrow {
-    padding: 15px;
-  }
-
-  .program-list .slick-prev {
-    left: -11vw;
-  }
-  .program-list .slick-next {
-    right: -11vw;
-  }
 }
 /* 아이폰(해상도 375px 이하)*/
 @media screen and (max-width: 375px) {
+  .top-banner .banner .slick-prev {
+    right: 19.5vw;
+  }
+  .top-banner .banner .item .txt-box,
+  .top-banner .banner .slick-dots {
+    left: 5vw;
+    transform: translate(5%, -50%);
+    width: 80%;
+  }
 }
 /* 갤럭시 fold(해상도 280px 이하)*/
 @media screen and (max-width: 320px) {
@@ -444,7 +439,7 @@
   .top-banner .banner .item .txt-box p {
     font-size: 2rem;
   }
-  .top-banner .banner .slick-next {
-    right: calc(100% - 82vw);
+  .top-banner .banner .slick-prev {
+    right: 21.5vw;
   }
 }

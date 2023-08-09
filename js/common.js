@@ -30,12 +30,12 @@ window.addEventListener("load", function () {
     nextArrow:
       '<a class="slick-next" href="#"><i class="fa-solid fa-chevron-right"></i></a>',
   });
-  var slider = $("#programList");
+  var progSlider = $("#programList");
   $(window).on("load resize", function () {
     if ($(window).width() < 767) {
-      slider.slick("unslick");
+      progSlider.slick("unslick");
     } else {
-      slider.not(".slick-initialized").slick(slickOptions);
+      progSlider.not(".slick-initialized").slick(slickOptions);
     }
   });
   $("#programList").slick({

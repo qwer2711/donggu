@@ -1038,7 +1038,7 @@
     margin: 0rem auto 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .certified-area {
     padding: 0rem 2rem 0;
     justify-content: space-evenly;
@@ -1533,7 +1533,7 @@
     width: 10%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .write-nav {
     flex-flow: wrap;
     justify-content: center;
@@ -1803,7 +1803,7 @@
   border-radius: 4px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .inquire-box {
     max-width: 85vw;
   }
