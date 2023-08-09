@@ -73,7 +73,7 @@
       <header class="sub-header">
         <div class="title fl-row">
           <h1>
-            <a href="#" title="to home"
+            <a href="./index.html" title="to home"
               ><img src="images/logo/logo.png" alt="logo"
             /></a>
           </h1>
@@ -297,13 +297,16 @@
                 <div class="sort">
                   <span class="tit">이메일</span>
                   <div class="email fl-row">
-                    <input
-                      type="text"
-                      placeholder="이메일을 입력해주세요."
-                      required
-                    />
-                    <span>@</span>
-                    <input id="directInput" type="text" disabled required />
+                    <div class="eee fl-row">
+                      <input
+                        type="text"
+                        placeholder="이메일을 입력해주세요."
+                        required
+                      />
+                      <span>@</span>
+                      <input id="directInput" type="text" disabled required />
+                    </div>
+
                     <select
                       name="email"
                       id="directEmail"
@@ -329,10 +332,12 @@
                 <div class="sort">
                   <span class="tit">전화번호</span>
                   <div class="call fl-row">
-                    <input type="text" value="SKT" readonly />
-                    <input type="text" value="010" readonly />
-                    <input type="text" value="1234" readonly />
-                    <input type="text" value="5678" readonly />
+                    <input type="text" value="SKT" class="tele" readonly />
+                    <div class="eee fl-row">
+                      <input type="text" value="010" readonly />
+                      <input type="text" value="1234" readonly />
+                      <input type="text" value="5678" readonly />
+                    </div>
                   </div>
                 </div>
                 <div class="sort">

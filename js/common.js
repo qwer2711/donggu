@@ -83,4 +83,14 @@ window.addEventListener("load", function () {
       },
     ],
   });
+
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > 50) {
+      $("html").addClass("header-fixed");
+    } else {
+      $("html").removeClass("header-fixed");
+    }
+  });
 });

@@ -41,6 +41,10 @@
 }
 
 /* ***** header  ***** */
+.header-fixed .header {
+  background: var(--mainColor);
+}
+
 .header {
   position: fixed;
   top: 0;
