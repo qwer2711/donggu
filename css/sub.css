@@ -1825,4 +1825,9 @@
 }
 .inq-complete .bt-btn-box a {
   display: inline-block;
+}
+
+.scroll {
+  width: 100%;
+  overflow-x: auto;
 }/*# sourceMappingURL=sub.css.map */
