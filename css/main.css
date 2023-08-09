@@ -51,12 +51,12 @@
   left: 0;
   z-index: 1000;
   width: 100%;
-  height: var(--headerHeight);
+  height: 80px;
   background: transparent;
 }
 .header .title {
   width: 100%;
-  height: var(--headerHeight);
+  height: 80px;
   font-size: 1.8rem;
   color: white;
   justify-content: start;
@@ -67,6 +67,14 @@
   margin-left: 3vw;
 }
 
+@media screen and (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
+  .header .title {
+    height: 60px;
+  }
+}
 .top-banner {
   position: relative;
   width: 100%;
