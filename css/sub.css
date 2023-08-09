@@ -554,13 +554,10 @@
   }
   .program-area .guide {
     font-size: 1.3rem;
-    padding: 1rem 0rem;
+    padding: 1rem 1.5rem;
   }
   .program-area .guide div {
     text-indent: 12px;
-  }
-  .program-area .guide div::before {
-    display: none;
   }
 }
 @media screen and (max-width: 375px) {
@@ -600,6 +597,16 @@
   .s-btn {
     background: #fff;
     font-size: var(--w-fz5) !important;
+  }
+  .program-area .guide div::before {
+    content: "-";
+    top: auto;
+    transform: translateY(0%);
+    left: -7px;
+    width: 0px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffb800;
   }
 }
 /* **********************************
@@ -1705,13 +1712,16 @@
           sub_10_신청조회_이메일.html
  ******************************************* */
 .inquire-box {
-  width: 100%;
+  width: calc(100% - 4rem);
   max-width: 650px;
-  height: 150px;
+  height: 100%;
+  min-height: 15vh;
+  min-height: calc(var(--vh, 1vh) * 15);
   border: 10px solid #fff3d0;
   margin: 40px auto 0;
   padding: 2rem;
   word-break: keep-all;
+  align-items: center;
 }
 .inquire-box .top-box {
   align-items: center;
@@ -1757,13 +1767,13 @@
 .find-box .tab-btn-box {
   width: 100%;
   margin: 20px 0;
-  gap: 30px;
+  gap: 3vw;
 }
 .find-box .tab-btn-box .f-btn.on {
   padding: 0 25px;
   background: #fff;
   color: var(--mainColor);
-  font-size: 18px;
+  font-size: var(--m-fz10);
   display: block;
   margin-top: 10px;
   width: 100px;
@@ -1779,7 +1789,7 @@
   padding: 0 25px;
   background: #fff;
   color: #818181;
-  font-size: 18px;
+  font-size: var(--m-fz10);
   display: block;
   margin-top: 10px;
   width: 100px;
@@ -1813,11 +1823,15 @@
 .find-box .write-form .sort .call {
   gap: 20px;
 }
+.find-box .write-form .sort .call .eee {
+  width: 100%;
+  gap: 10px;
+}
 .find-box .write-form .sort .call select {
   width: 20%;
 }
 .find-box .write-form .sort .call input[type=text] {
-  width: 25%;
+  width: 28%;
   border-radius: 4px;
 }
 .find-box .find-btn-box {
@@ -1827,7 +1841,7 @@
   padding: 0 25px;
   background: var(--mainColor);
   color: #fff;
-  font-size: 16px;
+  font-size: var(--m-fz10);
   display: block;
   margin-top: 10px;
   width: 100px;
@@ -1839,6 +1853,10 @@
   margin: 0 auto;
 }
 .find-box .email {
+  align-items: center;
+}
+.find-box .email .eee {
+  width: 100%;
   align-items: center;
 }
 .find-box .email span {
@@ -1859,7 +1877,7 @@
 
 @media screen and (max-width: 767px) {
   .inquire-box {
-    max-width: 85vw;
+    border: 1px solid #d7d7d7;
   }
   .inquire-box .top-box .left {
     display: none;
@@ -1871,7 +1889,8 @@
 }
 @media screen and (max-width: 480px) {
   .inquire-box {
-    padding: 1rem;
+    width: calc(100% - 2rem);
+    padding: 2rem 1rem;
   }
   .find-box .write-form .sort .call {
     flex-flow: wrap;
@@ -1880,7 +1899,7 @@
     width: 100%;
   }
   .find-box .write-form .sort .call input[type=text] {
-    width: 24.2%;
+    width: 28%;
   }
   .find-box .email {
     flex-flow: wrap;
@@ -1894,11 +1913,20 @@
   .find-box .email input {
     width: 39.5% !important;
   }
-  .inquire-box {
-    height: 180px;
+  .inquire-box .top-box .right .list-box li {
+    text-indent: 0px;
+    margin-bottom: 0.6vh;
   }
-  .find-box .tab-btn-box .f-btn {
-    font-size: 16px;
+  .inquire-box .top-box .right .list-box li::before {
+    content: "-";
+    position: absolute;
+    top: auto;
+    left: -10px;
+    transform: inherit;
+    width: 0px;
+    height: 3px;
+    border-radius: 50%;
+    background: #4b4855;
   }
 }
 @media screen and (max-width: 375px) {

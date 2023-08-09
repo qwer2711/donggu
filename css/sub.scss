@@ -576,13 +576,10 @@
   }
   .program-area .guide {
     font-size: 1.3rem;
-    padding: 1rem 0rem;
+    padding: 1rem 1.5rem;
   }
   .program-area .guide div {
     text-indent: 12px;
-  }
-  .program-area .guide div::before {
-    display: none;
   }
 }
 @media screen and (max-width: 375px) {
@@ -624,6 +621,16 @@
   .s-btn {
     background: #fff;
     font-size: var(--w-fz5) !important;
+  }
+  .program-area .guide div::before {
+    content: "-";
+    top: auto;
+    transform: translateY(0%);
+    left: -7px;
+    width: 0px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffb800;
   }
 }
 
@@ -1709,13 +1716,17 @@
           sub_10_신청조회_이메일.html
  ******************************************* */
 .inquire-box {
-  width: 100%;
+  width: calc(100% - 4rem);
   max-width: 650px;
-  height: 150px;
+  height: 100%;
+  min-height: 15vh;
+  min-height: calc(var(--vh, 1vh) * 15);
   border: 10px solid #fff3d0;
   margin: 40px auto 0;
   padding: 2rem;
   word-break: keep-all;
+  align-items: center;
+
   .top-box {
     align-items: center;
     width: 100%;
@@ -1759,15 +1770,15 @@
   .tab-btn-box {
     width: 100%;
     margin: 20px 0;
-    gap: 30px;
+    gap: 3vw;
     .f-btn.on {
-      @include button(0 25px, #fff, var(--mainColor), 18px);
+      @include button(0 25px, #fff, var(--mainColor), var(--m-fz10));
       border: 2px solid var(--mainColor);
       width: calc(50% - 15px);
     }
 
     .f-btn {
-      @include button(0 25px, #fff, #818181, 18px);
+      @include button(0 25px, #fff, #818181, var(--m-fz10));
       border: 1px solid #d7d7d7;
       width: calc(50% - 15px);
     }
@@ -1791,11 +1802,15 @@
       }
       .call {
         gap: 20px;
+        .eee {
+          width: 100%;
+          gap: 10px;
+        }
         select {
           width: 20%;
         }
         input[type="text"] {
-          width: 25%;
+          width: 28%;
           border-radius: 4px;
         }
       }
@@ -1804,13 +1819,17 @@
   .find-btn-box {
     margin: 30px 0 0;
     .find-btn {
-      @include button(0 25px, var(--mainColor), #fff, 16px);
+      @include button(0 25px, var(--mainColor), #fff, var(--m-fz10));
       margin: 0 auto;
     }
   }
   //이메일박스
   .email {
     align-items: center;
+    .eee {
+      width: 100%;
+      align-items: center;
+    }
     span {
       font-size: 1.6rem;
       padding: 0 1rem;
@@ -1829,14 +1848,9 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
-}
-
-@media screen and (max-width: 830px) {
-}
 @media screen and (max-width: 767px) {
   .inquire-box {
-    max-width: 85vw;
+    border: 1px solid #d7d7d7;
   }
   .inquire-box .top-box .left {
     display: none;
@@ -1848,7 +1862,8 @@
 }
 @media screen and (max-width: 480px) {
   .inquire-box {
-    padding: 1rem;
+    width: calc(100% - 2rem);
+    padding: 2rem 1rem;
   }
   .find-box .write-form .sort .call {
     flex-flow: wrap;
@@ -1857,8 +1872,9 @@
     width: 100%;
   }
   .find-box .write-form .sort .call input[type="text"] {
-    width: 24.2%;
+    width: 28%;
   }
+
   .find-box .email {
     flex-flow: wrap;
   }
@@ -1871,11 +1887,21 @@
   .find-box .email input {
     width: 39.5% !important;
   }
-  .inquire-box {
-    height: 180px;
+
+  .inquire-box .top-box .right .list-box li {
+    text-indent: 0px;
+    margin-bottom: 0.6vh;
   }
-  .find-box .tab-btn-box .f-btn {
-    font-size: 16px;
+  .inquire-box .top-box .right .list-box li::before {
+    content: "-";
+    position: absolute;
+    top: auto;
+    left: -10px;
+    transform: inherit;
+    width: 0px;
+    height: 3px;
+    border-radius: 50%;
+    background: #4b4855;
   }
 }
 @media screen and (max-width: 375px) {
