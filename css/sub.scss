@@ -926,12 +926,13 @@
   }
 }
 .certified-area {
-  width: 70vw;
-  height: 500px;
+  width: 100%;
+  height: 100%;
+  min-height: calc(var(--vh, 1vh) * 50);
   border: 1px solid #d7d7d7;
   border-radius: 10px;
   margin: 5rem auto 0;
-  padding: 4rem 4rem 0;
+  padding: 4rem 0 0;
   justify-content: space-between;
   .txt-area {
     width: 70%;
@@ -944,6 +945,7 @@
       font-size: 2.5rem;
       font-weight: 500;
       margin-bottom: 2rem;
+      word-break: keep-all;
     }
     .txt {
       font-size: 1.6rem;
@@ -1058,24 +1060,19 @@
 }
 @media screen and (max-width: 480px) {
   .certified-area .txt-area .tit {
-    font-size: 2rem;
+    font-size: var(--m-fz20);
   }
   .certified-area .txt-area .txt {
-    font-size: 1.2rem;
-    word-break: keep-all;
-    line-height: 1.5;
+    font-size: var(--m-fz10);
+    width: 65%;
+    margin: auto;
   }
   .certified-area .b-box .inquiry .txt p {
     font-size: 1.4rem;
   }
   .certified-area .b-box .inquiry .txt {
     margin-left: 0rem;
-  }
-}
-@media screen and (max-width: 375px) {
-  .certified-area .txt-area {
-    width: 80%;
-    word-break: keep-all;
+    text-align: center;
   }
   .certified-area .b-box .inquiry {
     flex-direction: column;
@@ -1088,12 +1085,27 @@
     margin-left: 0rem;
     margin-top: 0px;
     text-align: center;
-  }
-  .certified-area .b-box .inquiry .txt {
-    text-align: center;
-  }
-  .certified-area .b-box .inquiry .call {
     margin-top: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .certified-area .txt-area {
+    width: 80%;
+    word-break: keep-all;
+  }
+  .certified-area .txt-area .txt {
+    font-size: var(--m-fz10);
+    width: 100%;
+    margin: auto;
+  }
+  .certified-area .b-box .inquiry {
+    margin: 1.5vh 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .certified-area {
+    padding: 0rem 2rem 2rem;
+    justify-content: space-evenly;
   }
 }
 
