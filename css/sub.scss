@@ -573,6 +573,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .poster-area {
+    min-height: calc(var(--vh, 1vh) * 62);
+  }
   .poster-area .p-box .poster-txt .info-area {
     font-size: var(--m-fz10);
   }
