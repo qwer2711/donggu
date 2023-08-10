@@ -379,7 +379,7 @@
         height: 100%;
         min-height: 10vh;
         min-height: calc(var(--vh, 1vh) * 10);
-        border: 1px solid blue;
+        border: 1px solid pink;
         align-items: end;
         div {
           margin-right: 1vw;
@@ -574,7 +574,7 @@
 }
 @media screen and (max-width: 480px) {
   .poster-area {
-    min-height: calc(var(--vh, 1vh) * 62);
+    min-height: calc(var(--vh, 1vh) * 70);
   }
   .poster-area .p-box .poster-txt .info-area {
     font-size: var(--m-fz10);
