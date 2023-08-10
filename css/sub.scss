@@ -376,7 +376,7 @@
       }
       .item-area {
         width: 100%;
-        height: auto;
+        height: 100%;
         min-height: 10vh;
         min-height: calc(var(--vh, 1vh) * 10);
         border: 1px solid red;
