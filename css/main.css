@@ -344,8 +344,8 @@
     bottom: 5%;
   }
   .m-container {
-    padding: 2vh 0;
-    padding: calc(var(--vh, 1vh) * 2) 0;
+    padding: 4vh 0;
+    padding: calc(var(--vh, 1vh) * 4) 0;
   }
   .top-banner .banner .slick-prev {
     right: 16.5vw;
