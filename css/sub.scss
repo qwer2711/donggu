@@ -379,7 +379,7 @@
         height: auto;
         min-height: 10vh;
         min-height: calc(var(--vh, 1vh) * 10);
-        border: 1px solid red;
+        border: 1px solid blue;
         align-items: end;
         div {
           margin-right: 1vw;
@@ -593,6 +593,11 @@
     width: 100%;
     flex-flow: wrap;
   }
+  .poster-area .p-box .poster-txt .item-area {
+    justify-content: start;
+    flex-flow: wrap;
+    gap: 10px;
+  }
   .program-area .guide {
     font-size: 1.3rem;
     padding: 1rem 1.5rem;
@@ -612,11 +617,7 @@
   .poster-area .p-box .poster-txt .info-area .info-list .list span.tit {
     width: 180px;
   }
-  .poster-area .p-box .poster-txt .item-area {
-    justify-content: start;
-    flex-flow: wrap;
-    gap: 10px;
-  }
+
   .poster-area .p-box .poster-txt .item-area div {
     width: 25%;
   }
