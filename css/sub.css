@@ -1214,11 +1214,12 @@
   margin-bottom: 15px;
 }
 .check-area .txt-area {
-  padding: 2rem 3rem;
+  padding: 2rem;
   border: 1px solid #d7d7d7;
   align-items: start;
   color: #4b4855;
   line-height: 1.5;
+  word-break: keep-all;
 }
 .check-area .txt-area b {
   font-weight: 500;
@@ -1389,7 +1390,7 @@
   padding: 0 0;
   background: #fff;
   color: var(--mainColor);
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   margin-top: 10px;
   width: 100px;
@@ -1540,7 +1541,7 @@
   padding: 0 0;
   background: #fff;
   color: var(--mainColor);
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   margin-top: 10px;
   width: 100px;
@@ -1619,10 +1620,10 @@
     justify-content: space-between;
   }
   .write-area .row-box-2 .sort .count .box .two-tit {
-    width: 10%;
+    width: 13%;
   }
   .write-area .row-box-2 .sort .count .box .two-tit-2 {
-    width: 10%;
+    width: 13%;
   }
 }
 @media screen and (max-width: 598px) {
@@ -1631,10 +1632,11 @@
   }
   .check-area .chk-area .error.on {
     width: 100%;
-    padding-left: 6vw;
+    padding-left: 34px;
     padding-top: 5px;
   }
   .precautions {
+    width: calc(100% - 4rem);
     padding: 2rem 2rem;
   }
 }
@@ -1676,7 +1678,7 @@
     margin-top: 1rem;
   }
   .write-area .row-box-2 .sort .count .box .add-sort input.add {
-    width: 68% !important;
+    width: 66% !important;
   }
 }
 @media screen and (max-width: 375px) {
