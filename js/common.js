@@ -1,9 +1,12 @@
 /* *******************************************************
  * 파일이름 : common.js
  * 설명 : 전체JS
- * 업데이트 : 2023-08-03
+ * 업데이트 : 2023-08-16
  ******************************************************** */
 window.addEventListener("load", function () {
+  /* **********************************
+   * 설명 : 프로그램 슬라이더
+   ************************************ */
   function programSlider() {
     $("#programList").slick({
       autoplay: true,
@@ -115,7 +118,9 @@ window.addEventListener("load", function () {
   }
   programSlider();
 
-  // js
+  /* **********************************
+   * 설명 : 반응형 vh
+   ************************************ */
   function setScreenSize() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -123,6 +128,9 @@ window.addEventListener("load", function () {
   setScreenSize();
   window.addEventListener("resize", setScreenSize);
 
+  /* **********************************
+   * 설명 : 메인배너 슬라이더
+   ************************************ */
   $("#slider-div").slick({
     autoplay: false,
     autoplaySpeed: 1800,
