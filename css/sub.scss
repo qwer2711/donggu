@@ -970,7 +970,7 @@
   border: 1px solid #d7d7d7;
   border-radius: 10px;
   margin: 5rem auto 0;
-  padding: 4rem 0 0;
+  padding: 3rem 0 0;
   justify-content: space-between;
   .txt-area {
     width: 70%;
@@ -981,7 +981,7 @@
     .tit {
       font-size: 2.5rem;
       font-weight: 500;
-      margin-bottom: 2rem;
+      padding-bottom: 2rem;
       word-break: keep-all;
       line-height: 1.5;
     }
@@ -994,10 +994,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid #d7d7d7;
-    padding-bottom: 30px;
+    padding: 2rem 0;
     .m-icon {
-      margin: 30px auto 10px;
       .icon {
         position: relative;
         left: 50%;
@@ -1022,6 +1020,7 @@
       a {
         @include button(0 25px, var(--mainColor), #fff, 16px);
         display: inline-block !important;
+        margin-top: 18px;
       }
     }
     .s-btn.main {
@@ -1029,6 +1028,8 @@
     }
   }
   .b-box {
+    border-top: 1px solid #d7d7d7;
+    padding-top: 3rem;
     .inquiry {
       align-items: center;
       .txt {
@@ -1150,6 +1151,7 @@
   .write-nav .step {
     width: 100%;
     height: 6vh;
+    padding: 5px 0;
   }
   .write-nav .step .l-icon {
     display: none;
@@ -1200,9 +1202,6 @@
     font-size: var(--m-fz10);
     width: 100%;
     margin: auto;
-  }
-  .certified-area .b-box .inquiry {
-    margin: 2rem 0 0;
   }
 }
 
