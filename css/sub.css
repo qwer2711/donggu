@@ -1892,9 +1892,6 @@
   font-size: 1.6rem;
   padding: 0 1rem;
 }
-.find-box .email input {
-  width: 30% !important;
-}
 .find-box .email input:disabled {
   background: #fafafa !important;
 }
@@ -2074,12 +2071,40 @@
 }
 
 .scroll {
+  position: relative;
   width: 100%;
   overflow-x: auto;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.scroll::before {
+  content: "→ Swipe";
+  position: absolute;
+  top: 3%;
+  right: 0%;
+  color: rgba(255, 128, 0, 0.8);
+  font-size: 1.4rem;
+  font-family: var(--suit-400);
+  animation: swipe 1.5s ease-out infinite;
+  z-index: 10;
+  display: none;
 }
 
 @media screen and (max-width: 480px) {
   .inq-complete .t-comp td {
     padding: 0px 5px;
+  }
+  .scroll::before {
+    display: block;
   }
 }/*# sourceMappingURL=sub.css.map */
