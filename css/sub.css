@@ -1912,8 +1912,8 @@
     display: none;
   }
   .inquire-box .top-box .right {
-    padding-left: 1rem;
-    width: calc(100% - 1rem);
+    padding-left: 0rem;
+    width: calc(100% - 0rem);
   }
 }
 @media screen and (max-width: 480px) {
@@ -1941,6 +1941,9 @@
   }
   .find-box .email input {
     width: 39.5% !important;
+  }
+  .inquire-box .top-box .right .list-box {
+    padding-left: 1.2rem;
   }
   .inquire-box .top-box .right .list-box li {
     text-indent: 0px;
