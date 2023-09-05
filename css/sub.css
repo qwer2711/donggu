@@ -174,7 +174,7 @@
   font-size: var(--w-fz40);
   margin-top: 3vh;
   font-weight: 500;
-  font-family: "recipe", Sans-serif;
+  font-family: "Recipekorea", Sans-serif;
   letter-spacing: -1px;
 }
 .poster-area .p-box .poster-txt .top-area .title .status {
@@ -368,7 +368,7 @@
 .program-area h3 {
   margin: 50px 0 30px;
   font-size: var(--w-fz20);
-  font-family: "recipe", sans-serif;
+  font-family: "Recipekorea", sans-serif;
 }
 .program-area .t-prog.web-view {
   width: 100%;
@@ -1766,7 +1766,7 @@
 }
 .inquire-box .top-box .right h3 {
   font-size: 1.7rem;
-  font-family: "recipe", sans-serif;
+  font-family: "Recipekorea", sans-serif;
   margin-bottom: 1.5rem;
 }
 .inquire-box .top-box .right .list-box {
@@ -1992,7 +1992,7 @@
   font-size: 2.5rem;
 }
 .inq-complete .top-box .tit-box .tit {
-  font-family: "recipe", sans-serif;
+  font-family: "Recipekorea", sans-serif;
   font-size: 1.7rem;
   margin-left: 10px;
   padding-top: 8px;
