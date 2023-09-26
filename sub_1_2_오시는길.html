@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>과학문화체험플랫폼</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- 소개 -->
+    <meta name="description" content="title" />
+    <!-- 검색엔진 -->
+    <meta name="keywords" content="title" />
+    <!-- 제작자 -->
+    <meta name="author" content="title" />
+    <!-- 전화, 주소, 이메일 자동링크 없앨때 -->
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no"
+    />
+    <!-- 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:title" content="Content Title" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630s" />
+
+    <meta
+      name="twitter:card"
+      content="트위터 카드 타입(요약정보, 사진, 비디오)"
+    />
+    <meta name="twitter:title" content="콘텐츠 제목" />
+    <meta name="twitter:description" content="웹페이지 설명" />
+    <meta name="twitter:image" content="표시되는 이미지 " />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon/favicon.png" />
+    <!-- Plugin :: CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/plugin/slick.css" />
+    <link href="js/plugin/fullcalendar/main.css" rel="stylesheet" />
+    <!-- Custom :: CSS -->
+    <link rel="stylesheet" href="css/sub.css" />
+
+    <!-- jQuery :: JS -->
+    <script src="js/vendor/jquery-3.7.0.min.js"></script>
+    <!-- Plugin :: JS -->
+    <script defer src="js/plugin/slick.min.js"></script>
+    <script src="js/plugin/fullcalendar/main.min.js"></script>
+    <!-- Custom :: JS -->
+    <script defer src="js/common.js"></script>
+
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script type="text/javascript">
+        alert(
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+        );
+      </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- #wrap -->
+    <div id="wrap" class="sub-wrap">
+      <!-- header -->
+      <header class="menu-bar">
+        <h1 class="logo_wrap">
+          <a href="#" title="과학문화체험플랫폼"></a>
+        </h1>
+        <div class="desk-nav-box">
+          <nav class="desk-nav">
+            <h2 class="blind">메뉴바</h2>
+            <ul class="fl-row">
+              <li>
+                <a href="#">사이언스라운지</a>
+                <ul>
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">프로그램안내</a>
+                <ul>
+                  <li><a href="#">신청</a></li>
+                  <li><a href="#">신청조회</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학소식</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">과학행사정보</a></li>
+                  <li><a href="#">이달의 과학책</a></li>
+                  <li><a href="#">과학교재</a></li>
+                  <li><a href="#">과학뉴스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학문화행사</a>
+                <ul>
+                  <li><a href="#">행사개요</a></li>
+                  <li><a href="#">프로그램</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">소통</a>
+                <ul>
+                  <li><a href="#">같이가요</a></li>
+                  <li><a href="#">참여후기</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="donggu">
+            <a href="#"><i class="fa-solid fa-house"></i>동구청 홈페이지</a>
+          </div>
+        </div>
+        <div class="mobile-nav-box">
+          <div class="mobile-top-bar">
+            <div class="ico toggle-side-bar-btn" data-ico-now-animating="N">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- 좌측 사이드 바 메뉴 -->
+          <div class="left-side-bar-box">
+            <div class="left-side-bar">
+              <div class="mobile-nav">
+                <div class="top-menu"></div>
+                <ul>
+                  <li>
+                    <a href="#" class="donggu-quick">동구청바로가기</a>
+                  </li>
+                  <li>
+                    <a href="#" class="home">홈</a>
+                  </li>
+                  <li>
+                    <a href="#">사이언스라운지</a>
+                    <ul>
+                      <li>
+                        <a href="#">사이언스라운지 소개</a>
+                        <a href="#">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">프로그램안내</a>
+                    <ul>
+                      <li>
+                        <a href="#">신청</a>
+                        <a href="#">신청조회</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학소식</a>
+                    <ul>
+                      <li>
+                        <a href="#">공지사항</a>
+                        <a href="#">갤러리</a>
+                        <a href="#">과학행사정보</a>
+                        <a href="#">이달의 과학책</a>
+                        <a href="#">과학교재</a>
+                        <a href="#">과학뉴스</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학문화행사</a>
+                    <ul>
+                      <li>
+                        <a href="#">행사개요</a>
+                        <a href="#">프로그램</a>
+                        <a href="#">이벤트</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">소통</a>
+                    <ul>
+                      <li>
+                        <a href="#">같이가요</a>
+                        <a href="#">참여후기</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="menu_bg"></div>
+
+      <!-- main Contents -->
+      <div class="s-container no-pdbt">
+        <!-- shortcut -->
+        <div class="shortcut-btn">
+          <a href="#"
+            ><img src="images/main/shortcut.png" alt="프로그램신청바로가기"
+          /></a>
+        </div>
+        <!-- page location -->
+        <div class="sub-root">
+          <div class="root">
+            <ul class="clearfix">
+              <li class="cell">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지</span><span class="caret"></span>
+                </div>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">사이언스라운지</a></li>
+                  <li><a href="sub1-2.html">프로그램안내</a></li>
+                  <li><a href="sub1-3.html">과학소식</a></li>
+                  <li><a href="sub1-3.html">과학문화행사</a></li>
+                  <li><a href="sub1-3.html">소통</a></li>
+                </ul>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지소개</span><span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">소개</a></li>
+                  <li><a href="sub1-2.html">찾아오시는길</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cont">
+          <h3 class="sub-tit">오시는길</h3>
+          <div class="map-box">
+            <div class="map-i">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3215.0175732671237!2d127.45225357641908!3d36.3118806950729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356548b1a07c6bdd%3A0x42c314ada7433da!2z64yA7KCE6rSR7Jet7IucIOuPmeq1rCDrj5nqtazssq3roZwgMTQ3IDHsuLU!5e0!3m2!1sko!2skr!4v1694155994433!5m2!1sko!2skr"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="map-info fl-row">
+              <h4>사이언스라운지</h4>
+              <div class="box-1 fl-row">
+                <div class="box-2 fl-col">
+                  <div class="box-3 fl-row">
+                    <div class="box-4 fl-row">
+                      <span class="icon">
+                        <img
+                          src="images/sub/sub1_2_1.png"
+                          alt="주소아이콘"
+                        /> </span
+                      ><span class="tit">주소</span>
+                    </div>
+                    <span>대전광역시 동구 동구청로 147 1층</span>
+                  </div>
+                  <div class="box-3 fl-row">
+                    <div class="box-4 fl-row">
+                      <span class="icon">
+                        <img
+                          src="images/sub/sub1_2_2.png"
+                          alt="연락처아이콘"
+                        /> </span
+                      ><span class="tit">연락처</span>
+                    </div>
+                    <span>042-251-4114</span>
+                  </div>
+                  <button class="m-google-map fl-row">
+                    <span
+                      ><img src="images/sub/sub1_2_6.png" alt="아이콘"
+                    /></span>
+                    <span>네이버지도 보러가기</span>
+                  </button>
+                </div>
+                <button class="google-map">
+                  <a href="https://naver.me/5hJG2zHv" class="fl-col">
+                    <img src="images/sub/sub1_2_3.png" alt="구글지도보러가기" />
+                    <span>네이버<br />지도보러가기</span>
+                  </a>
+                </button>
+              </div>
+            </div>
+
+            <div class="map-info-2 fl-row">
+              <div class="list">
+                <div class="inner-box">
+                  <p class="tit fl-row">
+                    <span class="tit-2">교통안내(버스)</span
+                    ><span
+                      ><img src="images/sub/sub1_2_4.png" alt="버스아이콘"
+                    /></span>
+                  </p>
+                  <p class="bus">
+                    동구청 정류장 (도보3분) <span>514,608,618</span>
+                  </p>
+                  <p class="bus">
+                    가오고등학교 (도보 12분) <span>512,52</span>
+                  </p>
+                  <p class="bus">
+                    가오동 (도보20분) <span>511,512,618,31</span>
+                  </p>
+                </div>
+              </div>
+              <div class="list">
+                <div class="inner-box">
+                  <p class="tit fl-row">
+                    <span class="tit-2">주차안내(행사 이용 시)</span
+                    ><span
+                      ><img src="images/sub/sub1_2_5.png" alt="버스아이콘"
+                    /></span>
+                  </p>
+                  <p class="bus">3시간 이하<span>무료</span></p>
+                  <p class="bus">
+                    3시간 초과<span>1000원/10분 최대 3,000원</span>
+                    <span>예시 &#41; 3시간 10분 : 1,000원</span>
+                    <span>3시간 20분 : 2,000원</span>
+                    <span>3시간 30분~ : 3,000원</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bt-img img-box">
+          <img
+            src="images/sub/sub1_5_bottom_img.png"
+            alt=""
+            class="bt-img-desk"
+          />
+          <img
+            src="images/sub/sub1_5_bottom_img_885.png"
+            alt=""
+            class="bt-img-830"
+          />
+          <img
+            src="images/sub/sub1_5_bottom_img_480.png"
+            alt=""
+            class="bt-img-480"
+          />
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <div class="f-box fl-col">
+          <ul class="f-nav">
+            <li><a href="#">홈페이지 운영정책</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <div>
+            <p class="address">
+              ㉾34691 대전광역시 동구 동구청로 147(가오동) l TEL : 동구청
+              정책개발협력실 042-251-6914 (월~금) 09:00~18:00
+            </p>
+            <p class="copy">
+              copyright ⓒ 2023 by DONGGU District. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

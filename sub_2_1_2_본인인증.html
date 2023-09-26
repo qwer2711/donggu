@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>과학문화체험플랫폼</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- 소개 -->
+    <meta name="description" content="title" />
+    <!-- 검색엔진 -->
+    <meta name="keywords" content="title" />
+    <!-- 제작자 -->
+    <meta name="author" content="title" />
+    <!-- 전화, 주소, 이메일 자동링크 없앨때 -->
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no"
+    />
+    <!-- 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:title" content="Content Title" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630s" />
+
+    <meta
+      name="twitter:card"
+      content="트위터 카드 타입(요약정보, 사진, 비디오)"
+    />
+    <meta name="twitter:title" content="콘텐츠 제목" />
+    <meta name="twitter:description" content="웹페이지 설명" />
+    <meta name="twitter:image" content="표시되는 이미지 " />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon/favicon.png" />
+
+    <!-- Plugin :: CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/plugin/slick.css" />
+    <link href="js/plugin/fullcalendar/main.css" rel="stylesheet" />
+
+    <!-- Custom :: CSS -->
+    <link rel="stylesheet" href="css/sub.css" />
+
+    <!-- jQuery :: JS -->
+    <script src="js/vendor/jquery-3.7.0.min.js"></script>
+    <!-- Plugin :: JS -->
+    <script defer src="js/plugin/slick.min.js"></script>
+    <script src="js/plugin/fullcalendar/main.min.js"></script>
+    <!-- Custom :: JS -->
+    <script defer src="js/common.js"></script>
+
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script type="text/javascript">
+        alert(
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+        );
+      </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- #wrap -->
+    <div id="wrap" class="sub-wrap">
+      <!-- header -->
+      <header class="menu-bar">
+        <h1 class="logo_wrap">
+          <a href="#" title="과학문화체험플랫폼"></a>
+        </h1>
+        <div class="desk-nav-box">
+          <nav class="desk-nav">
+            <h2 class="blind">메뉴바</h2>
+            <ul class="fl-row">
+              <li>
+                <a href="#">사이언스라운지</a>
+                <ul>
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">프로그램안내</a>
+                <ul>
+                  <li><a href="#">신청</a></li>
+                  <li><a href="#">신청조회</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학소식</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">과학행사정보</a></li>
+                  <li><a href="#">이달의 과학책</a></li>
+                  <li><a href="#">과학교재</a></li>
+                  <li><a href="#">과학뉴스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학문화행사</a>
+                <ul>
+                  <li><a href="#">행사개요</a></li>
+                  <li><a href="#">프로그램</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">소통</a>
+                <ul>
+                  <li><a href="#">같이가요</a></li>
+                  <li><a href="#">참여후기</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="donggu">
+            <a href="#"><i class="fa-solid fa-house"></i>동구청 홈페이지</a>
+          </div>
+        </div>
+        <div class="mobile-nav-box">
+          <div class="mobile-top-bar">
+            <div class="ico toggle-side-bar-btn" data-ico-now-animating="N">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- 좌측 사이드 바 메뉴 -->
+          <div class="left-side-bar-box">
+            <div class="left-side-bar">
+              <div class="mobile-nav">
+                <div class="top-menu"></div>
+                <ul>
+                  <li>
+                    <a href="#" class="donggu-quick">동구청바로가기</a>
+                  </li>
+                  <li>
+                    <a href="#" class="home">홈</a>
+                  </li>
+                  <li>
+                    <a href="#">사이언스라운지</a>
+                    <ul>
+                      <li>
+                        <a href="#">사이언스라운지 소개</a>
+                        <a href="#">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">프로그램안내</a>
+                    <ul>
+                      <li>
+                        <a href="#">신청</a>
+                        <a href="#">신청조회</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학소식</a>
+                    <ul>
+                      <li>
+                        <a href="#">공지사항</a>
+                        <a href="#">갤러리</a>
+                        <a href="#">과학행사정보</a>
+                        <a href="#">이달의 과학책</a>
+                        <a href="#">과학교재</a>
+                        <a href="#">과학뉴스</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학문화행사</a>
+                    <ul>
+                      <li>
+                        <a href="#">행사개요</a>
+                        <a href="#">프로그램</a>
+                        <a href="#">이벤트</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">소통</a>
+                    <ul>
+                      <li>
+                        <a href="#">같이가요</a>
+                        <a href="#">참여후기</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="menu_bg"></div>
+
+      <!-- main Contents -->
+      <div class="s-container">
+        <!-- shortcut -->
+        <div class="shortcut-btn">
+          <a href="#"
+            ><img src="images/main/shortcut.png" alt="프로그램신청바로가기"
+          /></a>
+        </div>
+        <!-- page location -->
+        <div class="sub-root">
+          <div class="root">
+            <ul class="clearfix">
+              <li class="cell">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지</span><span class="caret"></span>
+                </div>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">사이언스라운지</a></li>
+                  <li><a href="sub1-2.html">프로그램안내</a></li>
+                  <li><a href="sub1-3.html">과학소식</a></li>
+                  <li><a href="sub1-3.html">과학문화행사</a></li>
+                  <li><a href="sub1-3.html">소통</a></li>
+                </ul>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지소개</span><span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">소개</a></li>
+                  <li><a href="sub1-2.html">찾아오시는길</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cont">
+          <h3 class="sub-tit">프로그램 신청</h3>
+          <div class="write-nav fl-row">
+            <div class="step step-1 fl-row">
+              <div class="l-icon">
+                <div class="icon">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+              </div>
+              <div class="r-txt fl-col">
+                <span class="col">STEP1</span>
+                <span class="txt">본인인증</span>
+              </div>
+            </div>
+            <div class="arrow">
+              <img src="images/icon/write-nav_arrow.png" alt="" />
+            </div>
+            <div class="step fl-row on">
+              <div class="l-icon">
+                <div class="icon">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </div>
+              </div>
+              <div class="r-txt fl-col">
+                <span class="col">STEP2</span>
+                <span class="txt">약관동의 및 정보입력</span>
+              </div>
+            </div>
+            <div class="arrow">
+              <img src="images/icon/write-nav_arrow.png" alt="" />
+            </div>
+            <div class="step fl-row on">
+              <div class="l-icon">
+                <div class="icon">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+              <div class="r-txt fl-col">
+                <span class="col">STEP3</span>
+                <span class="txt">완료</span>
+              </div>
+            </div>
+          </div>
+          <div class="certified-area">
+            <div class="txt-area">
+              <div class="tit">
+                프로그램 신청을 위해 본인인증을 진행해 주세요
+              </div>
+              <div class="txt">
+                본인인증을 위해 입력하신 개인정보는 본인인증 기관에서 수집하는
+                정보이며 회원가입여부 확인 및 입력편의 제공 본인인증 목적으로만
+                이용됩니다
+              </div>
+            </div>
+            <div class="m-area fl-row">
+              <div class="m-box fl-col">
+                <div class="top-txt fl-col">
+                  <div class="m-icon">
+                    <div class="icon">
+                      <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                  </div>
+                  <h4>휴대폰인증</h4>
+                  <p>개인정보보호법에 의거 <br />휴대전화를 통하여 본인 확인</p>
+                  <div class="certified-btn">
+                    <a href="./sub_4_프로그램신청_입력전.html">휴대폰 인증</a>
+                  </div>
+                </div>
+                <div class="bottom-txt">
+                  생년월일, 성명, 내/외국인, 휴대폰번호, 통신사를 입력하여
+                  본인확인을 받습니다.<br />본인명의의 휴대전화가 아닐 경우
+                  본인확인이 이루어지지 않습니다.
+                </div>
+              </div>
+              <div class="m-box fl-col">
+                <div class="top-txt fl-col">
+                  <div class="m-icon">
+                    <div class="icon">
+                      <i class="fa-solid fa-comments"></i>
+                    </div>
+                  </div>
+                  <h4>SNS소셜 로그인</h4>
+                  <p>간편하게 로그인 하실 수 있습니다.</p>
+                  <div class="sns-btn fl-col">
+                    <a href="#" class="naver fl-row">
+                      <img src="images/sub/naver.png" alt="" /><span
+                        >네이버 계정 로그인</span
+                      ></a
+                    >
+                    <a href="#" class="kakao fl-row"
+                      ><img src="images/sub/kakao.png" alt="" /><span
+                        >카카오톡 계정 로그인</span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="b-area fl-row">
+              <div class="inquiry fl-row">
+                <div><img src="images/sub/qna_img.png" alt="" /></div>
+                <div class="txt">
+                  <p>프로그램 신청에 문제가 있나요?</p>
+                  <span>전화로 문의해주세요</span>
+                  <span>(운영시간: 평일 9시~18시)</span>
+                </div>
+                <div class="call fl-row">
+                  <div class="icon fl-row">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <p>042-251-4114</p>
+                </div>
+              </div>
+              <div class="l-txt">
+                <p>
+                  신상 도용은 범죄행위입니다. 타인의 신상 도용 시 주민등록법에
+                  따라 3년 이하의 징역이나 1천만원 이하의 벌금에 처해지며,
+                  사전통보 없이 회원가입이 취소될 수 있습니다.
+                  <span class="more">자세히보기 ▶</span>
+                </p>
+                <p>&lt;법정대리인의 권리 행사 안내 &gt;</p>
+                <p>
+                  만 18세 미만은 반드시 게임 이용에 대한 법정대리인(보호자 또는
+                  부모님)의 인증 및 동의를 받아야 합니다. 인증 절차에서 보호자의
+                  정보를 입력하시고 인증방법을 선택 후, 보호자 등의 과정을
+                  완료해주세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <div class="f-box fl-col">
+          <ul class="f-nav">
+            <li><a href="#">홈페이지 운영정책</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <div>
+            <p class="address">
+              ㉾34691 대전광역시 동구 동구청로 147(가오동) l TEL : 동구청
+              정책개발협력실 042-251-6914 (월~금) 09:00~18:00
+            </p>
+            <p class="copy">
+              copyright ⓒ 2023 by DONGGU District. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

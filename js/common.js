@@ -1,9 +1,87 @@
+"use strict";
+
 /* *******************************************************
  * 파일이름 : common.js
  * 설명 : 전체JS
- * 업데이트 : 2023-08-16
+ * 업데이트 : 2023-09-06
  ******************************************************** */
 window.addEventListener("load", function () {
+  /* **********************************
+   * 설명 : header
+   ************************************ */
+  function header() {
+    const header = document.querySelector(".menu-bar");
+    const header_li = document.querySelectorAll(".desk-nav > ul > li");
+    for (let i = 0; i < header_li.length; i++) {
+      header_li[i].addEventListener("mouseenter", function () {
+        header.classList.add("open");
+      });
+      header_li[i].addEventListener("mouseleave", function () {
+        header.classList.remove("open");
+      });
+    }
+  }
+  header();
+
+  /* **********************************
+   * 설명 : scroll-header
+   ************************************ */
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > 50) {
+      $("html").addClass("header-fixed");
+    } else {
+      $("html").removeClass("header-fixed");
+    }
+  });
+
+  /* **********************************
+   * 설명 : mobile-header
+   ************************************ */
+  $(".toggle-side-bar-btn").click(function () {
+    var $clicked = $(this);
+    var nowAnimating = $clicked.attr("data-ico-now-animating");
+    if (nowAnimating == "Y") {
+      return;
+    }
+    if ($clicked.hasClass("active")) {
+      hideLeftSideBar();
+    } else {
+      showLeftSideBar();
+    }
+    $clicked.attr("data-ico-now-animating", "Y");
+    $clicked.toggleClass("active");
+    setTimeout(function () {
+      $clicked.attr("data-ico-now-animating", "N");
+    }, 400);
+  });
+
+  function showLeftSideBar() {
+    $(".left-side-bar > .mobile-nav ul > li.active").removeClass("active");
+    $(".left-side-bar-box").addClass("active");
+  }
+  function hideLeftSideBar() {
+    $(".left-side-bar-box").removeClass("active");
+  }
+
+  $(".left-side-bar > .mobile-nav ul > li").click(function (e) {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(this).siblings(".active").removeClass("active");
+      $(this).find(".active").removeClass("active");
+      $(this).addClass("active");
+    }
+    e.stopPropagation();
+  });
+  $(".left-side-bar-box").click(function () {
+    $(".toggle-side-bar-btn").click();
+  });
+  $(".left-side-bar").click(function (e) {
+    e.stopPropagation();
+  });
+
   /* **********************************
    * 설명 : 프로그램 슬라이더
    ************************************ */
@@ -158,5 +236,22 @@ window.addEventListener("load", function () {
     } else {
       $("html").removeClass("header-fixed");
     }
+  });
+  /* **********************************
+   * 설명 : 메인 탭메뉴
+   ************************************ */
+  $(".head > span").click(function () {
+    var $this = $(this);
+    var $part5 = $this.closest(".science-box");
+    var $current = $part5.find(">.head span.active");
+
+    $(this).siblings().removeClass("active");
+
+    $current.removeClass("active");
+    $this.addClass("active");
+
+    var index = $this.index();
+    $part5.find(">.content>div.active").removeClass("active");
+    $part5.find(">.content>div").eq(index).addClass("active");
   });
 });

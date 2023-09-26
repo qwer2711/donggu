@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>과학문화체험플랫폼</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- 소개 -->
+    <meta name="description" content="title" />
+    <!-- 검색엔진 -->
+    <meta name="keywords" content="title" />
+    <!-- 제작자 -->
+    <meta name="author" content="title" />
+    <!-- 전화, 주소, 이메일 자동링크 없앨때 -->
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no"
+    />
+    <!-- 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:title" content="Content Title" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630s" />
+
+    <meta
+      name="twitter:card"
+      content="트위터 카드 타입(요약정보, 사진, 비디오)"
+    />
+    <meta name="twitter:title" content="콘텐츠 제목" />
+    <meta name="twitter:description" content="웹페이지 설명" />
+    <meta name="twitter:image" content="표시되는 이미지 " />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon/favicon.png" />
+
+    <!-- Plugin :: CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/plugin/slick.css" />
+    <link href="js/plugin/fullcalendar/main.css" rel="stylesheet" />
+    <!-- Custom :: CSS -->
+    <link rel="stylesheet" href="css/sub.css" />
+    <!-- jQuery :: JS -->
+    <script src="js/vendor/jquery-3.7.0.min.js"></script>
+    <!-- Plugin :: JS -->
+    <script defer src="js/plugin/slick.min.js"></script>
+    <script src="js/plugin/fullcalendar/main.min.js"></script>
+    <!-- Custom :: JS -->
+    <script defer src="js/common.js"></script>
+
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script type="text/javascript">
+        alert(
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+        );
+      </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- #wrap -->
+    <div id="wrap" class="sub-wrap">
+      <!-- header -->
+      <header class="menu-bar">
+        <h1 class="logo_wrap">
+          <a href="#" title="과학문화체험플랫폼"></a>
+        </h1>
+        <div class="desk-nav-box">
+          <nav class="desk-nav">
+            <h2 class="blind">메뉴바</h2>
+            <ul class="fl-row">
+              <li>
+                <a href="#">사이언스라운지</a>
+                <ul>
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">프로그램안내</a>
+                <ul>
+                  <li><a href="#">신청</a></li>
+                  <li><a href="#">신청조회</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학소식</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">과학행사정보</a></li>
+                  <li><a href="#">이달의 과학책</a></li>
+                  <li><a href="#">과학교재</a></li>
+                  <li><a href="#">과학뉴스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학문화행사</a>
+                <ul>
+                  <li><a href="#">행사개요</a></li>
+                  <li><a href="#">프로그램</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">소통</a>
+                <ul>
+                  <li><a href="#">같이가요</a></li>
+                  <li><a href="#">참여후기</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="donggu">
+            <a href="#"><i class="fa-solid fa-house"></i>동구청 홈페이지</a>
+          </div>
+        </div>
+        <div class="mobile-nav-box">
+          <div class="mobile-top-bar">
+            <div class="ico toggle-side-bar-btn" data-ico-now-animating="N">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- 좌측 사이드 바 메뉴 -->
+          <div class="left-side-bar-box">
+            <div class="left-side-bar">
+              <div class="mobile-nav">
+                <div class="top-menu"></div>
+                <ul>
+                  <li>
+                    <a href="#" class="donggu-quick">동구청바로가기</a>
+                  </li>
+                  <li>
+                    <a href="#" class="home">홈</a>
+                  </li>
+                  <li>
+                    <a href="#">사이언스라운지</a>
+                    <ul>
+                      <li>
+                        <a href="#">사이언스라운지 소개</a>
+                        <a href="#">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">프로그램안내</a>
+                    <ul>
+                      <li>
+                        <a href="#">신청</a>
+                        <a href="#">신청조회</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학소식</a>
+                    <ul>
+                      <li>
+                        <a href="#">공지사항</a>
+                        <a href="#">갤러리</a>
+                        <a href="#">과학행사정보</a>
+                        <a href="#">이달의 과학책</a>
+                        <a href="#">과학교재</a>
+                        <a href="#">과학뉴스</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학문화행사</a>
+                    <ul>
+                      <li>
+                        <a href="#">행사개요</a>
+                        <a href="#">프로그램</a>
+                        <a href="#">이벤트</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">소통</a>
+                    <ul>
+                      <li>
+                        <a href="#">같이가요</a>
+                        <a href="#">참여후기</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="menu_bg"></div>
+
+      <!-- main Contents -->
+      <div class="s-container no-pdbt">
+        <!-- shortcut -->
+        <div class="shortcut-btn">
+          <a href="#"
+            ><img src="images/main/shortcut.png" alt="프로그램신청바로가기"
+          /></a>
+        </div>
+        <!-- page location -->
+        <div class="sub-root">
+          <div class="root">
+            <ul class="clearfix">
+              <li class="cell">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지</span><span class="caret"></span>
+                </div>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">사이언스라운지</a></li>
+                  <li><a href="sub1-2.html">프로그램안내</a></li>
+                  <li><a href="sub1-3.html">과학소식</a></li>
+                  <li><a href="sub1-3.html">과학문화행사</a></li>
+                  <li><a href="sub1-3.html">소통</a></li>
+                </ul>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지소개</span><span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">소개</a></li>
+                  <li><a href="sub1-2.html">찾아오시는길</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cont">
+          <h3 class="sub-tit">사이언스라운지 소개</h3>
+          <div class="introduce-box">
+            <div class="ib-row-1">
+              <div class="area">
+                <img
+                  src="images/sub/sub1_1_1.png"
+                  alt="사이언스라운지 이미지"
+                />
+                <h4 class="sub-tit-1">사이언스라운지란?</h4>
+                <p>
+                  <어린이들에게는> 과학을 더 쉽고 재미있게 접할 수 있는
+                  과학체험교육장이자, <어른들에게는> 과학도서를 탐독하며 차
+                  한잔의 여유를 즐길 수 있는 작은 과학도서관으로서 공간적 제약을
+                  벗어나 누구나 편리하게 과학문화를 접할 수 있게 해주는
+                  소통창구입니다.
+                </p>
+              </div>
+              <div class="img-box">
+                <img
+                  src="https://i.ibb.co/cFr4Nbr/Group-189.png"
+                  alt="임시이미지"
+                />
+              </div>
+            </div>
+            <div class="ib-row-2">
+              <h4 class="sub-tit-1">과학동구비전</h4>
+              <div class="list-box fl-row">
+                <div class="list fl-col">
+                  <div>
+                    <img src="images/sub/sub1_1_2.png" alt="아이콘1" />
+                  </div>
+                  <h5>기술접촉기회 확대</h5>
+                  <p>
+                    4차 산업혁명의 핵심기술 접촉 기회 확대로 지역과학문화 저변
+                    확대 및 과학문화도시 기반을 조성합니다.
+                  </p>
+                </div>
+                <div class="list fl-col">
+                  <div>
+                    <img src="images/sub/sub1_1_3.png" alt="아이콘2" />
+                  </div>
+                  <h5>과학문화의 통로</h5>
+                  <p>
+                    시간적, 물리적 한계로 접근하기 어려웠던 대전의 과학문화
+                    콘텐츠를 쉽게 접할 수 있는 통로를 마련합니다.
+                  </p>
+                </div>
+                <div class="list fl-col">
+                  <div>
+                    <img src="images/sub/sub1_1_4.png" alt="아이콘3" />
+                  </div>
+                  <h5>과학문화의 통로</h5>
+                  <p>
+                    자라나는 미래세대에게는 과학자의 꿈을 심어주고, 성인들에게는
+                    과학에 대한 진입장벽을 완화시켜 과학문화에 대한 전 세대를
+                    아우르는 관심을 발현합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bt-img img-box">
+          <img
+            src="images/sub/sub1_5_bottom_img.png"
+            alt=""
+            class="bt-img-desk"
+          />
+          <img
+            src="images/sub/sub1_5_bottom_img_885.png"
+            alt=""
+            class="bt-img-885"
+          />
+          <img
+            src="images/sub/sub1_5_bottom_img_480.png"
+            alt=""
+            class="bt-img-480"
+          />
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <div class="f-box fl-col">
+          <ul class="f-nav">
+            <li><a href="#">홈페이지 운영정책</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <div>
+            <p class="address">
+              ㉾34691 대전광역시 동구 동구청로 147(가오동) l TEL : 동구청
+              정책개발협력실 042-251-6914 (월~금) 09:00~18:00
+            </p>
+            <p class="copy">
+              copyright ⓒ 2023 by DONGGU District. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

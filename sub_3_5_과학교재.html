@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>과학문화체험플랫폼</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- 소개 -->
+    <meta name="description" content="title" />
+    <!-- 검색엔진 -->
+    <meta name="keywords" content="title" />
+    <!-- 제작자 -->
+    <meta name="author" content="title" />
+    <!-- 전화, 주소, 이메일 자동링크 없앨때 -->
+    <meta
+      name="format-detection"
+      content="telephone=no, address=no, email=no"
+    />
+    <!-- 공유 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/page.html" />
+    <meta property="og:title" content="Content Title" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630s" />
+
+    <meta
+      name="twitter:card"
+      content="트위터 카드 타입(요약정보, 사진, 비디오)"
+    />
+    <meta name="twitter:title" content="콘텐츠 제목" />
+    <meta name="twitter:description" content="웹페이지 설명" />
+    <meta name="twitter:image" content="표시되는 이미지 " />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon/favicon.png" />
+
+    <!-- Plugin :: CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/plugin/slick.css" />
+    <link href="js/plugin/fullcalendar/main.css" rel="stylesheet" />
+
+    <!-- Custom :: CSS -->
+    <link rel="stylesheet" href="css/sub.css" />
+
+    <!-- jQuery :: JS -->
+    <script src="js/vendor/jquery-3.7.0.min.js"></script>
+    <!-- Plugin :: JS -->
+    <script defer src="js/plugin/slick.min.js"></script>
+    <script src="js/plugin/fullcalendar/main.min.js"></script>
+    <!-- Custom :: JS -->
+    <script defer src="js/common.js"></script>
+
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script type="text/javascript">
+        alert(
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+        );
+      </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- #wrap -->
+    <div id="wrap" class="sub-wrap">
+      <!-- header -->
+      <header class="menu-bar">
+        <h1 class="logo_wrap">
+          <a href="#" title="과학문화체험플랫폼"></a>
+        </h1>
+        <div class="desk-nav-box">
+          <nav class="desk-nav">
+            <h2 class="blind">메뉴바</h2>
+            <ul class="fl-row">
+              <li>
+                <a href="#">사이언스라운지</a>
+                <ul>
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">프로그램안내</a>
+                <ul>
+                  <li><a href="#">신청</a></li>
+                  <li><a href="#">신청조회</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학소식</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">과학행사정보</a></li>
+                  <li><a href="#">이달의 과학책</a></li>
+                  <li><a href="#">과학교재</a></li>
+                  <li><a href="#">과학뉴스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학문화행사</a>
+                <ul>
+                  <li><a href="#">행사개요</a></li>
+                  <li><a href="#">프로그램</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">소통</a>
+                <ul>
+                  <li><a href="#">같이가요</a></li>
+                  <li><a href="#">참여후기</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="donggu">
+            <a href="#"><i class="fa-solid fa-house"></i>동구청 홈페이지</a>
+          </div>
+        </div>
+        <div class="mobile-nav-box">
+          <div class="mobile-top-bar">
+            <div class="ico toggle-side-bar-btn" data-ico-now-animating="N">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- 좌측 사이드 바 메뉴 -->
+          <div class="left-side-bar-box">
+            <div class="left-side-bar">
+              <div class="mobile-nav">
+                <div class="top-menu"></div>
+                <ul>
+                  <li>
+                    <a href="#" class="donggu-quick">동구청바로가기</a>
+                  </li>
+                  <li>
+                    <a href="#" class="home">홈</a>
+                  </li>
+                  <li>
+                    <a href="#">사이언스라운지</a>
+                    <ul>
+                      <li>
+                        <a href="#">사이언스라운지 소개</a>
+                        <a href="#">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">프로그램안내</a>
+                    <ul>
+                      <li>
+                        <a href="#">신청</a>
+                        <a href="#">신청조회</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학소식</a>
+                    <ul>
+                      <li>
+                        <a href="#">공지사항</a>
+                        <a href="#">갤러리</a>
+                        <a href="#">과학행사정보</a>
+                        <a href="#">이달의 과학책</a>
+                        <a href="#">과학교재</a>
+                        <a href="#">과학뉴스</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학문화행사</a>
+                    <ul>
+                      <li>
+                        <a href="#">행사개요</a>
+                        <a href="#">프로그램</a>
+                        <a href="#">이벤트</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">소통</a>
+                    <ul>
+                      <li>
+                        <a href="#">같이가요</a>
+                        <a href="#">참여후기</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="menu_bg"></div>
+
+      <!-- main Contents -->
+      <div class="s-container">
+        <!-- shortcut -->
+        <div class="shortcut-btn">
+          <a href="#"
+            ><img src="images/main/shortcut.png" alt="프로그램신청바로가기"
+          /></a>
+        </div>
+        <!-- page location -->
+        <div class="sub-root">
+          <div class="root">
+            <ul class="clearfix">
+              <li class="cell">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지</span><span class="caret"></span>
+                </div>
+
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">사이언스라운지</a></li>
+                  <li><a href="sub1-2.html">프로그램안내</a></li>
+                  <li><a href="sub1-3.html">과학소식</a></li>
+                  <li><a href="sub1-3.html">과학문화행사</a></li>
+                  <li><a href="sub1-3.html">소통</a></li>
+                </ul>
+              </li>
+              <li class="dropdown cell has-sub">
+                <div class="f-box fl-row">
+                  <span>사이언스라운지소개</span><span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="sub1-1.html">소개</a></li>
+                  <li><a href="sub1-2.html">찾아오시는길</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cont">
+          <h3 class="sub-tit">과학교재</h3>
+          <div class="total-post-box fl-row">
+            <div class="all-post">
+              총게시물 <span class="color">23</span> , <span>페이지</span>
+              <span>1/2</span>
+            </div>
+            <div class="search-box fl-row">
+              <span>행사구분</span>
+              <select name="first">
+                <option
+                  class="place"
+                  value="placeholder"
+                  disabled=""
+                  selected=""
+                >
+                  전체
+                </option>
+                <option>행사</option>
+                <option>특강</option>
+                <option>체험</option>
+              </select>
+              <select name="two">
+                <option
+                  class="place"
+                  value="placeholder"
+                  disabled=""
+                  selected=""
+                >
+                  전체
+                </option>
+                <option>접수중</option>
+                <option>대기자접수</option>
+                <option>접수마감</option>
+              </select>
+              <div class="search-area">
+                <div class="search-bar fl-row">
+                  <label for="search-input" class="blind">검색어입력</label>
+                  <input type="text" placeholder="검색어 입력" />
+                  <button>
+                    <span class="blind">검색</span
+                    ><img src="images/icon/search.png" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-book-box bottom-box fl-col">
+            <h4 class="top-title">전체보기</h4>
+            <div class="s-book-list fl-row">
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">하늘과 바람과 별과 인간</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">이기적 유전자</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">코스모스</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">물고기는 존재하지 않는다</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">하늘과 바람과 별과 인간</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">이기적 유전자</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">코스모스</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">물고기는 존재하지 않는다</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">하늘과 바람과 별과 인간</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">이기적 유전자</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">코스모스</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="img-box">
+                  <img src="https://place-hold.it/270x350" alt="" />
+                </div>
+                <div class="title-box">
+                  <h5 class="title one-ellipsis">물고기는 존재하지 않는다</h5>
+                  <div class="more-info fl-row">
+                    <span class="txt">김상욱</span>
+                    <span class="txt">바다출판사</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagenation fl-row">
+            <div class="page-list fl-row">
+              <span class="prev-page"
+                ><img src="images/icon/left.png" alt="이전페이지아이콘"
+              /></span>
+              <a href="#" class="on">1</a>
+              <a href="#">2</a>
+              <span class="next-page"
+                ><img src="images/icon/right.png" alt="다음페이지아이콘"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <div class="f-box fl-col">
+          <ul class="f-nav">
+            <li><a href="#">홈페이지 운영정책</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <div>
+            <p class="address">
+              ㉾34691 대전광역시 동구 동구청로 147(가오동) l TEL : 동구청
+              정책개발협력실 042-251-6914 (월~금) 09:00~18:00
+            </p>
+            <p class="copy">
+              copyright ⓒ 2023 by DONGGU District. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

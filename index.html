@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>동구청</title>
+    <title>과학문화체험플랫폼</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!-- 소개 -->
@@ -40,27 +40,78 @@
     <link rel="shortcut icon" href="favicon/favicon.png" />
 
     <!-- Plugin :: CSS -->
+    <link rel="stylesheet" href="css/plugin/slick.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/plugin/slick.css" />
+    <link href="js/plugin/fullcalendar/main.css" rel="stylesheet" />
 
     <!-- Custom :: CSS -->
     <link rel="stylesheet" href="css/main.css" />
-
+    <!-- Plugin :: JQuery -->
     <script src="js/vendor/jquery-3.7.0.min.js"></script>
     <!-- Plugin :: JS -->
     <script defer src="js/plugin/slick.min.js"></script>
+    <script src="js/plugin/fullcalendar/main.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var srcCalendarEl = document.getElementById("source-calendar");
+
+        var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
+          editable: false,
+          initialDate: "2023-09-12",
+          locale: "ko",
+          titleFormat: {
+            month: "long",
+            year: "numeric",
+            day: "numeric",
+            weekday: "long",
+          },
+          dayCellContent: function (info) {
+            var number = document.createElement("a");
+            number.innerHTML = info.dayNumberText.replace("일", "");
+            if (info.view.type === "dayGridMonth") {
+              return { html: number.outerHTML };
+            }
+            return {
+              domNodes: [],
+            };
+          },
+          titleFormat: function (date) {
+            // title 설정
+            return date.date.year + "년 " + (date.date.month + 1) + "월";
+          },
+          events: [
+            {
+              title: " ",
+              start: "2023-09-11T10:00:00",
+              end: "2023-09-11T16:00:00",
+            },
+            {
+              title: " ",
+              start: "2023-09-13T10:00:00",
+              end: "2023-09-13T16:00:00",
+            },
+          ],
+          eventLeave: function (info) {
+            console.log("event left!", info.event);
+          },
+        });
+
+        srcCalendar.render();
+      });
+    </script>
     <!-- Custom :: JS -->
     <script defer src="js/common.js"></script>
 
+    <style></style>
     <!-- HTLM5shiv ie6~8 -->
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script type="text/javascript">
         alert(
-          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요."
         );
       </script>
     <![endif]-->
@@ -68,28 +119,156 @@
 
   <body>
     <div id="skip">
-      <a href="#sub_1_0">바로가기1</a>
-      <a href="#sub_2_0">바로가기2</a>
-      <a href="#sub_3_0">바로가기3</a>
-      <a href="#sub_4_0">바로가기4</a>
+      <a href="#">사이언스라운지 바로가기</a>
+      <a href="#">프로그램 신청바로가기</a>
+      <a href="#">공지사항 바로가기</a>
+      <a href="#">행사개요 바로가기</a>
+      <a href="#">참여후기 바로가기</a>
+      <a href="#">동구청 바로가기</a>
     </div>
 
+    <!-- #wrap -->
     <div id="wrap" class="main-wrap">
-      <header class="header">
-        <div class="title fl-row">
-          <h1>
-            <a href="./index.html" title="to home"
-              ><img src="images/logo/logo.png" alt="logo"
-            /></a>
-          </h1>
+      <!-- header -->
+      <header class="menu-bar">
+        <h1 class="logo_wrap">
+          <a href="#" title="과학문화체험플랫폼"></a>
+        </h1>
+        <div class="desk-nav-box">
+          <nav class="desk-nav">
+            <h2 class="blind">메뉴바</h2>
+            <ul class="fl-row">
+              <li>
+                <a href="#">사이언스라운지</a>
+                <ul>
+                  <li><a href="#">소개</a></li>
+                  <li><a href="#">찾아오시는길</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">프로그램안내</a>
+                <ul>
+                  <li><a href="#">신청</a></li>
+                  <li><a href="#">신청조회</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학소식</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">갤러리</a></li>
+                  <li><a href="#">과학행사정보</a></li>
+                  <li><a href="#">이달의 과학책</a></li>
+                  <li><a href="#">과학교재</a></li>
+                  <li><a href="#">과학뉴스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">과학문화행사</a>
+                <ul>
+                  <li><a href="#">행사개요</a></li>
+                  <li><a href="#">프로그램</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">소통</a>
+                <ul>
+                  <li><a href="#">같이가요</a></li>
+                  <li><a href="#">참여후기</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="donggu">
+            <a href="#"><i class="fa-solid fa-house"></i>동구청 홈페이지</a>
+          </div>
+        </div>
+        <div class="mobile-nav-box">
+          <div class="mobile-top-bar">
+            <div class="ico toggle-side-bar-btn" data-ico-now-animating="N">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- 좌측 사이드 바 메뉴 -->
+          <div class="left-side-bar-box">
+            <div class="left-side-bar">
+              <div class="mobile-nav">
+                <div class="top-menu"></div>
+                <ul>
+                  <li>
+                    <a href="#" class="donggu-quick">동구청바로가기</a>
+                  </li>
+                  <li>
+                    <a href="#" class="home">홈</a>
+                  </li>
+                  <li>
+                    <a href="#">사이언스라운지</a>
+                    <ul>
+                      <li>
+                        <a href="#">사이언스라운지 소개</a>
+                        <a href="#">찾아오시는길</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">프로그램안내</a>
+                    <ul>
+                      <li>
+                        <a href="#">신청</a>
+                        <a href="#">신청조회</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학소식</a>
+                    <ul>
+                      <li>
+                        <a href="#">공지사항</a>
+                        <a href="#">갤러리</a>
+                        <a href="#">과학행사정보</a>
+                        <a href="#">이달의 과학책</a>
+                        <a href="#">과학교재</a>
+                        <a href="#">과학뉴스</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">과학문화행사</a>
+                    <ul>
+                      <li>
+                        <a href="#">행사개요</a>
+                        <a href="#">프로그램</a>
+                        <a href="#">이벤트</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">소통</a>
+                    <ul>
+                      <li>
+                        <a href="#">같이가요</a>
+                        <a href="#">참여후기</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
+      <div class="menu_bg"></div>
+      <!-- shortcut -->
       <div class="shortcut-btn">
-        <a href="./sub_9_신청조회_전화번호.html"
-          ><img src="images/main/shortcut.png" alt=""
+        <a href="#"
+          ><img src="images/main/shortcut.png" alt="프로그램신청바로가기"
         /></a>
       </div>
-      <div class="top-banner">
+      <!-- banner -->
+      <section class="top-banner">
         <div id="slider-div" class="banner">
           <div
             class="item"
@@ -119,171 +298,449 @@
               >
             </div>
           </div>
-          <div
-            class="item"
-            style="background-image: url(./images/main/banner_3.png)"
-          >
-            <div class="txt-box">
-              <p>9월 토요과학카페 (드론)</p>
-              <span class="sub-txt"
-                ><i class="fa-solid fa-clock"></i>매주 토요일 /
-                13:00~14:30</span
-              >
-              <span class="sub-txt"
-                ><i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지</span
-              >
-            </div>
-          </div>
-          <div
-            class="item"
-            style="background-image: url(./images/main/banner_4.png)"
-          >
-            <div class="txt-box">
-              <p>9월 토요과학카페(자율주행로봇)</p>
-              <span class="sub-txt"
-                ><i class="fa-solid fa-clock"></i>매주 토요일 /
-                13:00~14:30</span
-              >
-              <span class="sub-txt"
-                ><i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지</span
-              >
-            </div>
-          </div>
-          <div
-            class="item"
-            style="background-image: url(./images/main/banner_5.png)"
-          >
-            <div class="txt-box">
-              <p>10월 가족과함께하는 <br />드론 입문교육 (자격증 취득)</p>
-              <span class="sub-txt"
-                ><i class="fa-solid fa-clock"></i>매주 토요일 /
-                13:00~14:30</span
-              >
-              <span class="sub-txt"
-                ><i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지</span
-              >
-            </div>
-          </div>
-          <div
-            class="item"
-            style="background-image: url(./images/main/banner_6.png)"
-          >
-            <div class="txt-box">
-              <p>4기 생활과학교실</p>
-              <span class="sub-txt"
-                ><i class="fa-solid fa-clock"></i>매주 토요일 /
-                13:00~14:30</span
-              >
-              <span class="sub-txt"
-                ><i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지</span
-              >
-            </div>
-          </div>
         </div>
-      </div>
+      </section>
+      <!-- main Contents -->
 
-      <div class="m-container">
-        <h3 class="main-sub-tit">우리동네 문화콘텐츠</h3>
-        <div id="programList" class="program-list">
-          <div class="item" onclick="location.href='./sub_1_프로그램상세.html'">
-            <div class="img-box">
-              <img src="images/main/program_list_1.png" alt="" />
+      <section class="m-container fl-col">
+        <article class="main_row_1">
+          <h3 class="main-sub-tit">과학프로그램</h3>
+          <div class="mrow-box fl-row">
+            <div class="top-color fl-row">
+              <div class="app-wait"><span></span>여행</div>
+              <div class="app-ing"><span></span>교육</div>
+              <div class="app-end"><span></span>기타</div>
             </div>
-            <div class="txt-box">
-              <p class="b-tit ellipsis">9월 토요과학카페 (VR)</p>
-              <p class="s-tit">
-                <i class="fa-solid fa-clock"></i>매주 토요일 / 13:00~14:30
-              </p>
-              <p class="s-tit">
-                <i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지
-              </p>
+            <div id="source-calendar" class="calendar"></div>
+            <div class="calendar_list def-scr">
+              <div class="list-single fl-row">
+                <div class="left-area">
+                  <div class="tit">9월 토요과학카페(드론)</div>
+                  <div class="date-1">
+                    2023.09.02 <span>(토)</span> ~ 2023.08.30 <span>(토)</span>
+                  </div>
+                  <div class="date-2">매주 토요일 / 13:00~14:30</div>
+                  <div class="location">대전 동구청 1층 사이언스라운지</div>
+                </div>
+                <div class="right-area fl-col">
+                  <div class="state app-ing">교육</div>
+                  <div class="period">
+                    <span class="txt">접수기간 : </span>
+                    <span class="date"
+                      >2023.08.21(월) 24:00 <br />~ 2023.08.28(월) 24:00</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="list-single fl-row">
+                <div class="left-area">
+                  <div class="tit">9월 토요과학카페(드론)</div>
+                  <div class="date-1">
+                    2023.09.02 <span>(토)</span> ~ 2023.08.30 <span>(토)</span>
+                  </div>
+                  <div class="date-2">매주 토요일 / 13:00~14:30</div>
+                  <div class="location">대전 동구청 1층 사이언스라운지</div>
+                </div>
+                <div class="right-area fl-col">
+                  <div class="state app-wait">여행</div>
+                  <div class="period">
+                    <span class="txt">접수기간 : </span>
+                    <span class="date"
+                      >2023.08.21(월) 24:00 <br />~ 2023.08.28(월) 24:00</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="list-single fl-row">
+                <div class="left-area">
+                  <div class="tit">9월 토요과학카페(드론)</div>
+                  <div class="date-1">
+                    2023.09.02 <span>(토)</span> ~ 2023.08.30 <span>(토)</span>
+                  </div>
+                  <div class="date-2">매주 토요일 / 13:00~14:30</div>
+                  <div class="location">대전 동구청 1층 사이언스라운지</div>
+                </div>
+                <div class="right-area fl-col">
+                  <div class="state app-end">기타</div>
+                  <div class="period">
+                    <span class="txt">접수기간 : </span>
+                    <span class="date"
+                      >2023.08.21(월) 24:00 <br />~ 2023.08.28(월) 24:00</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="list-single fl-row">
+                <div class="left-area">
+                  <div class="tit">9월 토요과학카페(드론)</div>
+                  <div class="date-1">
+                    2023.09.02 <span>(토)</span> ~ 2023.08.30 <span>(토)</span>
+                  </div>
+                  <div class="date-2">매주 토요일 / 13:00~14:30</div>
+                  <div class="location">대전 동구청 1층 사이언스라운지</div>
+                </div>
+                <div class="right-area fl-col">
+                  <div class="state app-ing">교육</div>
+                  <div class="period">
+                    <span class="txt">접수기간 : </span>
+                    <span class="date"
+                      >2023.08.21(월) 24:00 <br />~ 2023.08.28(월) 24:00</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="list-single fl-row">
+                <div class="left-area">
+                  <div class="tit">9월 토요과학카페(드론)</div>
+                  <div class="date-1">
+                    2023.09.02 <span>(토)</span> ~ 2023.08.30 <span>(토)</span>
+                  </div>
+                  <div class="date-2">매주 토요일 / 13:00~14:30</div>
+                  <div class="location">대전 동구청 1층 사이언스라운지</div>
+                </div>
+                <div class="right-area fl-col">
+                  <div class="state app-wait">여행</div>
+                  <div class="period">
+                    <span class="txt">접수기간 : </span>
+                    <span class="date"
+                      >2023.08.21(월) 24:00 <br />~ 2023.08.28(월) 24:00</span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="item">
-            <div class="img-box">
-              <img src="images/main/program_list_2.png" alt="" />
+        </article>
+        <article class="main_row_2">
+          <div class="quick-menu-box fl-row">
+            <ul class="fl-row">
+              <li class="list">
+                <a href="#">
+                  <div class="fx fl-col">
+                    <div>
+                      <img src="images/main/menu_icon_1.png" alt="" />
+                    </div>
+                    <div>신청</div>
+                  </div>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <div class="fx fl-col">
+                    <div>
+                      <img src="images/main/menu_icon_2.png" alt="" />
+                    </div>
+                    <div>신청조회</div>
+                  </div>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <div class="fx fl-col">
+                    <div>
+                      <img src="images/main/menu_icon_3.png" alt="" />
+                    </div>
+                    <div>공지사항</div>
+                  </div>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <div class="fx fl-col">
+                    <div>
+                      <img src="images/main/menu_icon_4.png" alt="" />
+                    </div>
+                    <div>참여후기</div>
+                  </div>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <div class="fx fl-col">
+                    <div>
+                      <img src="images/main/menu_icon_5.png" alt="" />
+                    </div>
+                    <div>같이가요</div>
+                  </div>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#">
+                  <div class="fx fl-col">
+                    <div>
+                      <img src="images/main/menu_icon_6.png" alt="" />
+                    </div>
+                    <div>오시는길</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="main_row_3">
+          <h3 class="main-sub-tit">과학소식</h3>
+          <div class="science-box">
+            <div class="tab-box">
+              <div class="head fl-row">
+                <span class="first-tab active">과학뉴스</span>
+                <span class="two-tab">갤러리</span>
+                <span class="third-tab">이달의책</span>
+              </div>
             </div>
-            <div class="txt-box">
-              <p class="b-tit ellipsis">9월 토요과학카페 (드론)</p>
-              <p class="s-tit">
-                <i class="fa-solid fa-clock"></i>매주 토요일 / 13:00~14:30
-              </p>
-              <p class="s-tit">
-                <i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지
-              </p>
+            <div class="content">
+              <div class="first-cont active">
+                <div class="cont-list fl-row">
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법 알고보니
+                      </p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법 알고보니
+                      </p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        미생물이 나일론을 만든다고? 과학자들이 이토록 매달리는
+                        진짜 이유는?
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="two-cont">
+                <div class="cont-list fl-row">
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법
+                        알고보니2기후변화 해법 알고보니2기후변화 해법 알고보니2
+                      </p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법 알고보니2
+                      </p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법
+                        알고보니2기후변화 해법 알고보니2기후변화 해법 알고보니2
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="three-cont">
+                <div class="cont-list fl-row">
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법 알고보니3
+                      </p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법 알고보니3
+                      </p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="item">
+                      <div class="img-box">
+                        <img src="https://place-hold.it/390x340" alt="" />
+                      </div>
+                      <p class="one-ellipsis">
+                        과학자들이 발견한 ‘전혀 뜻밖의’ 기후변화 해법 알고보니3
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="item">
-            <div class="img-box">
-              <img src="images/main/program_list_3.png" alt="" />
+        </article>
+        <article class="main_row_4">
+          <h3 class="main-sub-tit">소통</h3>
+          <div class="mrow-box fl-row">
+            <div class="notice-box">
+              <table class="notice-table table-layout">
+                <colgroup>
+                  <col style="width: 100%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th colspan="2">
+                      <div class="table-th fl-row">
+                        <span class="table-tit"> 공지사항</span>
+                        <a href="#"> <span class="more-btn">+</span></a>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list fl-row">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>       
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list fl-row">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list fl-row">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="txt-box">
-              <p class="b-tit ellipsis">9월 토요과학카페 (자율주행로봇)</p>
-              <p class="s-tit">
-                <i class="fa-solid fa-clock"></i>매주 토요일 / 13:00~14:30
-              </p>
-              <p class="s-tit">
-                <i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지
-              </p>
+            <div class="review-box">
+              <table class="review-table table-layout">
+                <colgroup>
+                  <col style="width: 100%" />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th colspan="2">
+                      <div class="table-th fl-row">
+                        <span class="table-tit"> 참여후기</span>
+                        <a href="#"> <span class="more-btn">+</span></a>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list fl-row">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list fl-row">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="table-list fl-row">
+                        <a href="#" class="fl-row">
+                          <span class="table-tit one-ellipsis">
+                            [안내] 과학프로그램 신규 상품 모집 안내(상시 모집)2
+                            모집 안내(상시 모집)
+                          </span>
+                          <span class="table-date">2023.07.23</span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="item">
-            <div class="img-box">
-              <img src="images/main/program_list_4.png" alt="" />
-            </div>
-            <div class="txt-box">
-              <p class="b-tit ellipsis">9월 과학여행</p>
-              <p class="s-tit">
-                <i class="fa-solid fa-clock"></i>매주 토요일 / 13:00~14:30
-              </p>
-              <p class="s-tit">
-                <i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="img-box">
-              <img src="images/main/program_list_5.png" alt="" />
-            </div>
-            <div class="txt-box">
-              <p class="b-tit ellipsis">
-                10월 가족과함께하는 드론 입문교육 (자격증 취득)
-              </p>
-              <p class="s-tit">
-                <i class="fa-solid fa-clock"></i>매주 토요일 / 13:00~14:30
-              </p>
-              <p class="s-tit">
-                <i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="img-box">
-              <img src="images/main/program_list_6.png" alt="" />
-            </div>
-            <div class="txt-box">
-              <p class="b-tit ellipsis">4기 생활과학교실</p>
-              <p class="s-tit">
-                <i class="fa-solid fa-clock"></i>매주 토요일 / 13:00~14:30
-              </p>
-              <p class="s-tit">
-                <i class="fa-solid fa-location-dot"></i>동구청 1층 사이언스
-                라운지
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+        </article>
+      </section>
+      <!-- footer -->
       <footer>
         <div class="f-box fl-col">
           <ul class="f-nav">

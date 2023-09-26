@@ -4,7 +4,7 @@
   font-display: swap;
   src: local("Pretendard Black"),
     url("../../fonts/pretendard/woff2/Pretendard-Black.woff2") format("woff2"),
-    url("./woff/Pretendard-Black.woff") format("woff");
+    url("../../fonts/pretendard/woff/Pretendard-Black.woff") format("woff");
 }
 
 @font-face {

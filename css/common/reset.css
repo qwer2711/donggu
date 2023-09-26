@@ -1,7 +1,7 @@
 /* *******************************************************
  * 파일이름 : reset.css
  * 설명 : 공통css
- * 업데이트 : 2023-08-21
+ * 업데이트 : 2023-09-21
  ******************************************************** */
 @-ms-viewport {
   width: device-width;
@@ -123,6 +123,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  font-size: 1.6rem;
   line-height: 1;
 }
 
@@ -155,7 +156,7 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  font-size: 62.5%;
+  font-size: 1.4rem;
   line-height: 1.15;
   margin: 0;
 }
@@ -229,22 +230,9 @@ button {
 /* Skip Navigation */
 #skip {
   position: relative;
+  z-index: 201;
 }
 #skip a {
-  display: block;
-  position: absolute;
-  left: -999px;
-  top: -999px;
-}
-
-#skip a:focus {
-  left: 0;
-  top: 0;
-  padding: 3px;
-  background: #ffc;
-  border: 1px solid #990000;
-}
-/* #skip a {
   position: absolute;
   left: 0px;
   top: -150px;
@@ -252,14 +240,45 @@ button {
   color: #fff;
   background: #333;
   line-height: 30px;
-  width: 140px;
+  width: 160px;
   text-align: center;
-  z-index: 1000;
 }
 #skip a:active,
 #skip a:focus {
   top: 0;
-} */
+}
+
+/* 스크롤바 */
+.def-scr {
+  overflow-y: auto;
+}
+/* 스크롤바 너비*/
+.def-scr::-webkit-scrollbar {
+  width: 15px;
+}
+/* 스크롤막대 */
+.def-scr::-webkit-scrollbar-thumb {
+  background: #d7d7d7;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+/* 스크롤배경 */
+.def-scr::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* blind */
+.blind {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+}
 /* Table */
 table {
   border-collapse: collapse;
@@ -311,13 +330,24 @@ textarea {
   border: 1px solid #ddd;
   vertical-align: middle;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #333333;
 }
 
 /* eclipsis */
-.ellipsis {
+.one-ellipsis {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.two-ellipsis {
+  display: block;
+  max-width: 100%;
+  height: 68px;
+  margin: 0 auto;
+  line-height: 1;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
