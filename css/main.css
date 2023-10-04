@@ -59,9 +59,6 @@
   position: relative;
   width: 100%;
   height: calc(var(--vh, 1vh) * 46);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 .top-banner .banner .item .txt-box {
   position: absolute;
@@ -70,6 +67,7 @@
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: var(--area-1240-width);
+  display: none;
 }
 .top-banner .banner .item .txt-box p {
   font-family: "Recipekorea", sans-serif;
@@ -97,11 +95,12 @@
   display: block;
   z-index: 99;
   background: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
 }
 .top-banner .banner .slick-arrow i {
   color: #818181;
@@ -110,16 +109,12 @@
   color: var(--blackColor);
 }
 .top-banner .banner .slick-prev {
-  right: 19.8vw;
+  right: 19.5vw;
   left: auto;
-  border-top-left-radius: 45%;
-  border-bottom-left-radius: 45%;
 }
 .top-banner .banner .slick-next {
   left: auto;
   right: 17vw;
-  border-top-right-radius: 45%;
-  border-bottom-right-radius: 45%;
 }
 .top-banner .banner .slick-dots {
   position: absolute;
@@ -527,15 +522,9 @@
   .top-banner .banner .slick-dots {
     width: 70%;
   }
-  .top-banner .banner .slick-prev {
-    right: 20.6vw;
-  }
 }
 /* Desktop (해상도 1280px) */
 @media screen and (max-width: 1280px) {
-  .top-banner .banner .slick-prev {
-    right: 21vw;
-  }
   .top-banner .banner .item .txt-box {
     left: 10vw;
     transform: translate(5%, -50%);
@@ -553,9 +542,6 @@
 }
 /* PC (해상도 800px ~ 1024px)*/
 @media screen and (max-width: 1024px) {
-  .top-banner .banner .slick-prev {
-    right: 22vw;
-  }
   .main_row_2 {
     background-size: contain;
     height: 40vh;
@@ -578,9 +564,7 @@
   .web-view {
     display: none !important;
   }
-  .top-banner .banner .slick-prev {
-    right: 23vw;
-  }
+
   .top-banner .banner .item .txt-box p {
     font-size: var(--fz-35);
   }
@@ -647,10 +631,6 @@
     transform: translate(-50%, -50%);
     width: auto;
   }
-  .top-banner .banner .slick-prev {
-    right: 23.5vw;
-  }
-
   .top-banner .banner .slick-arrow {
     display: none !important;
   }
@@ -660,12 +640,6 @@
   .m-container > article {
     width: calc(100% - 8vw);
     padding: 0 4vw;
-  }
-  .top-banner .banner .slick-prev {
-    right: 16.5vw;
-  }
-  .top-banner .banner .slick-next {
-    right: 6vw;
   }
   .top-banner .banner .item .txt-box .btn-box {
     justify-content: center;
@@ -726,9 +700,6 @@
 }
 /* 아이폰(해상도 375px 이하)*/
 @media screen and (max-width: 375px) {
-  .top-banner .banner .slick-prev {
-    right: 19.5vw;
-  }
   .top-banner .banner .item .txt-box {
     left: 5vw;
     transform: translate(5%, -50%);
@@ -743,10 +714,6 @@
   }
   .top-banner .banner .item .txt-box {
     padding: 2vh 3vw;
-  }
-
-  .top-banner .banner .slick-prev {
-    right: 21.5vw;
   }
 
   .list-single {

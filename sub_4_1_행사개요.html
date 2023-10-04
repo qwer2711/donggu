@@ -48,6 +48,10 @@
 
     <!-- jQuery :: JS -->
     <script src="js/vendor/jquery-3.7.0.min.js"></script>
+
+    <!-- Custom :: JS -->
+    <script defer src="js/common.js"></script>
+
     <!-- HTLM5shiv ie6~8 -->
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
@@ -61,52 +65,55 @@
 
   <body>
     <div id="wrap" class="sub-wrap">
+      <!-- header -->
       <header class="menu-bar">
         <h1 class="logo_wrap">
-          <a href="#" title="과학문화체험플랫폼"></a>
+          <a href="index.html" title="과학문화체험플랫폼"></a>
         </h1>
         <div class="desk-nav-box">
           <nav class="desk-nav">
             <h2 class="blind">메뉴바</h2>
             <ul class="fl-row">
               <li>
-                <a href="#">사이언스라운지</a>
+                <a href="sub_1_1_사이언스라운지소개.html">사이언스라운지</a>
                 <ul>
-                  <li><a href="#">소개</a></li>
-                  <li><a href="#">찾아오시는길</a></li>
+                  <li><a href="sub_1_1_사이언스라운지소개.html">소개</a></li>
+                  <li><a href="sub_1_2_오시는길.html">찾아오시는길</a></li>
                 </ul>
               </li>
               <li>
-                <a href="#">프로그램안내</a>
+                <a href="sub_2_1_0_신청메인.html">프로그램안내</a>
                 <ul>
-                  <li><a href="#">신청</a></li>
-                  <li><a href="#">신청조회</a></li>
+                  <li><a href="sub_2_1_0_신청메인.html">신청</a></li>
+                  <li><a href="sub_2_1_2_본인인증.html">신청조회</a></li>
                 </ul>
               </li>
               <li>
                 <a href="#">과학소식</a>
                 <ul>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">갤러리</a></li>
-                  <li><a href="#">과학행사정보</a></li>
-                  <li><a href="#">이달의 과학책</a></li>
-                  <li><a href="#">과학교재</a></li>
-                  <li><a href="#">과학뉴스</a></li>
+                  <li><a href="sub_3_1_0_ 공지사항.html">공지사항</a></li>
+                  <li><a href="sub_3_2_0_갤러리.html">갤러리</a></li>
+                  <li><a href="sub_2_1_0_신청메인.html">과학행사정보</a></li>
+                  <li>
+                    <a href="sub_3_3_0_이달의과학책.html">이달의 과학책</a>
+                  </li>
+                  <li><a href="sub_3_5_0_과학교재.html">과학교재</a></li>
+                  <li><a href="sub_3_2_0_갤러리.html">과학뉴스</a></li>
                 </ul>
               </li>
               <li>
-                <a href="#">과학문화행사</a>
+                <a href="sub_4_1_행사개요.html">과학문화행사</a>
                 <ul>
-                  <li><a href="#">행사개요</a></li>
-                  <li><a href="#">프로그램</a></li>
-                  <li><a href="#">이벤트</a></li>
+                  <li><a href="sub_4_1_행사개요.html">행사개요</a></li>
+                  <li><a href="sub_4_2_프로그램.html">프로그램</a></li>
+                  <li><a href="sub_4_3_이벤트.html">이벤트</a></li>
                 </ul>
               </li>
               <li>
-                <a href="#">소통</a>
+                <a href="sub_3_1_0_ 공지사항.html">소통</a>
                 <ul>
-                  <li><a href="#">같이가요</a></li>
-                  <li><a href="#">참여후기</a></li>
+                  <li><a href="sub_3_1_0_ 공지사항.html">같이가요</a></li>
+                  <li><a href="sub_3_1_0_ 공지사항.html">참여후기</a></li>
                 </ul>
               </li>
             </ul>
@@ -130,17 +137,25 @@
                 <div class="top-menu"></div>
                 <ul>
                   <li>
-                    <a href="#" class="donggu-quick">동구청바로가기</a>
+                    <a
+                      href="https://dong.daegu.kr/main/main.htm"
+                      class="donggu-quick"
+                      >동구청바로가기</a
+                    >
                   </li>
                   <li>
-                    <a href="#" class="home">홈</a>
+                    <a href="index.html" class="home">홈</a>
                   </li>
                   <li>
                     <a href="#">사이언스라운지</a>
                     <ul>
                       <li>
-                        <a href="#">사이언스라운지 소개</a>
-                        <a href="#">찾아오시는길</a>
+                        <a href="sub_1_1_사이언스라운지소개.html"
+                          >사이언스라운지 소개</a
+                        >
+                      </li>
+                      <li>
+                        <a href="sub_1_2_오시는길.html">찾아오시는길</a>
                       </li>
                     </ul>
                   </li>
@@ -148,8 +163,10 @@
                     <a href="#">프로그램안내</a>
                     <ul>
                       <li>
-                        <a href="#">신청</a>
-                        <a href="#">신청조회</a>
+                        <a href="sub_2_1_0_신청메인.html">신청</a>
+                      </li>
+                      <li>
+                        <a href="sub_2_1_2_본인인증.html">신청조회</a>
                       </li>
                     </ul>
                   </li>
@@ -157,12 +174,22 @@
                     <a href="#">과학소식</a>
                     <ul>
                       <li>
-                        <a href="#">공지사항</a>
-                        <a href="#">갤러리</a>
-                        <a href="#">과학행사정보</a>
-                        <a href="#">이달의 과학책</a>
-                        <a href="#">과학교재</a>
-                        <a href="#">과학뉴스</a>
+                        <a href="sub_3_1_0_ 공지사항.html">공지사항</a>
+                      </li>
+                      <li>
+                        <a href="sub_3_2_0_갤러리.html">갤러리</a>
+                      </li>
+                      <li>
+                        <a href="sub_2_1_0_신청메인.html">과학행사정보</a>
+                      </li>
+                      <li>
+                        <a href="sub_3_3_0_이달의과학책.html">이달의 과학책</a>
+                      </li>
+                      <li>
+                        <a href="sub_3_5_0_과학교재.html">과학교재</a>
+                      </li>
+                      <li>
+                        <a href="sub_3_2_0_갤러리.html">과학뉴스</a>
                       </li>
                     </ul>
                   </li>
@@ -170,9 +197,13 @@
                     <a href="#">과학문화행사</a>
                     <ul>
                       <li>
-                        <a href="#">행사개요</a>
-                        <a href="#">프로그램</a>
-                        <a href="#">이벤트</a>
+                        <a href="sub_4_1_행사개요.html">행사개요</a>
+                      </li>
+                      <li>
+                        <a href="sub_4_2_프로그램.html">프로그램</a>
+                      </li>
+                      <li>
+                        <a href="sub_4_3_이벤트.html">이벤트</a>
                       </li>
                     </ul>
                   </li>
@@ -180,8 +211,10 @@
                     <a href="#">소통</a>
                     <ul>
                       <li>
-                        <a href="#">같이가요</a>
-                        <a href="#">참여후기</a>
+                        <a href="sub_3_1_0_ 공지사항.html">같이가요</a>
+                      </li>
+                      <li>
+                        <a href="sub_3_1_0_ 공지사항.html">참여후기</a>
                       </li>
                     </ul>
                   </li>
@@ -191,7 +224,6 @@
           </div>
         </div>
       </header>
-
       <div class="s-container">
         <!-- shortcut -->
         <div class="shortcut-btn">
@@ -261,24 +293,6 @@
               </div>
             </div>
           </div>
-          <div class="question-box mobile-view">
-            대기예약은 신청이 아니며, 신청 인원 중 취소 또는 반려 발생 시, 취소
-            인원 수에 맞는 신청자에게 문자로 안내됩니다.<br />
-            <div class="ex fl-row">
-              <div>예시1 &#41;</div>
-              <div>
-                신청인원 100명 &gt;&gt; 2명 반려 후 98명 / 선착순 대기 신청자 중
-                동반자 2명 or 1명씩 신청한 팀이 추가 참여됩니다.
-              </div>
-            </div>
-            <div class="ex fl-row">
-              <div>예시2 &#41;</div>
-              <div>
-                신청인원 100명 &gt;&gt; 2명 반려 후 98명 / 선착순 대기 신청자 중
-                동반자 2명 or 1명씩 신청한 팀이 추가 참여됩니다.
-              </div>
-            </div>
-          </div>
           <div class="program-area event">
             <h3>프로그램 안내</h3>
             <table class="event-table">
@@ -330,7 +344,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class="map-info fl-row">
+            <div class="map-info event fl-row">
               <h4>사이언스라운지</h4>
               <div class="box-1 fl-row">
                 <div class="box-2 fl-col">
@@ -358,7 +372,7 @@
                   </div>
                 </div>
                 <button class="google-map">
-                  <a href="https://naver.me/5hJG2zHv" class="fl-col">
+                  <a href="https://naver.me/GNvKVrGv" class="fl-col">
                     <img src="images/sub/sub1_2_3.png" alt="구글지도보러가기" />
                     <span>네이버<br />지도보러가기</span>
                   </a>

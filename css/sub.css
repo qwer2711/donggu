@@ -845,8 +845,7 @@
 }
 .poster-area .p-box .poter-img {
   overflow: hidden;
-  height: 460px;
-  min-height: 460px;
+  height: 515px;
 }
 
 .poster-area .p-box .poter-img img {
@@ -998,7 +997,7 @@
   border-right: 1px solid #ced0d5;
   vertical-align: middle;
   line-height: 1.2;
-  word-break: keep-all;
+  word-break: break-all;
   text-align: left;
 }
 .poster-area .p-box .poster-txt .info-area .t-info td button.link {
@@ -3132,13 +3131,16 @@
   line-height: 1.2;
 }
 .program-area.event .event-table td {
-  padding: 1.5rem;
+  padding: 1rem;
   background: #fff;
   border-bottom: 1px solid #ced0d5;
   border-right: 1px solid #ced0d5;
   vertical-align: middle;
   line-height: 1.2;
   word-break: keep-all;
+}
+.program-area.event .event-table td:last-child {
+  border-right: 0px;
 }
 .program-area.event .map-info {
   border-top-left-radius: 10px;
@@ -3148,13 +3150,90 @@
   margin-top: var(--titHeight);
 }
 
-@media screen and (max-width: 1024px) {
-}
+@media screen and (max-width: 768px) {
+  .poster-area.event .p-box .poster-txt .top-area .title {
+    font-size: var(--fz-20);
+  }
+  .poster-area.event .p-box .poster-txt .info-area .t-info th {
+    padding: 1rem 1rem;
+  }
 
-@media screen and (max-width: 885px) {
+  .program-area.event .map-info.event {
+    flex-direction: row !important;
+  }
+  .map-info.event {
+    height: 120px;
+  }
+  .map-info.event .box-3 {
+    flex-direction: row !important;
+    margin-bottom: 0px !important;
+    margin-left: 3rem !important;
+  }
+  .map-info.event .box-4 {
+    margin-right: 10px !important;
+    margin-bottom: 0px !important;
+  }
+  .map-info.event h4 {
+    width: 50% !important;
+    margin-bottom: 0px !important;
+    margin-left: 1rem !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .poster-area.event .p-box .poster-txt {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .map-info.event h4 {
+    width: 30% !important;
+    line-height: 1.3;
+  }
+  .program-area.event .event-table td {
+    padding: 0.6rem;
+  }
+
+  .poster-area.event .p-box .poster-txt .info-area .t-info th i {
+    width: auto;
+    margin-right: 10px;
+  }
+  .poster-area.event .p-box .poster-txt .info-area .t-info th {
+    padding: 1rem 0rem;
+  }
+  .program-area.event .map-info.event {
+    flex-direction: column !important;
+  }
+  .map-info.event .box-3 .icon img {
+    width: auto;
+  }
+
+  .map-info.event h4 {
+    width: 100% !important;
+    line-height: 1.3;
+    font-size: var(--fz-16);
+    margin-left: 0rem !important;
+  }
+  .map-info.event .box-3 {
+    margin-left: 1rem !important;
+  }
+  .map-info .box-3 .tit {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .poster-area.event {
+    padding: 2rem 1rem;
+  }
+  .poster-area.event .p-box .poter-img {
+    height: 280px;
+    min-height: 280px;
+  }
+  .poster-area.event .p-box .poster-txt .info-area .t-info td {
+    padding: 0rem 0rem;
+  }
 }
 
 /* *****************************************
@@ -3169,7 +3248,7 @@
   align-items: center;
 }
 .event-program .list .img-box {
-  width: 20%;
+  width: 290px;
   overflow: hidden;
   height: 300px;
   max-height: 300px;
@@ -3178,12 +3257,13 @@
   height: 100%;
 }
 .event-program .list .text-box {
-  width: 80%;
+  width: 100%;
 }
 .event-program .list .text-box .t-info .title {
   font-weight: 800;
   letter-spacing: -1px;
   padding-bottom: 2vh;
+  font-size: var(--fz-24);
 }
 .event-program .list .text-box .t-info {
   width: 100%;
@@ -3196,7 +3276,7 @@
   color: red;
 }
 .event-program .list .text-box .t-info th {
-  padding: 1rem 0;
+  width: 110px;
   vertical-align: middle;
   font-weight: 400;
   line-height: 1.2;
@@ -3204,11 +3284,11 @@
   text-align: left;
 }
 .event-program .list .text-box .t-info td {
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   background: #fff;
   vertical-align: middle;
   line-height: 1.2;
-  word-break: keep-all;
+  word-break: break-all;
   text-align: left;
 }
 .event-program .list .text-box .t-info th i {
@@ -3216,6 +3296,47 @@
   display: inline-block;
   width: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .event-program .list .img-box {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .event-program .list {
+    gap: 0px;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .event-program .list .text-box .t-info .title {
+    padding-bottom: 1vh;
+    font-size: var(--fz-22);
+  }
+  .event-program .list .text-box .t-info th {
+    width: 85px;
+  }
+  .event-program .list .text-box .t-info td {
+    padding: 6px 0;
+  }
+  .event-program .list .img-box {
+    width: 240px;
+    height: 290px;
+  }
+
+  .event-program .list .text-box {
+    padding-top: 1rem;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .event-program .list .text-box {
+    padding-top: 1rem;
+    width: 90%;
+  }
+}
+
 /* *****************************************
  * 설명 : sub_4_3_이벤트.html
  ******************************************* */
@@ -3242,6 +3363,7 @@
 .gift-event-box .list .top-area .b-txt {
   font-family: "Recipekorea", sans-serif;
   line-height: 1.3;
+  font-size: var(--fz-20);
 }
 .gift-event-box .list .top-area .sm-txt {
   margin-top: 5px;
@@ -3272,6 +3394,26 @@
 .bottom-area .r-area .date {
   font-family: "Recipekorea", sans-serif;
   margin-top: 20px;
+  font-size: var(--fz-20);
+}
+@media screen and (max-width: 768px) {
+  .gift-event-box .list {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .add-chat-box {
+    margin: 2rem 0rem !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .gift-event-box .list .top-area .b-txt {
+    font-size: var(--fz-16);
+  }
+  .gift-event-box .list .top-area .img-box {
+    width: 100px;
+  }
 }
 
 /* *****************************************
@@ -3312,17 +3454,21 @@
   justify-content: space-between;
 }
 .chat-box .chat-list .left {
+  width: 70%;
   gap: 10px;
 }
 .chat-box .chat-list .right {
-  justify-content: end;
+  width: 30%;
+  text-align: right;
+  justify-content: space-between;
 }
+
 .chat-box .chat-list .right .re-chat {
   text-align: right;
   margin-top: 10px;
 }
 .chat-box .reply {
-  padding: 1.5rem 2rem 1.5rem 4.5rem !important;
+  padding: 1.5rem 0rem 1.5rem 4.5rem !important;
 }
 .chat-box .reply .name {
   position: relative;
@@ -3355,6 +3501,43 @@
   width: 60px;
   border: 1px solid #d7d7d7;
 }
+
+@media screen and (max-width: 480px) {
+  .chat-box .chat-list {
+    padding: 1.5rem 0rem;
+  }
+  .chat-box .reply {
+    padding: 1.5rem 0rem 1.5rem 2rem !important;
+  }
+  .together-detail .title-box .more-info .btn-box {
+    position: inherit;
+    text-align: right;
+    display: block;
+    padding-top: 20px;
+  }
+  .chat-box .reply .name::before {
+    left: -20px;
+  }
+  .detail-comm .title-box .more-info span.txt:nth-child(3) {
+    border-right: 0px !important;
+  }
+  .chat-box .chat-list .right > div:first-child {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .detail-comm .title-box .tit {
+    padding: 1rem;
+  }
+  .detail-comm .title-box .more-info span.txt {
+    padding: 0 5px;
+  }
+  .detail-comm .title-box .more-info {
+    padding: 0 1rem 0rem;
+  }
+}
+
 /* *****************************************
  * 설명 : 설명 : sub_5_1_0_ 같이가요_글쓰기.html
  ******************************************* */
@@ -3392,7 +3575,7 @@
   width: calc(100% - 20px);
 }
 .writing-table input.name {
-  width: calc(30% - 20px);
+  width: calc(100% - 20px);
 }
 .writing-table td textarea {
   width: calc(100% - 20px);
@@ -3444,6 +3627,16 @@
   margin-right: 20px;
   padding: 2rem 2rem 2rem 0rem;
 }
+
+@media screen and (max-width: 768px) {
+  .menu-list {
+    flex-wrap: wrap;
+  }
+  .menu-list a {
+    width: 100%;
+  }
+}
+
 /* *****************************************
  * 설명 : sub_4_프로그램신청_입력전.html
  ******************************************* */
