@@ -499,6 +499,11 @@ footer .f-box {
   max-width: var(--area-1240-width);
 }
 
+footer .f-box .f-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 footer .f-box .f-nav li {
   position: relative;
   display: inline-block;
@@ -612,5 +617,23 @@ footer .f-box .f-nav li:last-child:after {
     font-size: var(--fz-14);
     text-align: center;
     margin-bottom: 8px;
+  }
+  .address {
+    width: 65% !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer .f-box .f-nav {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  footer .f-box .f-nav li {
+    width: calc(50% - 20px);
+    text-align: center;
+    padding: 5px 0;
+  }
+  footer .f-box .f-nav li:nth-child(2n):after {
+    width: 0px;
   }
 }

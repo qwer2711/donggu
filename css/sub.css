@@ -800,7 +800,7 @@
   }
   .search-bar button img {
     display: inline-block;
-    margin-left: 5%;
+    margin-left: 11%;
     width: 20px;
   }
   .search-bar button::after {

@@ -294,6 +294,7 @@
 }
 .list-single .left-area {
   letter-spacing: -0.2px;
+  width: 53%;
 }
 .list-single .left-area > div {
   margin-bottom: 5px;
@@ -664,6 +665,9 @@
     background: rgba(39, 39, 39, 0.35);
     z-index: -1;
   }
+  .top-banner .banner .item .txt-box {
+    width: 80%;
+  }
   .top-banner .banner .item .txt-box p {
     font-size: var(--fz-26);
   }
@@ -676,6 +680,12 @@
   .m-container {
     padding: 4vh 0;
     padding: calc(var(--vh, 1vh) * 4) 0;
+  }
+
+  .main_row_1 .list-single .right-area .state {
+    width: 55px;
+    height: 25px;
+    line-height: 25px;
   }
 
   .main_row_2 {
