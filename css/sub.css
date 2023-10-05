@@ -2439,6 +2439,7 @@
 .detail-comm .title-box .down-list span {
   display: inline-block;
   margin-left: 10px;
+  text-decoration: underline;
 }
 .detail-comm .txt-box {
   padding: 1rem 1.5rem 5rem;
@@ -2612,6 +2613,7 @@
   border: 1px solid #d7d7d7;
   background: #fff;
   padding: 4px 8px;
+  display: none;
 }
 .gallery-detail .down-list a {
   display: block;
