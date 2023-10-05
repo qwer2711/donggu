@@ -450,6 +450,26 @@
   padding: 2rem 0 1rem;
   font-weight: 500;
 }
+
+.content > div > .cont-list .item .img-box {
+  overflow: hidden;
+  height: 260px;
+  max-height: 260px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content > div > .cont-list .item .img-box::after {
+  content: "";
+  display: block;
+  padding-top: calc(3 / 4 * 100%);
+}
+.content > div > .cont-list .item .img-box img {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* main_row_4 */
 .main_row_4 {
   height: 100%;

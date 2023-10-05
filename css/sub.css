@@ -3469,8 +3469,17 @@
   text-align: right;
   margin-top: 10px;
 }
+
+.chat-box .chat-list .right .re-chat button {
+  border-right: 1px solid #000;
+  padding: 0 1vw;
+}
+.chat-box .chat-list .right .re-chat button:last-child {
+  border: 0px;
+  padding-right: 0px;
+}
 .chat-box .reply {
-  padding: 1.5rem 0rem 1.5rem 4.5rem !important;
+  padding: 1.5rem 2rem 1.5rem 4.5rem !important;
 }
 .chat-box .reply .name {
   position: relative;
@@ -3527,6 +3536,13 @@
     font-size: 12px;
   }
 }
+@media screen and (max-width: 375px) {
+  .chat-box .chat-list .right .re-chat button {
+    border-right: 1px solid #000;
+    padding: 0 1.5vw;
+    font-size: var(--fz-12);
+  }
+}
 
 @media screen and (max-width: 320px) {
   .detail-comm .title-box .tit {
@@ -3537,6 +3553,9 @@
   }
   .detail-comm .title-box .more-info {
     padding: 0 1rem 0rem;
+  }
+  .chat-box .chat-list .right {
+    width: 37%;
   }
 }
 
