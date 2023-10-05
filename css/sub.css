@@ -1218,7 +1218,7 @@
   .poster-area {
     width: calc(100% - 0rem);
     background-image: none;
-    border: 10px solid #d7d7d7;
+    border: 7px solid #d7d7d7;
     border-radius: 20px;
     box-sizing: border-box;
     padding: 3rem 2rem;

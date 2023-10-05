@@ -161,6 +161,7 @@
   vertical-align: top;
   width: 195px;
   height: 33px;
+  z-index: 5;
 }
 
 .menu-bar .logo_wrap a {
