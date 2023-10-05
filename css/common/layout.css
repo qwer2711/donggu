@@ -119,10 +119,6 @@
   background: #fff;
   color: #272136;
 }
-
-.header-fixed .menu-bar .logo_wrap a {
-  background-image: url(../images/logo/black_logo.png);
-}
 .header-fixed .menu-bar .donggu a:hover {
   color: var(--mainColor);
   text-decoration: underline;
@@ -135,7 +131,6 @@
   color: #272136;
   transition: backgroundColor 0.3s;
 }
-
 .menu-bar::before {
   content: "";
   position: absolute;
@@ -147,14 +142,12 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-
 .header-fixed .menu-bar::before {
   opacity: 1;
 }
 .menu-bar.open::before {
   opacity: 1;
 }
-
 .sub-wrap .menu-bar::before {
   opacity: 1;
 }
@@ -172,23 +165,23 @@
 
 .menu-bar .logo_wrap a {
   width: 195px;
-  height: 38px;
+  height: 33px;
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: inline-block;
   font-size: 0;
 }
 .main-wrap .menu-bar .logo_wrap a {
-  background-image: url(../../images/logo/logo.png);
+  background-image: url(../../images/logo/logo_web_white.png);
 }
 .header-fixed .main-wrap .menu-bar .logo_wrap a {
-  background-image: url(../../images/logo/black_logo.png);
+  background-image: url(../../images/logo/logo_web_black.png);
 }
 .main-wrap .menu-bar.open .logo_wrap a {
-  background-image: url(../../images/logo/black_logo.png);
+  background-image: url(../../images/logo/logo_web_black.png);
 }
 .sub-wrap .menu-bar .logo_wrap a {
-  background-image: url(../../images/logo/black_logo.png);
+  background-image: url(../../images/logo/logo_web_black.png);
 }
 /* 동구청바로가기 */
 .menu-bar .donggu a {
@@ -554,6 +547,10 @@ footer .f-box .f-nav li:last-child:after {
 }
 
 @media screen and (max-width: 885px) {
+  :root {
+    --headerHeight: 60px;
+    --gapHeight: calc(var(--vh, 1vh) * 4);
+  }
   body {
     font-size: 1.4rem !important;
   }
@@ -561,14 +558,29 @@ footer .f-box .f-nav li:last-child:after {
     right: -40vw;
     width: 40vw;
   }
+  .menu-bar .logo_wrap a {
+    width: 155px;
+    height: 26px;
+  }
+  .main-wrap .menu-bar .logo_wrap a {
+    background-image: url(../../images/logo/logo_mobile_white.png);
+  }
+  .header-fixed .main-wrap .menu-bar .logo_wrap a {
+    background-image: url(../../images/logo/logo_mobile_black.png);
+  }
+  .main-wrap .menu-bar.open .logo_wrap a {
+    background-image: url(../../images/logo/logo_mobile_black.png);
+  }
+  .sub-wrap .menu-bar .logo_wrap a {
+    background-image: url(../../images/logo/logo_mobile_black.png);
+  }
 }
 
 @media screen and (max-width: 480px) {
-  :root {
-    --headerHeight: 65px;
-    --gapHeight: calc(var(--vh, 1vh) * 4);
+  .ico {
+    width: 18px;
+    height: 18px;
   }
-
   .header .title {
     justify-content: center !important;
   }

@@ -214,7 +214,7 @@
   font-weight: 400;
   color: #272136;
   font-family: "Recipekorea", sans-serif;
-  font-size: var(--fz-20);
+  font-size: var(--fz-);
 }
 /* 일요일 날짜 빨간색 */
 .fc-day-sun a {
