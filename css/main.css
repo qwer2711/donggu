@@ -613,7 +613,7 @@
     text-align: center;
   }
   .main_row_2 .quick-menu-box li .fx div img {
-    width: 80%;
+    width: 70%;
   }
   .main_row_4 .mrow-box {
     flex-direction: column;
@@ -692,7 +692,7 @@
     font-size: var(--fz-12);
   }
   .main_row_1 .list-single .left-area .tit {
-    font-size: var(--fz-14);
+    font-size: var(--fz-16);
   }
   .main_row_2 .quick-menu-box ul {
     width: 80%;

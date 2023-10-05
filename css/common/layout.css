@@ -86,7 +86,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  z-index: 199;
   display: none;
 }
 .menu-bar.open + .menu_bg {
@@ -161,7 +161,7 @@
   vertical-align: top;
   width: 195px;
   height: 33px;
-  z-index: 5;
+  z-index: 9;
 }
 
 .menu-bar .logo_wrap a {
@@ -338,9 +338,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 50%;
   height: var(--headerHeight);
-  z-index: 1;
+  z-index: 11;
 }
 .ico {
   position: absolute;
@@ -403,6 +403,7 @@
   visibility: hidden;
   transition: visibility 0.5s, background-color 0.5s;
   color: #272136;
+  z-index: 10;
 }
 .left-side-bar-box.active {
   background-color: rgba(0, 0, 0, 0.5);
@@ -418,7 +419,6 @@
   background-color: #fff;
   transition: right 0.5s;
   overflow-y: auto;
-  z-index: 2;
 }
 .left-side-bar-box.active > .left-side-bar {
   right: 0;
