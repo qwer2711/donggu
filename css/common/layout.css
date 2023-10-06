@@ -623,7 +623,7 @@ footer .f-box .f-nav li:last-child:after {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   footer .f-box .f-nav {
     flex-wrap: wrap;
     width: 90%;
