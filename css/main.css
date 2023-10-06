@@ -294,7 +294,7 @@
 }
 .list-single .left-area {
   letter-spacing: -0.2px;
-  width: 53%;
+  width: 60%;
 }
 .list-single .left-area > div {
   margin-bottom: 5px;
@@ -312,7 +312,7 @@
   color: #2475bf;
 }
 .list-single .right-area {
-  width: 50%;
+  width: 40%;
   align-items: end;
   justify-content: space-between;
 }
@@ -449,6 +449,10 @@
   width: 100%;
   padding: 2rem 0 1rem;
   font-weight: 500;
+}
+
+.content > div > .cont-list .item:hover p {
+  text-decoration: underline;
 }
 
 .content > div > .cont-list .item .img-box {
@@ -694,12 +698,6 @@
   .top-banner .banner .item .txt-box p {
     font-size: var(--fz-26);
   }
-  .top-banner .banner .item .txt-box .btn-box {
-    justify-content: center;
-  }
-  .top-banner .banner .item .txt-box .btn-box .s-btn.join {
-    background: var(--mainColor);
-  }
   .m-container {
     padding: 4vh 0;
     padding: calc(var(--vh, 1vh) * 4) 0;
@@ -709,6 +707,11 @@
     width: 55px;
     height: 25px;
     line-height: 25px;
+  }
+
+  .main_row_1 .list-single .right-area .period .txt {
+    display: inline-block;
+    width: 100%;
   }
 
   .main_row_2 {
@@ -729,6 +732,9 @@
   }
   .main_row_2 .quick-menu-box ul {
     width: 80%;
+  }
+  .main_row_3 {
+    margin-top: 10px;
   }
   .science-box .tab-box .head {
     border: 1px solid #d7d7d7;
@@ -764,6 +770,13 @@
     width: calc(100%);
   }
 }
+
+@media screen and (max-width: 390px) {
+  .main_row_2 {
+    height: 38vh;
+  }
+}
+
 /* 아이폰(해상도 375px 이하)*/
 @media screen and (max-width: 375px) {
   .top-banner .banner .item .txt-box {
@@ -781,18 +794,26 @@
   .top-banner .banner .item .txt-box {
     padding: 2vh 3vw;
   }
-
-  .list-single {
+  .top-banner .banner .item .txt-box p {
+    font-size: var(--fz-20);
+  }
+  .main_row_1 .list-single {
     justify-content: space-between;
     flex-direction: column;
   }
-  .list-single .left-area {
+  .main_row_1 .list-single .left-area {
     text-align: center;
   }
-  .list-single .right-area {
+  .main_row_1 .list-single .right-area {
     width: 100%;
     align-items: center;
     margin-top: 10px;
+  }
+  .main_row_1 .list-single .left-area {
+    width: 100%;
+  }
+  .main_row_1 .list-single .right-area .period {
+    text-align: center;
   }
   .main_row_2 {
     background-size: cover;

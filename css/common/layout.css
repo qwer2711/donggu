@@ -485,7 +485,7 @@ footer {
   bottom: 0vh;
   background: #222;
   width: 100%;
-  height: 20vh;
+  height: 22vh;
   align-items: center;
 }
 
@@ -601,7 +601,6 @@ footer .f-box .f-nav li:last-child:after {
   footer .f-box {
     margin: 0 auto;
     padding: 0 0;
-    max-width: 450px;
   }
   footer .f-box .f-nav li {
     margin-right: 20px;
