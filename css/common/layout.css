@@ -583,6 +583,9 @@ footer .f-box .f-nav li:last-child:after {
 }
 
 @media screen and (max-width: 480px) {
+  footer {
+    height: 28vh;
+  }
   .ico {
     width: 18px;
     height: 18px;
@@ -603,7 +606,7 @@ footer .f-box .f-nav li:last-child:after {
     padding: 0 0;
   }
   footer .f-box .f-nav li {
-    margin-right: 20px;
+    margin-right: 0px;
   }
   footer .f-box .f-nav li::after {
     right: -12px;
@@ -628,11 +631,11 @@ footer .f-box .f-nav li:last-child:after {
     width: 90%;
   }
   footer .f-box .f-nav li {
-    width: calc(50% - 20px);
+    width: calc(100% - 20px);
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
   }
-  footer .f-box .f-nav li:nth-child(2n):after {
+  footer .f-box .f-nav li::after {
     width: 0px;
   }
 }
