@@ -4335,7 +4335,7 @@
 }
 
 /* *****************************************
- * 설명 : 설명 : sub_5_1_1_ 같이가요_글쓰기.html
+ * 설명 : sub_5_1_1_ 같이가요_글쓰기.html
  ******************************************* */
 
 .writing-table {
@@ -4429,4 +4429,170 @@
   .menu-list a {
     width: 100%;
   }
+}
+
+/* *****************************************
+ * 설명 : sub_6_1_개인정보처리방침.html
+ ******************************************* */
+.privacy_1 h4 {
+  font-size: var(--fz-18);
+  font-weight: 700;
+}
+.privacy_1 .txt-box {
+  border-top: 1px solid #4b4855;
+  border-bottom: 1px solid #4b4855;
+  padding: 2rem 0;
+  line-height: 1.5;
+  word-break: keep-all;
+  margin-top: var(--titHeight);
+  color: #272136;
+}
+
+.privacy_1 .tit {
+  background: #efefef;
+  font-size: var(--fz-16);
+  font-weight: 700;
+  padding: 2rem;
+  text-align: center;
+  margin-top: var(--gapHeight);
+}
+.list-box {
+  margin-top: var(--titHeight);
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.list-box .list {
+  width: calc(33.333% - 33.333px);
+  justify-content: center;
+  align-items: center;
+}
+.list-box .list .top-box {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: 700;
+  min-height: 120px;
+}
+.list-box .list .top-box p {
+  margin-top: 1.3rem;
+}
+.list-box .list .bottom-txt {
+  width: 100%;
+  border-top: 1px solid #4b4855;
+  border-bottom: 1px solid #4b4855;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+.list-box .list .bottom-txt span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+}
+.click-txt {
+  color: #2475bf;
+  margin-top: var(--gapHeight);
+  margin-bottom: 10px;
+}
+.contents-list {
+  width: 100%;
+  border-top: 1px solid #4b4855;
+  border-bottom: 1px solid #4b4855;
+}
+.contents-list .inner-box {
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 40px 0;
+}
+
+.contents-list .inner-box a {
+  width: calc(33.333% - 30px - 2rem);
+  padding: 2rem 1rem;
+  text-align: center;
+  word-break: keep-all;
+  line-height: 1.5;
+  vertical-align: middle;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d7d7d7;
+}
+.privacy_1 .move-list {
+  margin-top: var(--titHeight);
+  word-break: keep-all;
+}
+.privacy_1 .move-list h5 {
+  font-size: var(--fz-18);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.privacy_1 .move-list .list {
+  padding: 50px 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+ul.one-depth > li {
+  display: inline-block;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+ul.two-depth > li {
+  font-size: var(--fz-16);
+  line-height: 1;
+  display: block;
+  padding-left: 1rem;
+}
+ul.two-depth > li > a {
+  text-decoration: underline;
+}
+ul.two-depth > li::before {
+  content: "·";
+  font-size: 25px;
+}
+
+ul.three-depth > li {
+  position: relative;
+  display: block;
+  padding-left: 2rem;
+  line-height: 1.5;
+}
+
+.pv-table {
+  width: 100%;
+  border-top: 2px solid #32afdd;
+  text-align: center;
+  border-left: 1px solid #ced0d5;
+}
+.pv-table th {
+  border-bottom: 1px solid #ced0d5;
+  background: #efefef;
+  vertical-align: middle;
+  font-weight: 400;
+  word-break: keep-all;
+  padding: 12px;
+  border-right: 1px solid #ced0d5;
+}
+.pv-table tr {
+  border-bottom: 1px solid #d7d7d7;
+}
+.pv-table td {
+  vertical-align: middle;
+  word-break: keep-all;
+  padding: 12px;
+  border-right: 1px solid #ced0d5;
+}
+
+.policy ul.two-depth > li::before {
+  display: none;
+}
+.policy ul.two-depth > li {
+  line-height: 1.5;
+}
+.policy .plus {
+  margin: 20px 0;
 }
