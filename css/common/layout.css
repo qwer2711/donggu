@@ -573,69 +573,70 @@ footer .f-box .f-nav li:last-child:after {
   }
   .header-fixed .main-wrap .menu-bar .logo_wrap a {
     background-image: url(../../images/logo/logo_mobile_black.png);
-  
-  .main-wrap .menu-bar.open .logo_wrap a {
-    background-image: url(../../images/logo/logo_mobile_black.png);
-  }
-  .sub-wrap .menu-bar .logo_wrap a {
-    background-image: url(../../images/logo/logo_mobile_black.png);
-  }
-}
 
-@media screen and (max-width: 480px) {
-  footer {
-    height: 28vh;
+    .main-wrap .menu-bar.open .logo_wrap a {
+      background-image: url(../../images/logo/logo_mobile_black.png);
+    }
+    .sub-wrap .menu-bar .logo_wrap a {
+      background-image: url(../../images/logo/logo_mobile_black.png);
+    }
   }
-  .ico {
-    width: 18px;
-    height: 18px;
-  }
-  .header .title {
-    justify-content: center !important;
-  }
-  .header .title h1 {
-    display: block;
-    margin-left: 0vw !important;
-  }
-  .left-side-bar {
-    right: -70vw;
-    width: 70vw;
-  }
-  footer .f-box {
-    margin: 0 auto;
-    padding: 0 0;
-  }
-  footer .f-box .f-nav li {
-    margin-right: 0px;
-  }
-  footer .f-box .f-nav li::after {
-    right: -12px;
-  }
-  .address,
-  .copy {
-    width: 90%;
-    margin: 0 auto;
-    color: #818181;
-    font-size: var(--fz-14);
-    text-align: center;
-    margin-bottom: 8px;
-  }
-  .address {
-    width: 65% !important;
-  }
-}
 
-@media screen and (max-width: 480px) {
-  footer .f-box .f-nav {
-    flex-wrap: wrap;
-    width: 90%;
+  @media screen and (max-width: 480px) {
+    footer {
+      height: 28vh;
+    }
+    .ico {
+      width: 18px;
+      height: 18px;
+    }
+    .header .title {
+      justify-content: center !important;
+    }
+    .header .title h1 {
+      display: block;
+      margin-left: 0vw !important;
+    }
+    .left-side-bar {
+      right: -70vw;
+      width: 70vw;
+    }
+    footer .f-box {
+      margin: 0 auto;
+      padding: 0 0;
+    }
+    footer .f-box .f-nav li {
+      margin-right: 0px;
+    }
+    footer .f-box .f-nav li::after {
+      right: -12px;
+    }
+    .address,
+    .copy {
+      width: 90%;
+      margin: 0 auto;
+      color: #818181;
+      font-size: var(--fz-14);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .address {
+      width: 65% !important;
+    }
   }
-  footer .f-box .f-nav li {
-    width: calc(100% - 20px);
-    text-align: center;
-    padding: 10px 0;
-  }
-  footer .f-box .f-nav li::after {
-    width: 0px;
+
+  @media screen and (max-width: 480px) {
+    footer .f-box .f-nav {
+      flex-wrap: wrap;
+      width: 90%;
+    }
+    footer .f-box .f-nav li {
+      width: calc(100% - 20px);
+      text-align: center;
+      padding: 10px 0;
+    }
+    footer .f-box .f-nav li::after {
+      width: 0px;
+    }
   }
 }
