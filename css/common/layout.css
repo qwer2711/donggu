@@ -573,7 +573,7 @@ footer .f-box .f-nav li:last-child:after {
   }
   .header-fixed .main-wrap .menu-bar .logo_wrap a {
     background-image: url(../../images/logo/logo_mobile_black.png);
-  }
+  
   .main-wrap .menu-bar.open .logo_wrap a {
     background-image: url(../../images/logo/logo_mobile_black.png);
   }
