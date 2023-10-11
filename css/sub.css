@@ -4509,7 +4509,7 @@
 }
 
 .contents-list .inner-box a {
-  width: calc(33.333% - 30px - 2rem);
+  width: calc(33.333% - 30px);
   padding: 2rem 1rem;
   text-align: center;
   word-break: keep-all;
@@ -4535,6 +4535,9 @@
 .privacy_1 .move-list .list {
   padding: 50px 0;
   border-bottom: 1px solid #d7d7d7;
+}
+.privacy_1 .move-list .list .one-depth {
+  overflow-x: auto;
 }
 ul.one-depth > li {
   display: inline-block;
@@ -4595,4 +4598,20 @@ ul.three-depth > li {
 }
 .policy .plus {
   margin: 20px 0;
+}
+@media screen and (max-width: 885px) {
+  .list-box .list {
+    width: calc(50% - 33.333px);
+  }
+  .contents-list .inner-box a {
+    width: calc(50% - 27px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .list-box .list {
+    width: calc(100%);
+  }
+  .contents-list .inner-box a {
+    width: calc(100%);
+  }
 }
