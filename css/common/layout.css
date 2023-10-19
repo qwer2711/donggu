@@ -1,7 +1,7 @@
 /* *******************************************************
  * 파일이름 : layout.css
  * 설명 : 레이아웃 스타일 
- * 업데이트 : 2023-10-06
+ * 업데이트 : 2023-10-18
  ******************************************************** */
 
 :root {
@@ -72,12 +72,14 @@
   width: 100%;
   height: 100%;
 }
+
 .shortcut-btn {
   position: fixed;
   top: 75%;
   right: 0;
   z-index: 99;
 }
+
 /* ****************** header  ********************** */
 
 /* 로고 */
@@ -213,6 +215,27 @@
   background: var(--mainColor);
 }
 
+.menu-bar .login a {
+  position: absolute;
+  top: calc(9vh / 3.6);
+  top: calc(var(--headerHeight) / 3.6);
+  right: 50px;
+  width: calc(150px - 20px);
+  height: calc(38px -23px);
+  line-height: calc(38px -23px);
+  text-align: center;
+  padding: 8px 5px 10px 5px;
+  border-radius: 3px;
+}
+.main-wrap .menu-bar .login a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.sub-wrap .menu-bar .login a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .sub-wrap .ico > div {
   background: #000;
 }
@@ -250,6 +273,8 @@
   display: block;
   line-height: var(--headerHeight);
   text-align: center;
+  font-size: var(--fz-18);
+  font-weight: 700;
 }
 /* 2차메뉴 */
 .menu-bar .desk-nav > ul ul {
@@ -573,70 +598,69 @@ footer .f-box .f-nav li:last-child:after {
   }
   .header-fixed .main-wrap .menu-bar .logo_wrap a {
     background-image: url(../../images/logo/logo_mobile_black.png);
-
-    .main-wrap .menu-bar.open .logo_wrap a {
-      background-image: url(../../images/logo/logo_mobile_black.png);
-    }
-    .sub-wrap .menu-bar .logo_wrap a {
-      background-image: url(../../images/logo/logo_mobile_black.png);
-    }
   }
-
-  @media screen and (max-width: 480px) {
-    footer {
-      height: 28vh;
-    }
-    .ico {
-      width: 18px;
-      height: 18px;
-    }
-    .header .title {
-      justify-content: center !important;
-    }
-    .header .title h1 {
-      display: block;
-      margin-left: 0vw !important;
-    }
-    .left-side-bar {
-      right: -70vw;
-      width: 70vw;
-    }
-    footer .f-box {
-      margin: 0 auto;
-      padding: 0 0;
-    }
-    footer .f-box .f-nav li {
-      margin-right: 0px;
-    }
-    footer .f-box .f-nav li::after {
-      right: -12px;
-    }
-    .address,
-    .copy {
-      width: 90%;
-      margin: 0 auto;
-      color: #818181;
-      font-size: var(--fz-14);
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    .address {
-      width: 65% !important;
-    }
+  .main-wrap .menu-bar.open .logo_wrap a {
+    background-image: url(../../images/logo/logo_mobile_black.png);
   }
+  .sub-wrap .menu-bar .logo_wrap a {
+    background-image: url(../../images/logo/logo_mobile_black.png);
+  }
+}
 
-  @media screen and (max-width: 480px) {
-    footer .f-box .f-nav {
-      flex-wrap: wrap;
-      width: 90%;
-    }
-    footer .f-box .f-nav li {
-      width: calc(100% - 20px);
-      text-align: center;
-      padding: 10px 0;
-    }
-    footer .f-box .f-nav li::after {
-      width: 0px;
-    }
+@media screen and (max-width: 480px) {
+  footer {
+    height: 28vh;
+  }
+  .ico {
+    width: 18px;
+    height: 18px;
+  }
+  .header .title {
+    justify-content: center !important;
+  }
+  .header .title h1 {
+    display: block;
+    margin-left: 0vw !important;
+  }
+  .left-side-bar {
+    right: -70vw;
+    width: 70vw;
+  }
+  footer .f-box {
+    margin: 0 auto;
+    padding: 0 0;
+  }
+  footer .f-box .f-nav li {
+    margin-right: 0px;
+  }
+  footer .f-box .f-nav li::after {
+    right: -12px;
+  }
+  .address,
+  .copy {
+    width: 90%;
+    margin: 0 auto;
+    color: #818181;
+    font-size: var(--fz-14);
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .address {
+    width: 65% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer .f-box .f-nav {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  footer .f-box .f-nav li {
+    width: calc(100% - 20px);
+    text-align: center;
+    padding: 10px 0;
+  }
+  footer .f-box .f-nav li::after {
+    width: 0px;
   }
 }

@@ -3,7 +3,7 @@
 /* *******************************************************
  * 파일이름 : common.js
  * 설명 : 전체JS
- * 업데이트 : 2023-09-06
+ * 업데이트 : 2023-10-19
  ******************************************************** */
 window.addEventListener("load", function () {
   /* **********************************
@@ -88,12 +88,12 @@ window.addEventListener("load", function () {
   function programSlider() {
     $("#programList").slick({
       autoplay: true,
-      autoplaySpeed: 1800,
-      speed: 600,
+      autoplaySpeed: 1500,
+      speed: 500,
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
-      pauseOnHover: true,
+      pauseOnHover: false,
       dots: false,
       pauseOnDotsHover: false,
       cssEase: "linear",
@@ -114,56 +114,10 @@ window.addEventListener("load", function () {
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 830,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 481,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
-    var progSlider = $("#programList");
-    var slickOptions = {
-      autoplay: true,
-      autoplaySpeed: 1800,
-      speed: 600,
-      infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      pauseOnHover: true,
-      dots: false,
-      pauseOnDotsHover: false,
-      cssEase: "linear",
-      // fade:true,
-      draggable: true,
-      prevArrow:
-        '<a class="slick-prev" href="#"><i class="fa-solid fa-chevron-left"></i></a>',
-      nextArrow:
-        '<a class="slick-next" href="#"><i class="fa-solid fa-chevron-right"></i></a>',
-      responsive: [
-        // 반응형 웹 구현 옵션
-        {
-          breakpoint: 1441, //화면 사이즈 960px
-          settings: {
             slidesToShow: 3,
           },
         },
         {
-          breakpoint: 1025,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
           breakpoint: 830,
           settings: {
             slidesToShow: 2,
@@ -175,26 +129,29 @@ window.addEventListener("load", function () {
             slidesToShow: 1,
           },
         },
-        {
-          breakpoint: 767,
-          settings: "unslick",
-        },
       ],
-    };
-    if ($(window).width() < 767) {
-      progSlider.slick("unslick");
-    } else {
-      progSlider.not(".slick-initialized").slick(slickOptions);
-    }
-    $(window).on("resize", function () {
-      if ($(window).width() < 767) {
-        progSlider.slick("unslick");
-      } else {
-        progSlider.not(".slick-initialized").slick(slickOptions);
-      }
     });
   }
   programSlider();
+
+  function sliderStopBtn() {
+    let flag = false;
+
+    $(".main_row_0 .play-btn").click(function () {
+      if (flag == false) {
+        $("#programList").slick("slickPause");
+        $(".play-btn .fa-solid").removeClass("fa-pause");
+        $(".play-btn .fa-solid").addClass("fa-play");
+        flag = true;
+      } else {
+        $("#programList").slick("slickPlay");
+        $(".play-btn .fa-solid").removeClass("fa-play");
+        $(".play-btn .fa-solid").addClass("fa-pause");
+        flag = false;
+      }
+    });
+  }
+  sliderStopBtn();
 
   /* **********************************
    * 설명 : 반응형 vh
@@ -240,18 +197,67 @@ window.addEventListener("load", function () {
   /* **********************************
    * 설명 : 메인 탭메뉴
    ************************************ */
-  $(".head > span").click(function () {
-    var $this = $(this);
-    var $part5 = $this.closest(".science-box");
-    var $current = $part5.find(">.head span.active");
+  // $(".head > span").click(function () {
+  //   var $this = $(this);
+  //   var $part5 = $this.closest(".science-box");
+  //   var $current = $part5.find(">.head span.active");
 
-    $(this).siblings().removeClass("active");
+  //   $(this).siblings().removeClass("active");
 
-    $current.removeClass("active");
-    $this.addClass("active");
+  //   $current.removeClass("active");
+  //   $this.addClass("active");
 
-    var index = $this.index();
-    $part5.find(">.content>div.active").removeClass("active");
-    $part5.find(">.content>div").eq(index).addClass("active");
-  });
+  //   var index = $this.index();
+  //   $part5.find(">.content>div.active").removeClass("active");
+  //   $part5.find(">.content>div").eq(index).addClass("active");
+  // });
+
+  function gallerySlider() {
+    $("#gallery").slick({
+      autoplay: false,
+      autoplaySpeed: 1500,
+      speed: 500,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      pauseOnHover: false,
+      dots: false,
+      pauseOnDotsHover: false,
+      cssEase: "linear",
+      // fade:true,
+      draggable: true,
+      prevArrow:
+        '<a class="slick-prev" href="#"><i class="fa-solid fa-chevron-left"></i></a>',
+      nextArrow:
+        '<a class="slick-next" href="#"><i class="fa-solid fa-chevron-right"></i></a>',
+      responsive: [
+        // 반응형 웹 구현 옵션
+        {
+          breakpoint: 1441, //화면 사이즈 960px
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 830,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 481,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+  }
+  gallerySlider();
 });

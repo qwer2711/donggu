@@ -2,7 +2,7 @@
 /* *******************************************************
  * 파일이름 : sub.css
  * 설명 : 전체 서브페이지 css
- * 업데이트 : 2023-10-06
+ * 업데이트 : 2023-10-18
  ******************************************************** */
 /* ****************** Sub 공통CSS  ********************** */
 @import url(../css/common/layout.css);
@@ -866,7 +866,7 @@
   width: calc(100% - 4rem);
   height: 100%;
   margin-top: 40px;
-  background-image: url(../images/sub/poster_box.png);
+  background-image: url(/science/images/scep/sub/poster_box.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -979,7 +979,7 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: url(../images/icon/caret_right.png);
+  background: url(/science/images/scep/icon/caret_right.png);
   background-repeat: no-repeat;
   background-position: center;
   text-indent: 0rem;
@@ -989,7 +989,7 @@
 }
 .poster-area .join-btn span:hover:after {
   content: "";
-  background: url(../images/icon/caret_right_2.png);
+  background: url(/science/images/scep/icon/caret_right_2.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1480,6 +1480,7 @@
 }
 .alarm-pop .m-cont .btn-box {
   justify-content: center;
+  margin-top: 0px !important;
 }
 
 .alarm-pop.on {
@@ -2248,7 +2249,7 @@
   -moz-appearance: none;
   appearance: none;
   /*  화살표 이미지 첨부 */
-  background-image: url(../images/icon/select-box.png);
+  background-image: url(/science/images/scep/icon/select-box.png);
   background-position: calc(100% - 5px);
   background-repeat: no-repeat;
 }
@@ -2944,7 +2945,7 @@
   display: none;
   width: 116px;
   height: 116px;
-  background-image: url(../images/sub/sub2_1_5_1.png);
+  background-image: url(/science/images/scep/sub/sub2_1_5_1.png);
 }
 
 .inq-complete .swipe {
@@ -3421,7 +3422,7 @@
   box-sizing: border-box;
 }
 
-.slick-slider {
+.gallery-detail .slick-slider {
   position: initial !important;
 }
 .gallery-detail .slider-for .slick-arrow {
@@ -4204,6 +4205,8 @@
   position: absolute;
   top: 0;
   right: 0;
+  margin-top: 0px !important;
+  width: auto !important;
 }
 
 .together-detail .title-box .more-info .btn-box .line {
@@ -4456,27 +4459,27 @@
   text-align: center;
   margin-top: var(--gapHeight);
 }
-.list-box {
+.privacy_1 .list-box {
   margin-top: var(--titHeight);
   gap: 50px;
   flex-wrap: wrap;
 }
-.list-box .list {
+.privacy_1 .list-box .list {
   width: calc(33.333% - 33.333px);
   justify-content: center;
   align-items: center;
 }
-.list-box .list .top-box {
+.privacy_1 .list-box .list .top-box {
   width: 100%;
   text-align: center;
   padding: 2rem 0;
   font-weight: 700;
   min-height: 120px;
 }
-.list-box .list .top-box p {
+.privacy_1 .list-box .list .top-box p {
   margin-top: 1.3rem;
 }
-.list-box .list .bottom-txt {
+.privacy_1 .list-box .list .bottom-txt {
   width: 100%;
   border-top: 1px solid #4b4855;
   border-bottom: 1px solid #4b4855;
@@ -4484,23 +4487,23 @@
   justify-content: center;
   align-items: center;
 }
-.list-box .list .bottom-txt span {
+.privacy_1 .list-box .list .bottom-txt span {
   display: inline-block;
   width: 100%;
   text-align: center;
   line-height: 1.5;
 }
-.click-txt {
+.privacy_1 .click-txt {
   color: #2475bf;
   margin-top: var(--gapHeight);
   margin-bottom: 10px;
 }
-.contents-list {
+.privacy_1 .contents-list {
   width: 100%;
   border-top: 1px solid #4b4855;
   border-bottom: 1px solid #4b4855;
 }
-.contents-list .inner-box {
+.privacy_1 .contents-list .inner-box {
   width: 100%;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -4508,7 +4511,7 @@
   padding: 40px 0;
 }
 
-.contents-list .inner-box a {
+.privacy_1 .contents-list .inner-box a {
   width: calc(33.333% - 30px);
   padding: 2rem 1rem;
   text-align: center;
@@ -4539,39 +4542,39 @@
 .privacy_1 .move-list .list .one-depth {
   overflow-x: auto;
 }
-ul.one-depth > li {
+.privacy_1 ul.one-depth > li {
   display: inline-block;
   line-height: 1.5;
   margin-bottom: 15px;
 }
-ul.two-depth > li {
+.privacy_1 ul.two-depth > li {
   font-size: var(--fz-16);
   line-height: 1;
   display: block;
   padding-left: 1rem;
 }
-ul.two-depth > li > a {
+.privacy_1 ul.two-depth > li > a {
   text-decoration: underline;
 }
-ul.two-depth > li::before {
+.privacy_1 ul.two-depth > li::before {
   content: "·";
   font-size: 25px;
 }
 
-ul.three-depth > li {
+.privacy_1 ul.three-depth > li {
   position: relative;
   display: block;
   padding-left: 2rem;
   line-height: 1.5;
 }
 
-.pv-table {
+.privacy_1 .pv-table {
   width: 100%;
   border-top: 2px solid #32afdd;
   text-align: center;
   border-left: 1px solid #ced0d5;
 }
-.pv-table th {
+.privacy_1 .pv-table th {
   border-bottom: 1px solid #ced0d5;
   background: #efefef;
   vertical-align: middle;
@@ -4580,38 +4583,38 @@ ul.three-depth > li {
   padding: 12px;
   border-right: 1px solid #ced0d5;
 }
-.pv-table tr {
+.privacy_1 .pv-table tr {
   border-bottom: 1px solid #d7d7d7;
 }
-.pv-table td {
+.privacy_1 .pv-table td {
   vertical-align: middle;
   word-break: keep-all;
   padding: 12px;
   border-right: 1px solid #ced0d5;
 }
 
-.policy ul.two-depth > li::before {
+.privacy_1 .policy ul.two-depth > li::before {
   display: none;
 }
-.policy ul.two-depth > li {
+.privacy_1 .policy ul.two-depth > li {
   line-height: 1.5;
 }
-.policy .plus {
+.privacy_1 .policy .plus {
   margin: 20px 0;
 }
 @media screen and (max-width: 885px) {
-  .list-box .list {
+  .privacy_1 .list-box .list {
     width: calc(50% - 33.333px);
   }
-  .contents-list .inner-box a {
+  .privacy_1 .contents-list .inner-box a {
     width: calc(50% - 27px);
   }
 }
 @media screen and (max-width: 480px) {
-  .list-box .list {
+  .privacy_1 .list-box .list {
     width: calc(100%);
   }
-  .contents-list .inner-box a {
+  .privacy_1 .contents-list .inner-box a {
     width: calc(100%);
   }
 }
