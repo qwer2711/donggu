@@ -1,7 +1,7 @@
 /* *******************************************************
  * 파일이름 : layout.css
  * 설명 : 레이아웃 스타일 
- * 업데이트 : 2023-10-18
+ * 업데이트 : 2023-10-20
  ******************************************************** */
 
 :root {
@@ -562,6 +562,10 @@ footer .f-box .f-nav li:last-child:after {
 }
 
 @media screen and (max-width: 1280px) {
+  :root {
+    /* MaxWidth */
+    --area-1240-width: 1040px;
+  }
   .desk-nav-box {
     display: none;
   }
@@ -574,6 +578,13 @@ footer .f-box .f-nav li:last-child:after {
 
   .header-fixed .ico.active > div {
     background: #fff;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    /* MaxWidth */
+    --area-1240-width: 885px;
   }
 }
 
