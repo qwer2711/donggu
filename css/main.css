@@ -1199,6 +1199,10 @@
     transform: translate(5%, -50%);
     width: 80%;
   }
+  .main_row_2 {
+    height: 67vh;
+    height: calc(var(--vh, 1vh) * 67);
+  }
   .main_row_2 .quick-menu-box li {
     width: 33%;
   }
