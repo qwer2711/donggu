@@ -1236,6 +1236,10 @@
   .main_row_1 .list-single .right-area .period {
     text-align: center;
   }
+  .main_row_2 .quick-menu-box li a {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (max-width: 280px) {
