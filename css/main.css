@@ -1174,8 +1174,8 @@
     margin-top: var(--headerHeight);
   }
   .main_row_2 .quick-menu-box li a {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
   }
   .main_row_2 .quick-menu-box li .icon img {
     height: 38px;
