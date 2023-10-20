@@ -2,7 +2,7 @@
 /* *******************************************************
  * 파일이름 : sub.css
  * 설명 : 전체 서브페이지 css
- * 업데이트 : 2023-10-18
+ * 업데이트 : 2023-10-20
  ******************************************************** */
 /* ****************** Sub 공통CSS  ********************** */
 @import url(../css/common/layout.css);
@@ -65,15 +65,16 @@
   height: 100%;
   min-height: calc(100vh - 41vh);
   max-width: var(--area-1240-width);
-  margin: 5vh auto;
-  margin: calc(var(--vh, 1vh) * 5) auto;
+  margin: 9vh auto;
+  margin: var(--headerHeight) auto;
 }
 
 /*  sub-root  */
 
 .sub-root {
-  background: #f4fcff;
+  background: var(--mainColor);
   border-bottom: 1px solid rgba(215, 215, 215, 0.6);
+  position: relative;
 }
 .sub-root .root {
   width: 100%;
@@ -89,6 +90,7 @@
   line-height: 45px;
   text-align: center;
   cursor: pointer;
+  color: #fff;
 }
 .sub-root .root > ul > li::after {
   content: "";
@@ -128,15 +130,12 @@
   border-left: 4px solid transparent;
 }
 
-/*  page location */
-.sub-root {
-  position: relative;
-  z-index: 100;
-}
-.sub-root .root > ul > li {
-  position: relative;
-}
+/* root_2depth_menu */
 
+.sub-root .f-box {
+  justify-content: center;
+  align-items: center;
+}
 .sub-root .root > ul > li ul.dropdown-menu {
   position: absolute;
   top: 100%;
@@ -152,6 +151,7 @@
 .sub-root .root > ul > li ul.dropdown-menu > li {
   width: 100%;
   background: #fff;
+  color: #272136;
 }
 .sub-root .root > ul > li ul.dropdown-menu > li > a {
   display: block;
@@ -219,23 +219,20 @@
 .web-view {
   display: block !important;
 }
-.f-box {
-  justify-content: center;
-  align-items: center;
-}
+
 .sub-tit {
   margin: 0 0 var(--titHeight);
   font-family: "Recipekorea", sans-serif;
   text-align: center;
   border-bottom: 1px solid #efefef;
-  padding-bottom: 5vh;
-  font-size: var(--fz-20);
+  padding-bottom: 3vh;
+  font-size: var(--fz-30);
 }
 .sub-tit-1 {
   margin: var(--titHeight) 0 2vh;
   font-family: "Recipekorea", sans-serif;
   text-align: center;
-  font-size: var(--fz-18);
+  font-size: var(--fz-24);
 }
 
 @media screen and (max-width: 1280px) {
@@ -866,7 +863,7 @@
   width: calc(100% - 4rem);
   height: 100%;
   margin-top: 40px;
-  background-image: url(/science/images/scep/sub/poster_box.png);
+  background-image: url(../images/sub/poster_box.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -979,7 +976,7 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: url(/science/images/scep/icon/caret_right.png);
+  background: url(../images/icon/caret_right.png);
   background-repeat: no-repeat;
   background-position: center;
   text-indent: 0rem;
@@ -989,7 +986,7 @@
 }
 .poster-area .join-btn span:hover:after {
   content: "";
-  background: url(/science/images/scep/icon/caret_right_2.png);
+  background: url(../images/icon/caret_right_2.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2249,7 +2246,7 @@
   -moz-appearance: none;
   appearance: none;
   /*  화살표 이미지 첨부 */
-  background-image: url(/science/images/scep/icon/select-box.png);
+  background-image: url(../images/icon/select-box.png);
   background-position: calc(100% - 5px);
   background-repeat: no-repeat;
 }
@@ -2945,7 +2942,7 @@
   display: none;
   width: 116px;
   height: 116px;
-  background-image: url(/science/images/scep/sub/sub2_1_5_1.png);
+  background-image: url(../images/sub/sub2_1_5_1.png);
 }
 
 .inq-complete .swipe {
