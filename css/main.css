@@ -1172,6 +1172,7 @@
   }
   .main_row_2 {
     margin-top: var(--headerHeight);
+    height: 480px !important;
   }
   .main_row_2 .quick-menu-box li a {
     width: 60px;
