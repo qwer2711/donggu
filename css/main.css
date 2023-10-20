@@ -1027,7 +1027,7 @@
     height: 100%;
   }
   .main_row_1 .calendar_list {
-    height: 45vh;
+    height: 400px;
     margin-top: 0rem;
   }
 
@@ -1162,7 +1162,7 @@
     display: none;
   }
   .main_row_1 .calendar_list {
-    margin-top: 5vh;
+    margin-top: 50px;
   }
   .main_row_1 .list-single {
     font-size: var(--fz-12);
