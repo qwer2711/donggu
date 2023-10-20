@@ -687,7 +687,7 @@
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
-.program-list-box .program-list .list .img-box {
+/* .program-list-box .program-list .list .img-box {
   max-height: 400px;
   border-radius: 10px;
   overflow: hidden;
@@ -697,28 +697,39 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
+} */
+
+.program-list-box .program-list .list .img-box {
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.program-list-box .program-list .list .img-box .state {
-  position: absolute;
-  top: 10px;
-  right: 20px;
+.program-list-box .program-list .list .img-box::after {
+  content: "";
+  display: block;
+  padding-top: calc(3.5 / 3 * 100%);
+}
+
+.program-list-box .program-list .list .state {
   display: inline-block;
   color: #fff;
-  border-radius: 14px;
-  padding: 6px 2rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 1rem;
   font-size: var(--fz-14);
 }
-
-.program-list-box .program-list .list .img-box .state.wait {
-  background-color: #ffc000;
+.program-list-box .program-list .list .state.wait {
+  background-color: #a7a7a7;
 }
-.program-list-box .program-list .list .img-box .state.ing {
+.program-list-box .program-list .list .state.ing {
   background-color: #3bbcad;
 }
-.program-list-box .program-list .list .img-box .state.end {
+.program-list-box .program-list .list .state.end {
   background-color: #4b4855;
 }
 .program-list-box .program-list .list .title-box {
@@ -726,18 +737,6 @@
   border-radius: 10px;
 }
 
-.program-list-box .program-list .list .title-box .state {
-  display: inline-block;
-  color: #fff;
-  border-radius: 14px;
-  padding: 6px 2rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin-bottom: 1.5rem;
-  font-size: var(--fz-14);
-}
-.program-list-box .program-list .list .title-box .state {
-  background: #4b4855;
-}
 .program-list-box .program-list .list .title-box .title {
   font-family: "Recipekorea", Sans-serif;
   color: #4b4855;
