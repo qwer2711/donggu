@@ -1665,7 +1665,7 @@
  * 설명 : sub_2_1_2_본인인증.html
  ******************************************* */
 .write-nav {
-  width: 85%;
+  width: 100%;
   margin: 30px auto 0;
   margin-top: 3vh;
   justify-content: space-between;
@@ -1673,8 +1673,8 @@
 }
 .write-nav .step {
   position: relative;
-  width: 15vw;
-  height: 7.5vh;
+  width: 30%;
+  height: 75px;
   border: 1px solid #d7d7d7;
   background: #efefef;
   border-radius: 40px;
@@ -1918,22 +1918,9 @@
   color: #4b4855;
 }
 
-@media screen and (max-width: 1440px) {
-  .write-nav .step {
-    width: 18vw;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .write-nav {
-    width: 75%;
-  }
-}
 @media screen and (max-width: 1024px) {
-  .write-nav {
-    width: inherit;
-  }
   .write-nav .step {
-    width: 25vw;
+    width: 30%;
   }
   .certified-area .txt-area .txt {
     width: 80%;
@@ -3524,6 +3511,7 @@
   font-family: "Recipekorea", sans-serif;
   margin-bottom: 30px;
   text-indent: 10px;
+  font-size: var(--fz-24);
 }
 .s-book-box .s-book-list {
   width: 100%;
@@ -3575,6 +3563,9 @@
   border-right: 1px solid #272136;
   display: inline-block;
   padding: 0 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .s-book-box .s-book-list .list .title-box .more-info span.txt:last-child {
   border-right: 0px;
