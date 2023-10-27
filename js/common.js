@@ -3,7 +3,7 @@
 /* *******************************************************
  * 파일이름 : common.js
  * 설명 : 전체JS
- * 업데이트 : 2023-10-20
+ * 업데이트 : 2023-10-26
  ******************************************************** */
 window.addEventListener("load", function () {
   /* **********************************
@@ -80,6 +80,24 @@ window.addEventListener("load", function () {
   });
   $(".left-side-bar").click(function (e) {
     e.stopPropagation();
+  });
+
+  /* *******************************************************
+   * 설명 : top버튼 클릭시 최상단으로 이동
+   ******************************************************** */
+
+  $(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > 500) {
+      $(".top-fix").fadeIn();
+    } else {
+      $(".top-fix").fadeOut();
+    }
+  });
+  $(".top-fix").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+    return false;
   });
 
   /* **********************************

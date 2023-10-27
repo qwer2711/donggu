@@ -1,7 +1,7 @@
 /* *******************************************************
  * 파일이름 : layout.css
  * 설명 : 레이아웃 스타일 
- * 업데이트 : 2023-10-20
+ * 업데이트 : 2023-10-26
  ******************************************************** */
 
 :root {
@@ -88,15 +88,10 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 199;
+  z-index: 100;
   display: none;
 }
 .menu-bar.open + .menu_bg {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 100;
   display: block;
 }
 .menu-bar {
@@ -110,6 +105,13 @@
   letter-spacing: -0.9px;
   transition: backgroundColor 0.3s;
 }
+.menu-bar .inner-box {
+  position: relative;
+  height: var(--headerHeight);
+}
+.menu-bar.open .inner-box {
+  height: auto;
+}
 .main-wrap .menu-bar {
   color: #fff;
 }
@@ -122,10 +124,8 @@
   color: #272136;
 }
 .header-fixed .menu-bar .donggu a:hover {
-  color: var(--mainColor);
   text-decoration: underline;
   text-underline-offset: 3px;
-  border: 1px solid var(--mainColor);
 }
 .menu-bar.open {
   border-bottom: 1px solid #d7d7d7;
@@ -156,8 +156,8 @@
 /* 로고 */
 .menu-bar .logo_wrap {
   position: absolute;
-  top: calc(9vh / 4);
-  top: calc(var(--headerHeight) / 4);
+  top: calc(9vh / 3.4);
+  top: calc(var(--headerHeight) / 3.4);
   left: 2vw;
   display: inline-block;
   vertical-align: top;
@@ -189,42 +189,35 @@
 /* 동구청바로가기 */
 .menu-bar .donggu a {
   position: absolute;
-  top: calc(9vh / 3.6);
-  top: calc(var(--headerHeight) / 3.6);
+  top: calc(9vh / 2.5);
+  top: calc(var(--headerHeight) / 2.5);
   right: 50px;
   width: calc(195px - 20px);
   height: calc(38px -23px);
   line-height: calc(38px -23px);
   text-align: center;
-  padding: 8px 5px 10px 5px;
   border-radius: 3px;
   border: 1px solid transparent;
 }
 
 .main-wrap .menu-bar .donggu a:hover {
-  color: #fff;
   text-decoration: underline;
   text-underline-offset: 3px;
-  border: 1px solid #fff;
 }
 .sub-wrap .menu-bar .donggu a:hover {
-  color: #fff;
   text-decoration: underline;
   text-underline-offset: 3px;
-  border: 1px solid var(--mainColor);
-  background: var(--mainColor);
 }
 
 .menu-bar .login a {
   position: absolute;
-  top: calc(9vh / 3.6);
-  top: calc(var(--headerHeight) / 3.6);
-  right: 50px;
+  top: calc(9vh / 2.5);
+  top: calc(var(--headerHeight) / 2.47);
+  right: 190px;
   width: calc(150px - 20px);
   height: calc(38px -23px);
   line-height: calc(38px -23px);
   text-align: center;
-  padding: 8px 5px 10px 5px;
   border-radius: 3px;
 }
 .main-wrap .menu-bar .login a:hover {
@@ -244,14 +237,16 @@
 }
 
 .header-fixed .main-wrap .menu-bar .donggu a:hover {
-  color: #fff;
   text-decoration: underline;
   text-underline-offset: 3px;
-  border: 1px solid var(--mainColor);
-  background: var(--mainColor);
 }
 
 .menu-bar .donggu i {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.menu-bar .login i {
   display: inline-block;
   margin-right: 8px;
 }
@@ -356,14 +351,26 @@
 }
 
 .top-menu {
+  position: relative;
   height: var(--headerHeight);
   background: #272136;
+}
+.top-menu .login a {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: calc(150px - 20px);
+  height: calc(38px -23px);
+  line-height: calc(38px -23px);
+  text-align: inherit;
+  border-radius: 3px;
+  color: white;
 }
 .mobile-top-bar {
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 6%;
   height: var(--headerHeight);
   z-index: 11;
 }
@@ -560,6 +567,12 @@ footer .f-box .f-nav li:last-child:after {
   font-size: var(--fz-14);
   text-align: center;
   margin: 12px 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .menu-bar .desk-nav {
+    max-width: 824px;
+  }
 }
 
 @media screen and (max-width: 1280px) {

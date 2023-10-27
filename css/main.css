@@ -2,7 +2,7 @@
 /* *******************************************************
  * 파일이름 : main.css
  * 설명 : 메인 css
- * 업데이트 : 2023-10-20
+ * 업데이트 : 2023-10-26
  ******************************************************** */
 /* ****************** 공통CSS  ********************** */
 @import url(../css/common/layout.css);
@@ -61,6 +61,36 @@
 
 .m-container > article {
   width: 100%;
+}
+
+@keyframes top-fix {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.top-fix {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  display: block;
+  width: 4vw;
+  height: 4vw;
+  z-index: 9999;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  background-image: url(../images/main/top_fix.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: top-fix 4s ease-out infinite;
 }
 
 /* ***** top-banner  ***** */
@@ -711,20 +741,7 @@
   position: relative;
   max-width: var(--area-1240-width);
   margin: 10px auto 0;
-}
-.main_row_3::after {
-  content: "";
-  position: absolute;
-  bottom: 256px;
-  left: -243px;
-  background-image: url(../images/main/vector_3.png);
-  background-position: 100% 100%;
-  width: 300px;
-  height: 329px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -1;
-  animation: front 10s linear infinite;
+  padding-bottom: 10vh;
 }
 
 .main_row_3 .left-box .main-tit-box {
@@ -855,10 +872,23 @@
   position: relative;
   height: 100%;
   max-width: var(--area-1240-width);
-  padding: 80px 0;
+  padding: 4vh 0 7vh;
   margin: 0 auto;
 }
-
+.main_row_4::after {
+  content: "";
+  position: absolute;
+  bottom: 7vh;
+  left: -243px;
+  background-image: url(../images/main/vector_3.png);
+  background-position: 100% 100%;
+  width: 300px;
+  height: 329px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  animation: front 10s linear infinite;
+}
 .main_row_4 .mrow-box {
   position: relative;
   width: 100%;
@@ -938,7 +968,7 @@
     height: 332px;
   }
 
-  .main_row_3::after {
+  .main_row_4::after {
     bottom: 335px;
     left: -111px;
     width: 250px;
@@ -998,7 +1028,7 @@
     width: 189px;
     animation: front 10s linear infinite;
   }
-  .main_row_3::after {
+  .main_row_4::after {
     bottom: 70%;
     left: -70px;
     width: 350px;
@@ -1115,7 +1145,7 @@
     bottom: 12%;
   }
 
-  .main_row_3::after {
+  .main_row_4::after {
     bottom: 86%;
     left: 27px;
     width: 243px;

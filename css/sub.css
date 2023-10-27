@@ -2,7 +2,7 @@
 /* *******************************************************
  * 파일이름 : sub.css
  * 설명 : 전체 서브페이지 css
- * 업데이트 : 2023-10-20
+ * 업데이트 : 2023-10-26
  ******************************************************** */
 /* ****************** Sub 공통CSS  ********************** */
 @import url(../css/common/layout.css);
@@ -877,7 +877,7 @@
 }
 .poster-area .p-box .poter-img {
   overflow: hidden;
-  height: 515px;
+  height: auto;
 }
 
 .poster-area .p-box .poter-img img {
@@ -936,12 +936,11 @@
   display: block;
   text-align: center;
   background: transparent;
-  transition: background-color 0.5s 0.05s;
-}
-.poster-area .join-btn span:hover {
   background: var(--mainColor);
   color: #fff;
+  transition: background-color 0.5s 0.05s;
 }
+
 .poster-area .join-btn span::before {
   content: "";
   position: absolute;
@@ -1034,7 +1033,7 @@
 }
 .poster-area .p-box .poster-txt .info-area .t-info td button.link {
   padding: 1rem 2rem;
-  background: var(--mainColor);
+  background: #2475bf;
   color: #fff;
   border-radius: 6px;
   white-space: nowrap;
