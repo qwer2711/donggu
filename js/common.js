@@ -3,7 +3,7 @@
 /* *******************************************************
  * 파일이름 : common.js
  * 설명 : 전체JS
- * 업데이트 : 2023-10-26
+ * 업데이트 : 2023-10-27
  ******************************************************** */
 window.addEventListener("load", function () {
   /* **********************************
@@ -106,8 +106,8 @@ window.addEventListener("load", function () {
   function programSlider() {
     $("#programList").slick({
       autoplay: true,
-      autoplaySpeed: 1000,
-      speed: 1000,
+      autoplaySpeed: 1800,
+      speed: 1800,
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -233,8 +233,8 @@ window.addEventListener("load", function () {
   function gallerySlider() {
     $("#gallery").slick({
       autoplay: true,
-      autoplaySpeed: 1000,
-      speed: 1000,
+      autoplaySpeed: 1800,
+      speed: 1800,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,

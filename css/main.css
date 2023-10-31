@@ -2,7 +2,7 @@
 /* *******************************************************
  * 파일이름 : main.css
  * 설명 : 메인 css
- * 업데이트 : 2023-10-26
+ * 업데이트 : 2023-10-30
  ******************************************************** */
 /* ****************** 공통CSS  ********************** */
 @import url(../css/common/layout.css);
@@ -73,24 +73,6 @@
   100% {
     transform: translateY(5px);
   }
-}
-
-.top-fix {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  display: block;
-  width: 4vw;
-  height: 4vw;
-  z-index: 9999;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  background-image: url(../images/main/top_fix.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: top-fix 4s ease-out infinite;
 }
 
 /* ***** top-banner  ***** */
@@ -277,7 +259,7 @@
 .main_row_0 .program-list .img-box::after {
   content: "";
   display: block;
-  padding-top: calc(3.3 / 3 * 100%);
+  padding-top: calc(3 / 3 * 100%);
 }
 
 .main_row_0 .program-list .item .txt-box {
@@ -1199,6 +1181,10 @@
     font-size: var(--fz-12);
   }
   .main_row_1 .list-single .left-area .tit {
+    font-size: var(--fz-16);
+  }
+
+  .main_row_2 .quick-menu-box li .icon span {
     font-size: var(--fz-16);
   }
   .main_row_2 {

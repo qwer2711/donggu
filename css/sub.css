@@ -2,7 +2,7 @@
 /* *******************************************************
  * 파일이름 : sub.css
  * 설명 : 전체 서브페이지 css
- * 업데이트 : 2023-10-26
+ * 업데이트 : 2023-10-27
  ******************************************************** */
 /* ****************** Sub 공통CSS  ********************** */
 @import url(../css/common/layout.css);
@@ -875,24 +875,30 @@
   justify-content: space-evenly;
   gap: 2rem;
 }
+
 .poster-area .p-box .poter-img {
+  width: 41%;
+  min-height: 400px;
   overflow: hidden;
-  height: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.poster-area .p-box .poter-img img {
-  height: 100%;
+.poster-area .p-box .poter-img::after {
+  content: "";
+  display: block;
+  padding-top: calc(3 / 3 * 100%);
 }
 
 .poster-area .p-box .poster-txt {
-  width: 65%;
-  height: 100%;
+  width: 59%;
   justify-content: space-between;
+  gap: 10px;
 }
 .poster-area .p-box .poster-txt .top-area {
   width: 100%;
   height: auto;
-  padding-bottom: 1vh;
   justify-content: space-between;
   align-items: center;
 }
@@ -905,20 +911,31 @@
   letter-spacing: -1px;
   font-size: var(--fz-26);
 }
-.poster-area .p-box .poster-txt .top-area .title .status {
-  padding: 0.5rem 1.2rem;
-  font-weight: 400;
-  color: #fff;
-  background: #3bbcad;
-  border-radius: 18px;
-  margin-left: 1.3rem;
+
+.poster-area .p-box .poster-txt .top-area .title .state {
   display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  margin-left: 1.3rem;
   font-size: var(--fz-14);
+}
+.poster-area .p-box .poster-txt .top-area .title .state.wait {
+  background-color: #a7a7a7;
+}
+.poster-area .p-box .poster-txt .top-area .title .state.ing {
+  background-color: #3bbcad;
+}
+.poster-area .p-box .poster-txt .top-area .title .state.end {
+  background-color: #4b4855;
 }
 .poster-area .p-box .poster-txt .top-area .title::before {
   content: attr(data-before-title);
   position: absolute;
-  top: -30px;
+  top: -24px;
   font-family: "Pretendard", Sans-serif;
   letter-spacing: -0.3px;
   font-weight: 400;
@@ -927,18 +944,23 @@
 }
 .poster-area .join-btn span {
   position: relative;
-  width: 140px;
+  width: 181px;
   height: 40px;
-  border-radius: 25px;
+  border-radius: 5px;
   line-height: 40px;
   color: var(--blackColor);
   text-indent: 2.5rem;
   display: block;
   text-align: center;
-  background: transparent;
   background: var(--mainColor);
   color: #fff;
   transition: background-color 0.5s 0.05s;
+}
+.poster-area .join-btn a {
+  display: inline-block;
+}
+.poster-area .join-btn a:hover span {
+  background: #0064b8;
 }
 
 .poster-area .join-btn span::before {
@@ -949,9 +971,7 @@
   width: 40px;
   height: 40px;
   text-indent: 0rem;
-  border-radius: 100%;
   color: #fff;
-  background: var(--mainColor);
   transition: background-color 0.5s 0.05s;
   font-weight: 100;
 }
@@ -1009,35 +1029,40 @@
 .poster-area .p-box .poster-txt .info-area .t-info th {
   border-bottom: 1px solid #ced0d5;
   border-right: 1px solid #ced0d5;
-  padding: 1rem;
   background: rgba(239, 239, 239, 0.5);
   vertical-align: middle;
   font-weight: 400;
   line-height: 1.2;
   word-break: keep-all;
   text-align: left;
+  padding: 6px 10px;
 }
 .poster-area .p-box .poster-txt .info-area .t-info th i {
   display: inline-block;
   width: 30px;
 }
 .poster-area .p-box .poster-txt .info-area .t-info td {
-  padding: 1rem 2rem;
   background: #fff;
   border-bottom: 1px solid #ced0d5;
   border-right: 1px solid #ced0d5;
   vertical-align: middle;
-  line-height: 1.2;
   word-break: break-all;
   text-align: left;
+  padding: 6px 10px;
 }
 .poster-area .p-box .poster-txt .info-area .t-info td button.link {
-  padding: 1rem 2rem;
-  background: #2475bf;
-  color: #fff;
-  border-radius: 6px;
-  white-space: nowrap;
+  position: relative;
+  color: #2475bf;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: var(--fz-16);
 }
+
+.poster-area .p-box .poster-txt .info-area .t-info td button.link i {
+  display: inline-block;
+  margin-right: 5px;
+}
+
 .poster-area
   .p-box
   .poster-txt
@@ -1105,7 +1130,9 @@
   height: auto;
   align-items: end;
   gap: 10px;
-  margin-top: 2vh;
+}
+.poster-area .p-box .poster-txt .item-area .img-box {
+  width: 12%;
 }
 
 .question-box.mobile-view {
@@ -1221,9 +1248,6 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .poster-area .p-box .poster-txt {
-    width: 60%;
-  }
   .poster-area .p-box .poster-txt .info-area .info-list .list span.dot {
     text-indent: 1vw;
   }
@@ -1265,29 +1289,24 @@
     flex-direction: column;
   }
 
+  .poster-area .p-box .poter-img {
+    min-height: inherit;
+  }
+
   .poster-area .p-box .poster-txt .top-area {
     padding-bottom: 0vh;
-  }
-  .top-area .join-btn {
-    display: none;
-  }
-  .poster-area .join-btn {
     text-align: center;
-    border: 1px solid var(--mainColor);
-    border-radius: 30px;
-    padding: 5px 0;
-    background: var(--mainColor);
   }
+
   .poster-area .join-btn span {
     margin: 0 auto;
     color: #fff;
   }
   .poster-area .p-box .poster-txt .top-area .title {
-    text-align: center;
     width: 100%;
   }
   .poster-area .p-box .poster-txt {
-    width: 80%;
+    width: 100%;
     gap: 2rem;
   }
   .poster-area .p-box .poster-txt .question-hover {
@@ -1295,13 +1314,13 @@
   }
   .poster-area .p-box .poster-txt .item-area {
     align-items: end;
-    justify-content: space-between;
   }
   .poster-area .p-box .poster-txt .item-area {
     width: 100%;
     height: auto;
     min-height: inherit;
     align-items: end;
+    justify-content: center;
   }
   .poster-area .p-box .poster-txt .info-area {
     flex-direction: column;
@@ -1309,11 +1328,17 @@
   .poster-area .p-box .poster-txt .info-area .t-info th {
     width: 30%;
   }
+  .poster-area .join-btn {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .poster-area .p-box .poster-txt .top-area .title {
     font-size: var(--fz-24);
+  }
+  .poster-area .p-box .poster-txt .item-area .img-box {
+    width: 14%;
   }
 }
 @media screen and (max-width: 598px) {
@@ -1351,6 +1376,8 @@
 @media screen and (max-width: 480px) {
   .poster-area .p-box .poter-img {
     overflow: hidden;
+    width: 100%;
+
     height: 100%;
     min-height: inherit;
   }
@@ -1378,8 +1405,12 @@
     justify-content: start;
     flex-flow: wrap;
   }
-  .poster-area .p-box .poster-txt .item-area div {
-    width: 29.4117647059%;
+  .poster-area .p-box .poster-txt .item-area .img-box {
+    width: 25%;
+  }
+  .poster-area .join-btn a,
+  .poster-area .join-btn a span {
+    width: 100%;
   }
   .program-area .guide {
     padding: 1rem 1.5rem;
