@@ -143,6 +143,7 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
 }
+
 .top-banner .banner .slick-arrow i {
   color: #818181;
 }
@@ -153,6 +154,7 @@
   right: 26%;
   left: auto;
 }
+
 .top-banner .banner .slick-next {
   left: auto;
   right: calc(26% - 50px);
